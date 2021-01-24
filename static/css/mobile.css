@@ -1,0 +1,16 @@
+/* 600px */
+header .right_menu .lang{display: none;}
+header .right_menu .fam{margin-right: 70px;}
+/* 480px */
+@media all and (max-width:480px){
+    header{height: 60px;}
+    header>.inner{height: 60px;}
+    header>.inner{padding: 0 0 0 20px;}
+    header .left_menu h2>a{height: 60px; line-height: 60px;}
+    header .left_menu h2 .mobile{height: 15px; padding-top: 20px;}
+    header .right_menu{padding-top: 14px;}
+    header .right_menu .fam h2>a{width: 87px; font-size: 10px;}
+    .trigger_menu{height: 60px;}
+    .banner .swiper-slide .main_con h2{font-size: 8vw;}
+    .banner .swiper-slide .main_con p{font-size: 3.5vw;}
+}
