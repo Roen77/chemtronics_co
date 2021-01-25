@@ -132,8 +132,8 @@ $(document).ready(function(){
             fam.add(lang).addClass('over');
             subHieght=$(".gnb .sub_con").outerHeight();
             var total=headerHeight+subHieght;
-            header.stop().animate({height:total+'px'},200)
             subMenu.hide();
+            header.stop().animate({height:total+'px'},200)
             $(this).find(".sub_con").show();
            }
 
@@ -143,7 +143,6 @@ $(document).ready(function(){
             inactivate(header)
             fam.add(lang).removeClass('over');
             header.stop().animate({height:headerHeight+'px'},200)
-            subMenu.hide();
             Timer=setTimeout(function(){
                 subMenu.hide();
             },200)

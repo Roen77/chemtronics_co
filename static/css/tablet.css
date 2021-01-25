@@ -24,6 +24,7 @@ header .left_menu .gnb .depth2>li>a:hover::before{width: 0;}
 header .left_menu .gnb .sub_con{display:none;}
 header .right_menu{padding-top: 25px;}
 .trigger_menu{height: 80px; width: 70px; line-height: 80px;}
+
 .banner .scroll_down{display: none;}
 .banner .controls{bottom:24px}
 .banner .controls .loading{left:280px; right: 17px;}
