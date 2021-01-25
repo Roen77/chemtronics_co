@@ -1,4 +1,12 @@
 /* 1220px */
+/* ######################## COMMON ###################### */
+.tit b{ font-size: 30px;}
+.menu_list>li>a{font-size: 15px;}
+.tit_info h3{margin-bottom: 15px;}
+.tit_info h3 b{font-size: 30px;}
+.tit_info p b{font-size: 12px;}
+
+/* ######################## SECTION:header ###################### */
 header{height: 80px; line-height: 80px; }
 header .left_menu{height: 100%;}
 header .left_menu h2 .pc_logo{display: none;}
@@ -24,7 +32,10 @@ header .left_menu .gnb .depth2>li>a:hover::before{width: 0;}
 header .left_menu .gnb .sub_con{display:none;}
 header .right_menu{padding-top: 25px;}
 .trigger_menu{height: 80px; width: 70px; line-height: 80px;}
-
+.mobile_lang{display: block;  text-align: center;}
+.mobile_lang>a{line-height:14px; display: inline-block; font-size: 14px; color:#a2a2a2; border-right: 1px solid #ddd; padding: 0 7px;}
+.mobile_lang>a:last-child{border-right:none;}
+.mobile_lang>a.on{color:#222;}
 .banner .scroll_down{display: none;}
 .banner .controls{bottom:24px}
 .banner .controls .loading{left:280px; right: 17px;}
@@ -39,8 +50,17 @@ header .right_menu.on .fam>h2>a,
 header .right_menu.on .fam .list>li>a{color:#fff;}
 header .right_menu.on .fam .list>li:hover{background-color: #444;}
 header .left_menu .gnb>li>a.on::after{content: '\f077';}
+.global .right_con .con_inner{padding: 72px 10% 0; box-sizing: border-box;}
+
+.global .tit_info{left:27px; bottom:32px;}
+
 /* 800px */
 @media all and (max-width:800px){
+    /* ######################## COMMON ###################### */
+    .tit_info h3{margin-bottom:0;}
+    .tit_info h3 b{font-size: 24px;}
+    .tit_info p b{display: none;}
+    .menu_list>li>a{height: 38px; line-height: 38px; font-size: 13px;}
     .inner{padding: 0 20px;}
     .banner .swiper-slide .main_con{transform: none; top:auto; bottom:100px;}
     .banner .swiper-slide .main_con h2{font-size: 36px; line-height: 1; padding-bottom:1.5rem;}
@@ -51,5 +71,17 @@ header .left_menu .gnb>li>a.on::after{content: '\f077';}
     .banner .controls .loading span{display: none;}
     .banner .controls .loading li span,
     .banner .controls .loading li span::before{height: 4px;}
+    .section.global{height: auto;}
+    .global>div,
+    .global .right_con .info>div{float: none; width: 100%; height: auto;}
+    .global .left_con .global_slide .bg_con{padding-top: 100%; height: auto;}
+    .global .right_con .con_inner{padding: 35px 15px 33px;}
+    .global .right_con .driving{width: 100%; position: relative; height:auto; padding-top: 52.52%; background-color: red;} 
+    .global .right_con .driving img{position: absolute;}
+    .global .tit_info{left:15px;}
+    .global .menu_list{overflow: hidden;}
+    .global .menu_list li{float: left; width: 50%; padding: 0 5px; box-sizing: border-box;}
+
+
     
 }

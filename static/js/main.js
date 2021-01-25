@@ -38,8 +38,22 @@ $(document).ready(function(){
                     sections.css({height:allHeight+'px'});
                  
                 }//setslide
-        
+
+                //pc에서 마우스휠 사용할 때 애니메이션
+                function pcOffset(){
+                    section.each(function(i,v){
+                        console.log(currentindex === i)
+                        var aniElem= $(this).find(".animate");
+                        if(currentindex === i){
+                            if(!aniElem.hasClass('motion')){
+                                aniElem.addClass("motion")
+                            }
+                        }
+                    })
+                }
+
                 function moveslide(index){
+                    console.log('move')
                     if($('body').hasClass('hidden')) return;
                     currentindex=index;
                     if(currentindex <0){
@@ -51,11 +65,12 @@ $(document).ready(function(){
                         return
                     }
                     var sectionTop=section.eq(currentindex).attr('data-index');
-                    console.log(currentindex);
                     sections.css(
                         {transform:'translate3d(0,'+(-sectionTop)+'px'+',0)',
                              });
+                    pcOffset();
                 }
+
         
                 $('.nav-btn>li').click(function(){
                     var index=$(this).index();
@@ -96,7 +111,7 @@ $(document).ready(function(){
                 }
                 })
             setslide();  
-            moveslide(currentindex);      
+            // moveslide(currentindex);      
 
         };
     }
@@ -115,6 +130,12 @@ $(document).ready(function(){
             section.removeAttr("style");
             fullpage();
         }
+
+        if(winWidth<1220){
+            section.each(function(){
+                $(this).find(".animate").removeClass('animate');
+            })
+          }
     }
 
     function activate(Elem){
@@ -125,15 +146,21 @@ $(document).ready(function(){
         Elem.removeClass('active');
     }
     /* header */
+    /* pc 일때 메뉴 */
+    nav.on('mouseenter focusin',function(){
+        subHieght=$(".gnb .sub_con").outerHeight();
+        var total=headerHeight+subHieght;
+        header.stop().animate({height:total+'px'},200)
+    })
+    .on('mouseleave focusout', function(){
+        header.stop().animate({height:headerHeight+'px'},200)
+    })
     gnb.on('mouseenter focusin',function(){
         if(winWidth>1221){
             clearTimeout(Timer);
             activate($('header'));
             fam.add(lang).addClass('over');
-            subHieght=$(".gnb .sub_con").outerHeight();
-            var total=headerHeight+subHieght;
             subMenu.hide();
-            header.stop().animate({height:total+'px'},200)
             $(this).find(".sub_con").show();
            }
 
@@ -142,11 +169,8 @@ $(document).ready(function(){
         if(winWidth>1221){
             inactivate(header)
             fam.add(lang).removeClass('over');
-            header.stop().animate({height:headerHeight+'px'},200)
-            Timer=setTimeout(function(){
-                subMenu.hide();
-            },200)
-           }
+            subMenu.hide();
+        }
     })
     /* 모바일 버전 메뉴 */
     $('.gnb>li>a').click(function(){
@@ -219,18 +243,15 @@ $(document).ready(function(){
     var loading=$('.banner .loading>li');
     var playBtn=$('.banner .play-btn>a');
     var swiper = new Swiper('.banner .swiper-container', {
-        speed: 1300,
+        speed: 1000,
         effect: 'fade',
-        fadeEffect: {
-          crossFade: true,
-        },
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
           },
-        slidesPerView:'1',
+        slidesPerView:'auto',
         loop:true,
-        loopedSlides:1,
+        loopedSlides:'4',
         pagination: {
           el: '.pager',
           type: 'fraction',
@@ -238,6 +259,14 @@ $(document).ready(function(){
         navigation: {
           nextEl: '.arrows .next',
           prevEl: '.arrows .prev',
+        },
+        breakpoints: {
+            1240: {
+              slidesPerView: 1,
+              fadeEffect: {
+                crossFade: true
+              },
+            },
         },
         on: {
             init: function () {
@@ -260,7 +289,8 @@ $(document).ready(function(){
           console.log(swiper.realIndex);
           $(this).addClass('active').siblings('li').removeClass('active');
       })
-      playBtn.on('click focus',function(){
+      playBtn.on('click focus',function(e){
+          e.preventDefault();
         $(this).toggleClass('on');
         var icon=$(this).find('i');
         if($(this).hasClass('on')){
@@ -272,6 +302,17 @@ $(document).ready(function(){
             icon.attr('class','fas fa-pause');
         }
       })
+      //golbal 슬라이드
+      var globalSwiper = new Swiper('.global_slide', {
+        autoplay: {
+          delay: 4000,
+          disableOnInteraction: false,
+        },
+        slidesPerView:'1',
+        loop:true,
+        loopedSlides:4,
+        
+      });
       //메뉴 리사이즈될때 메뉴 수정
       function MenuResize(){
         nav.removeClass('on');
@@ -283,11 +324,44 @@ $(document).ready(function(){
             trigger.add(lang).add(fam).removeClass("on");
             $(this).add(nav).add('.right_menu').removeClass('on'); 
           }
+          //1220px 이하일때는 애니메이션 주지 않음
+          if(winWidth<1220){
+            section.each(function(){
+                $(this).find(".animate").removeClass('animate');
+            })
+          }
+          
       }
       function mobileHeight(){
-             var sec=$('section');
+             var sec=$('section.header');
              sec.css({height:$(window).height()+'px'});
              console.log('높이수정');
+      }
+    
+      
+      //모바일에서(800px 이상 1240px 이하) 스크롤될때 애니메이션
+      var winOffset;
+      var sectionOffset;
+      var aniMotion;
+      function mobileOffset(Elem){
+        winOffset=$(window).scrollTop();
+        sectionOffset=Elem.offset().top-$(window).outerHeight()*0.6;
+        console.log('높이',sectionOffset);
+        aniMotion=Elem.find('.animate');
+
+        if(sectionOffset<winOffset){
+            if(!aniMotion.hasClass("motion")){
+                aniMotion.addClass("motion")
+            }
+        }
+      }
+      function Motion(){
+       if(winWidth>800){
+            mobileOffset($('.global'))
+            console.log("800")
+        }else{
+            return
+        }
       }
     
    
@@ -296,6 +370,10 @@ $(document).ready(function(){
     $(window).on('resize',function(){
         MenuResize();
         init();
+    })
+
+    $(window).scroll(function(){
+        Motion();
     })
 
     init();

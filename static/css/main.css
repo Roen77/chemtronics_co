@@ -4,19 +4,24 @@
 .pc .main{position: absolute;left:0;top:0;width: 100%; transition: all 0.5s ease-in-out;}
 section{width: 100%; height: 100vh;}
 footer{height: 500px; background-color: lightcoral; width: 100%;}
-section.global{background-color: lightgreen;}
-/* ######################## COMMON ###################### */
+section.info{background-color: lightgreen;}
+/* ######################## COMMON ############################ */
 body{font-family: 'Play','Noto Sans KR', sans-serif; font-weight: 400; line-height: 1; color:#fff; font-size: 16px; min-width: 360px;}
 body.hidden{overflow: hidden;}
 a{color:#fff;}
 .inner{max-width:1600px; margin: 0 auto; box-sizing: border-box;}
-.tit{font-weight: 700;}
-.main_con h2,
-.main_con p{overflow: hidden;;}
-.main_con b{display: inline-block; transform: translateY(80px); opacity: 0;}
-.motion b{
-    animation: mainAni 1.7s linear forwards;
+
+/* //애니메이트 효과(1220px 이하에서는 animate 삭제) */
+.animate{overflow: hidden;}
+.animate b{display: inline-block; transform: translateY(80px); opacity: 0;}
+
+.animate.motion b{
+    animation: mainAni 0.6s 0.1s ease-in-out forwards;
 }
+.animate.ani_cover{position: relative;}
+.animate.ani_cover::before{content: ''; position: absolute; left:0; top:0; width: 100%; height: 100%; background-color: #fff; z-index: 10; }
+.animate.ani_cover.motion::before{animation: coverAni 1s forwards;}
+
 /* 햄버거 메뉴 */
 .trigger{position: absolute; width: 18px; height: 12px; top:50%; left:50%; transform: translate(-50%,-50%);}
 .trigger>span{position: absolute; width: 100%; height: 2px; background-color: #fff; transition: all 0.5s;}
@@ -30,9 +35,37 @@ a{color:#fff;}
 .trigger.on>span:nth-child(3){top:50%; transform: rotate(45deg);}
 
 @keyframes mainAni{
-    0%{opacity: 0; transform: translateY(80px);}
+    0%{opacity: 0; transform: translateY(50px);}
     100%{opacity: 1; transform: translateY(0);}
 }
+
+@keyframes coverAni{
+    0%{left:0;width: 100%;}
+    100%{left:100%;width: 0;}
+}
+
+.tit b{font-weight: bold; color:#222; font-size: 38px;}
+.tit.white b{color:#fff;}
+.menu_list{width: 100%;}
+.menu_list>li{width: 100%;}
+.menu_list>li>a{position: relative; display: block; height: 50px; line-height: 50px; color:#222; border-bottom: 1px solid #e5e5e5;}
+.menu_list.white>li>a{color:#fff; border-color: rgba(255, 255, 255, 0.247);}
+.menu_list>li>a::after{content: '\f105'; position: absolute; font-size: 14px; font-family: fontawesome; right: 5px; top:50%; transform: translateY(-50%); transition: all 0.5s;}
+.menu_list.white>li>a::after{color:rgba(255, 255, 255, 0.527);}
+.menu_list>li:hover>a::after{color:#ed1c24;}
+.menu_list.white>li:hover>a::after{color:#fff;}
+.menu_list>li>a::before{content: ''; position: absolute; left:0; bottom:-1px; height: 1px; width:0; background-color: #ed1c24;transition: all 0.5s;}
+.menu_list.white>li>a::before{background-color: #fff;}
+.menu_list>li:hover>a::before{width: 100%;}
+.menu_list>li:hover>a{color:#ed1c24;}
+.menu_list.white>li:hover>a{color:#fff;}
+
+.tit_info h3{margin-bottom: 30px;}
+.tit_info h3 b{font-weight: bold; font-size: 38px;}
+.tit_info p b{ color:rgba(255, 255, 255, 0.61);}
+
+
+
 /* ######################## SECTION:header ###################### */
 header{position: absolute; left:0; top:0; width: 100%; height:100px; z-index: 100; transition:background-color 0.5s; }
 header>.inner{display: flex; width: 100%; max-width:none; padding: 0 0 0 40px;}
@@ -74,6 +107,7 @@ header .right_menu .lang .list{border: 1px solid #fff; border-top-color:transpar
 header .right_menu .list a{height: 30px; line-height: 30px; font-weight: bold;}
 header .right_menu .fam .list a{color:#222;}
 .trigger_menu{position: absolute; right: 0; top:0; width: 90px; height: 100px; z-index:9999; }
+.mobile_lang{display: none;}
 /* header pc 메뉴 */
 .pc_trigger_menu{position: fixed; opacity: 0; visibility: hidden; left:0; top:0; width: 100%; height:100vh; background-color:#fff; z-index: 200; padding-right: 160px; box-sizing: border-box; transition:all 0.5s; }
 .pc_trigger_menu .bg{ transition: all ease-in-out 0.7s; overflow: hidden; transform: translateX(-500px); opacity: 0;}
@@ -84,14 +118,16 @@ header .right_menu .fam .list a{color:#222;}
 .pc_trigger_menu>ul .pc_depth2>li>a::before{content: ''; position: absolute; left:0; top:0; width:0; height: 100%; background-color: #ed1c24; transition: width 0.5s; z-index: -1;}
 .banner{position: relative; height: 100%;}
 .banner .inner{position: relative; height: 100%;}
-.banner .swiper-container{position: relative; height: 100%; width: 100%; z-index: 10;}
+.banner .swiper-container{position: relative; height: 100%;  width: 100%; z-index: 10;}
 .pc .banner .swiper-container{height: 100vh;}
-.banner .swiper-slide{position: relative;}
+.banner .swiper-slide{position: relative; height:100%; width: 100vw !important;}
 .banner .swiper-slide .bg{position: absolute; left:0; top:0; width: 100%; height: 100%; z-index: -1;}
 .banner .swiper-slide .bg img{position: absolute; left:0; top:0; width: 100%; height: 100%;}
 .banner .swiper-slide .main_con{position: absolute; left:0; top:50%; transform: translateY(-50%); width: 100%; }
 .banner .swiper-slide .main_con h2{font-size:55px; line-height: 60px; font-weight: 700; padding-bottom: 28px; overflow: hidden; letter-spacing: -0.5px;}
+.banner .main_con b{opacity: 0; transform: translateY(50px);}
 .banner .swiper-slide .main_con h2 b{font-weight: 700;}
+.banner .swiper-slide .main_con b{display: inline-block; opacity: 0; transform: translateY(50deg);}
 .banner .swiper-slide .main_con p{font-size: 18px; line-height: 30px; letter-spacing: -0.5px;}
 
 /* CUSTOM SLIDE */
@@ -149,6 +185,8 @@ header .right_menu .lang.over h2>a{color:#222;}
 .pc_trigger_menu>ul>li:hover h2{color:#ed1c24;}
 .pc_trigger_menu>ul .pc_depth2>li>a:hover{color:#fff;}
 .pc_trigger_menu>ul .pc_depth2>li>a:hover::before{width: 100%;}
+.mobile_lang{display: none;}
+.banner .swiper-slide-active {opacity: 1 !important;} /* 희미해지는버그수정 */
 .banner .swiper-slide-active .main_con b{animation: mainAni 0.8s 0.2s ease-in-out forwards;}
 .banner .swiper-slide-active .main_con p>b{animation-delay: 0.5s;}
 .banner .controls .loading li.active span::before{ animation: loading 6.2s forwards;}
@@ -170,11 +208,31 @@ header .right_menu .lang.over h2>a{color:#222;}
     100%{width:100%; left:0;}
 }
 
-/* 800px */
+
+/* 1650px */
 @media all and (max-width:1650px){
     .inner{ padding: 0 45px; width: 100%;}
     header .left_menu .gnb>li>a{padding:0 20px;}
     .banner .controls .loading{left: 22%; right: 2%;}
     
 }
+/* ######################## SECTION:global ###################### */
+.global>div{float: left; width: 50%; height: 100vh;}
+.global .left_con{position: relative;}
+.global .left_con .global_slide{height: 100%; width: 100%;}
+.global .left_con .global_slide .bg_con{position: relative; width: 100%; height: 100vh; overflow: hidden;}
+.global .left_con .global_slide .bg_con img{position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); width: 100%; height: 100%;}
+.global .right_con .info>div{position: relative; float:left; width: 50%; height: 50vh;}
+.global .right_con .con_inner{padding: 72px 20.208% 0; box-sizing: border-box;}
+.global .right_con .con_inner .tit{margin-bottom: 30px;}
+.global .right_con .info .ir{background-color: #ed1c24;}
+.global .right_con .driving{position: relative;overflow: hidden;  height: 50vh;} 
+.global .right_con .driving img{position: absolute; left:0; top:0; width: 100%; height: 100%; transition: transform 0.5s;}
+.global .tit_info{position: absolute; left:99px; bottom:110px; z-index: 1;}
+
+/* active */
+.global .right_con .driving img:hover{transform: scale(1.1);}
+
+
+
 

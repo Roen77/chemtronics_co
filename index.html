@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="static/css/swiper.css">
     <script src="static/js/vender/jquery-3.5.1.min.js"></script>
     <script src="https://kit.fontawesome.com/0c7f47858a.js" crossorigin="anonymous"></script>
+    <!-- MOUSEWHEEL.JS -->
+    <script src="static/js/vender/jquery.mousewheel.min.js"></script>
     <!--SWIPPER.JS -->
     <script src="static/js/vender/swiper.min.js"></script>
     <!-- MAIN.CSS & MAN.JS -->
@@ -155,12 +157,14 @@
                                     </div>
                                 </div>
                               </li>
+                              <li>
+                                <div class="mobile_lang">
+                                    <a href="#" class="on">KOR</a>
+                                    <a href="#">ENG</a>
+                                    <a href="#">CHI</a>
+                                </div>
+                              </li>
                             </ul>
-                            <div class="mobile_lang">
-                                <a href="#">KOR</a>
-                                <a href="#">ENG</a>
-                                <a href="#">CHI</a>
-                            </div>
                         </nav>
                         <!-- nav -->
                         </div>
@@ -335,8 +339,69 @@
                     <span class="scroll_down"><img src="static/images/main_scroll_icon_txt.png" alt="scroll_down"><p></p></span>
                 </div>
             </section>
-            <section class="section global ">sec2</section>
-            <section class="section info">sec3</section>
+            <!-- section:header -->
+            <section class="section global clearfix">
+                <div class="left_con animate ani_cover">
+                    <div class="swiper-container global_slide">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"><a href="#"><div class="bg_con"><img src="static/images/main_section2_slide_01.jpg" alt=""></div></a></div>
+                          <div class="swiper-slide"><a href="#"><div class="bg_con"><img src="static/images/main_section2_slide_02.jpg" alt=""></div></a></div>
+                          <div class="swiper-slide"><a href="#"><div class="bg_con"><img src="static/images/main_section2_slide_03.jpg" alt=""></div></a></div>
+                          <div class="swiper-slide"><a href="#"><div class="bg_con"><img src="static/images/main_section2_slide_04.jpg" alt=""></div></a></div>
+                        </div>
+                    </div>
+                    <div class="tit_info animate">
+                        <h3><b>Global Technology</b></h3>
+                        <p><b>세계적인 기술력으로 지속성장을 노력하는 선진기업, 켐트로닉스
+                        </b></p>
+                    </div>
+                </div>
+                <div class="right_con">
+                    <div class="info clearfix">
+                        <div class="com animate ani_cover">
+                            <div class="con_inner">
+                                <h2 class="tit animate"><b>Company</b></h2>
+                                <ul class="menu_list">
+                                    <li><a href="#">CEO인사말</a></li>
+                                    <li><a href="#">비전</a></li>
+                                    <li><a href="#">연혁/수상실적</a></li>
+                                    <li><a href="#">사업장 소개</a></li>
+                                    <li><a href="#">계열사 소개</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ir animate ani_cover">
+                           <div class="con_inner">
+                            <h2 class="tit white animate"><b>IR</b></h2>
+                            <ul class="menu_list white">
+                                <li><a href="#">주가정보</a></li>
+                                <li><a href="#">재무정보</a></li>
+                                <li><a href="#">결산정보</a></li>
+                                <li><a href="#">공시정보</a></li>
+                                <li><a href="#">IR자료실</a></li>
+                            </ul>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="driving animate ani_cover">
+                        <a href="#">
+                            <img src="static/images/main_section2_right_banner.jpg" alt="Automated Driving">
+                        <div class="tit_info animate">
+                            <h3><b>Automated Driving</b></h3>
+                            <p><b>자율주행에서 필수적으로 갖추어야  할 핵심인 V2X/WAVE기술의 개발</b></p>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!-- section:global -->
+            <section class="section info">
+                <div class="tit_info animate">
+                    <h3><b>Information</b></h3>
+                    <p><b>고객의 모든 순간을 가치있게 만드는 Chemtronics
+                    </b></p>
+                </div>
+            </section>
             <section class="section public">sec4</section>
             <section class="section who">sec5</section>
             <footer class="section footer"></footer>
