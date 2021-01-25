@@ -2,11 +2,11 @@
 /* ######################## COMMON ###################### */
 .tit b{ font-size: 30px;}
 .menu_list>li>a{font-size: 15px;}
-.tit_info h3{margin-bottom: 15px;}
-.tit_info h3 b{font-size: 30px;}
-.tit_info p b{font-size: 12px;}
+.tit_info h3{margin-bottom: 15px; font-size: 38px;}
+.tit_info p{font-size: 16px;}
 
 /* ######################## SECTION:header ###################### */
+.navi_btns{display: none;}
 header{height: 80px; line-height: 80px; }
 header .left_menu{height: 100%;}
 header .left_menu h2 .pc_logo{display: none;}
@@ -53,12 +53,23 @@ header .left_menu .gnb>li>a.on::after{content: '\f077';}
 .global .right_con .con_inner{padding: 72px 10% 0; box-sizing: border-box;}
 
 .global .tit_info{left:27px; bottom:32px;}
+.global .tit_info h3{font-size: 30px; margin-bottom: 20px;}
+.global .tit_info p{font-size: 12px;}
+.inform{height: auto;}
+/* .inform .info_con{height: 770px;} */
+.inform .info_con{height: 730px;}
+.inform .des{padding: 0 30px;}
+.inform .info_con>li{padding-top: 255px;}
+.inform .info_con>li .num{padding: 34px 0 30px; font-size: 37px; line-height: 37px;}
+.inform .info_con>li .sub {display: none; padding:47px 0 0;}
+.inform .inquiry{padding: 0 30px; bottom: 30px;}
+.inform .inquiry .tit_info{left:15px; width: 45%;}
+.inform .inquiry .tit_info p{line-height: 20px; font-size: 14px;}
 
 /* 800px */
 @media all and (max-width:800px){
     /* ######################## COMMON ###################### */
-    .tit_info h3{margin-bottom:0;}
-    .tit_info h3 b{font-size: 24px;}
+    .tit_info h3{margin-bottom:0; font-size:30px;}
     .tit_info p b{display: none;}
     .menu_list>li>a{height: 38px; line-height: 38px; font-size: 13px;}
     .inner{padding: 0 20px;}
@@ -76,11 +87,30 @@ header .left_menu .gnb>li>a.on::after{content: '\f077';}
     .global .right_con .info>div{float: none; width: 100%; height: auto;}
     .global .left_con .global_slide .bg_con{padding-top: 100%; height: auto;}
     .global .right_con .con_inner{padding: 35px 15px 33px;}
-    .global .right_con .driving{width: 100%; position: relative; height:auto; padding-top: 52.52%; background-color: red;} 
+    .global .right_con .driving{width: 100%; position: relative; height:auto; padding-top: 52.52%;} 
     .global .right_con .driving img{position: absolute;}
     .global .tit_info{left:15px;}
+    .global .tit_info h3 b{font-size: 24px;}
     .global .menu_list{overflow: hidden;}
     .global .menu_list li{float: left; width: 50%; padding: 0 5px; box-sizing: border-box;}
+    .inform .des{padding: 0;}
+    .inform>.tit_info{position: static; padding-top: 65px;}
+    .inform .info_con{display: block; height: auto; padding-top: 60px;}
+    .inform .info_con>li{padding-top:0; border-bottom: 1px solid #eee; overflow: hidden; line-height: 69px; height: 69px; border-right:none}
+    .inform .info_con>li:nth-child(1)>span{background-image: url(../images/info_m_ico01.jpg);}
+    .inform .info_con>li:nth-child(2)>span{background-image: url(../images/info_m_ico02.jpg);}
+    .inform .info_con>li:nth-child(3)>span{background-image: url(../images/info_m_ico03.jpg);}
+    .inform .info_con>li:nth-child(4)>span{background-image: url(../images/info_m_ico04.jpg);}
+    .inform .info_con>li>span{padding-top: 0; margin-left: 20px; padding-left: 29px; float: left; background-position:left center;}
+    .inform .info_con>li .num{padding: 0; float: right; height: 100%; line-height: 65px; font-size: 30px; padding-right: 15px;}
+    .inform .inquiry{position: static; padding: 49px 15px; display: block; height: auto;}
+    .inform .inquiry>a{display: block; width: 100%;}
+    .inform .inquiry>a img{height: 120px;}
+    .inform .inquiry .tit_info{width: 45%;}
+    .inform .inquiry .tit_info h3{font-size: 20px;margin-bottom: 9px;}
+    .inform .inquiry .tit_info p{font-size: 12px;}
+
+
 
 
     

@@ -15,6 +15,7 @@ $(document).ready(function(){
     var fam=$('.right_menu .fam');
     var subMenu=$('header .sub_con');
     function fullpage(){
+
             if(wrap.hasClass('pc')){
                 var currentindex=0;
                 var sectionLen=section.length;
@@ -51,6 +52,18 @@ $(document).ready(function(){
                         }
                     })
                 }
+                function sectionTab(){
+                    section.each(function(){
+                        $(this).on('focusin',function(){
+                            var aniElem= $(this).find(".animate");
+                            if(!aniElem.hasClass('motion')){
+                                aniElem.addClass("motion")
+                            }
+                        })
+                    })
+                }
+            
+                
 
                 function moveslide(index){
                     console.log('move')
@@ -68,13 +81,18 @@ $(document).ready(function(){
                     sections.css(
                         {transform:'translate3d(0,'+(-sectionTop)+'px'+',0)',
                              });
+
+                             $('.navi_btns>li').removeClass('active');
+                             $('.navi_btns>li').eq(currentindex).addClass("active");
                     pcOffset();
                 }
 
         
-                $('.nav-btn>li').click(function(){
+                $('.navi_btns>li').click(function(){
                     var index=$(this).index();
                     moveslide(index);
+                    $('.navi_btns>li').removeClass('active');
+                    $(this).addClass("active");
                 })
         
                 var wheellstate=false;
@@ -111,6 +129,7 @@ $(document).ready(function(){
                 }
                 })
             setslide();  
+            sectionTab();
             // moveslide(currentindex);      
 
         };
@@ -129,6 +148,7 @@ $(document).ready(function(){
             wrap.addClass('pc');
             section.removeAttr("style");
             fullpage();
+            $('.navi_btns>li').eq(0).addClass("active");
         }
 
         if(winWidth<1220){
@@ -148,16 +168,21 @@ $(document).ready(function(){
     /* header */
     /* pc 일때 메뉴 */
     nav.on('mouseenter focusin',function(){
+        if(winWidth>1221){
         subHieght=$(".gnb .sub_con").outerHeight();
         var total=headerHeight+subHieght;
         header.stop().animate({height:total+'px'},200)
+        }else{
+            return
+        }
     })
     .on('mouseleave focusout', function(){
-        header.stop().animate({height:headerHeight+'px'},200)
+        if(winWidth>1221){
+            header.stop().animate({height:headerHeight+'px'},200)
+        }
     })
     gnb.on('mouseenter focusin',function(){
         if(winWidth>1221){
-            clearTimeout(Timer);
             activate($('header'));
             fam.add(lang).addClass('over');
             subMenu.hide();
@@ -165,13 +190,21 @@ $(document).ready(function(){
            }
 
     })
-    .on('mouseleave focusout',function(){
+    .on('mouseleave focousout',function(){
         if(winWidth>1221){
             inactivate(header)
             fam.add(lang).removeClass('over');
             subMenu.hide();
         }
     })
+    fam.add(lang).on('focusin',function(){
+        inactivate(header)
+            fam.add(lang).removeClass('over');
+            subMenu.hide();;
+       
+    })
+
+
     /* 모바일 버전 메뉴 */
     $('.gnb>li>a').click(function(){
         if(winWidth<1220){
@@ -237,14 +270,15 @@ $(document).ready(function(){
     
 
 
-
-
     /*banner 슬라이드 */
     var loading=$('.banner .loading>li');
     var playBtn=$('.banner .play-btn>a');
     var swiper = new Swiper('.banner .swiper-container', {
         speed: 1000,
         effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+          },
         autoplay: {
             delay: 5000,
             disableOnInteraction: false,
@@ -260,18 +294,19 @@ $(document).ready(function(){
           nextEl: '.arrows .next',
           prevEl: '.arrows .prev',
         },
-        breakpoints: {
-            1240: {
-              slidesPerView: 1,
-              fadeEffect: {
-                crossFade: true
-              },
-            },
-        },
+        // breakpoints: {
+        //     1240: {
+        //       slidesPerView: 1,
+        //       fadeEffect: {
+        //         crossFade: true
+        //       },
+        //     },
+        // },
         on: {
             init: function () {
                 loading.eq(0).addClass('active');
             },
+            
         }
       })
 
@@ -280,6 +315,8 @@ $(document).ready(function(){
           loading.removeClass('active');
           loading.eq(index).addClass('active');
       });
+
+
       
       
 
