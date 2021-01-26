@@ -85,6 +85,7 @@ $(document).ready(function(){
                              $('.navi_btns>li').removeClass('active');
                              $('.navi_btns>li').eq(currentindex).addClass("active");
                     pcOffset();
+                    numCount();
                 }
 
         
@@ -151,7 +152,7 @@ $(document).ready(function(){
             $('.navi_btns>li').eq(0).addClass("active");
         }
 
-        if(winWidth<1220){
+        if(winWidth<800){
             section.each(function(){
                 $(this).find(".animate").removeClass('animate');
             })
@@ -291,8 +292,8 @@ $(document).ready(function(){
           type: 'fraction',
         },
         navigation: {
-          nextEl: '.arrows .next',
-          prevEl: '.arrows .prev',
+          nextEl: '.banner .arrows .next',
+          prevEl: '.banner .arrows .prev',
         },
         // breakpoints: {
         //     1240: {
@@ -350,6 +351,52 @@ $(document).ready(function(){
         loopedSlides:4,
         
       });
+      //public 슬라이드
+      var publicSwiper = new Swiper('.swiper-container.news_slides', {
+        // autoplay: {
+        //     delay: 5000,
+        //     disableOnInteraction: false,
+        //   },
+          slidesPerView:1,
+          spaceBetween: 20,
+        autoHeight:true,
+        loop:true,
+        pagination: {
+            el: '.public .pager',
+            type: 'fraction',
+          },
+          navigation: {
+            nextEl: '.public .arrows .next',
+            prevEl: '.public .arrows .prev',
+          },
+          breakpoints: {
+            1330: {
+                slidesPerView: 3.5,
+                spaceBetween: 50,
+            },
+            1000: {
+                slidesPerView:3,
+                spaceBetween: 20,
+            },
+            800: {
+                slidesPerView:2,
+                spaceBetween: 20,
+            },
+            600: {
+                slidesPerView:3,
+                spaceBetween: 20,
+            },
+            480: {
+                slidesPerView:1.5,
+                spaceBetween: 20,
+            },
+
+
+          }
+       
+      });
+
+
       //메뉴 리사이즈될때 메뉴 수정
       function MenuResize(){
         nav.removeClass('on');
@@ -361,8 +408,8 @@ $(document).ready(function(){
             trigger.add(lang).add(fam).removeClass("on");
             $(this).add(nav).add('.right_menu').removeClass('on'); 
           }
-          //1220px 이하일때는 애니메이션 주지 않음
-          if(winWidth<1220){
+          //800px 이하일때는 애니메이션 주지 않음
+          if(winWidth<800){
             section.each(function(){
                 $(this).find(".animate").removeClass('animate');
             })
@@ -374,6 +421,37 @@ $(document).ready(function(){
              sec.css({height:$(window).height()+'px'});
              console.log('높이수정');
       }
+
+        //infrom  숫자 애니메이션
+        var numCountState=false;
+    function numCount(){
+        var count=$('.animate.count');
+        if($('.inform .animate').hasClass("motion")){
+            if(!numCountState){
+                count.each(function(){
+                    var target=$(this);
+                    var targetNum=target.attr('data-rate')
+                    $({rate:0}).animate({rate:targetNum},{
+                        duration:1200,
+                        progress:function(){
+                            var now=this.rate;
+                            var nowText=Math.ceil(now);
+                            if(target.hasClass('number')){
+                                var numnowText=nowText.toLocaleString();
+                                target.text(numnowText);
+                            }else{
+                                target.text(nowText);
+                            }
+                            
+                        }
+                    })
+                })
+            }
+            numCountState=true;
+            console.log('numCount')
+        }
+
+        }
     
       
       //모바일에서(800px 이상 1240px 이하) 스크롤될때 애니메이션
@@ -383,7 +461,6 @@ $(document).ready(function(){
       function mobileOffset(Elem){
         winOffset=$(window).scrollTop();
         sectionOffset=Elem.offset().top-$(window).outerHeight()*0.6;
-        console.log('높이',sectionOffset);
         aniMotion=Elem.find('.animate');
 
         if(sectionOffset<winOffset){
@@ -392,10 +469,13 @@ $(document).ready(function(){
             }
         }
       }
+
       function Motion(){
        if(winWidth>800){
             mobileOffset($('.global'))
-            console.log("800")
+            mobileOffset($('.inform'))
+            mobileOffset($('.public'))
+            numCount();
         }else{
             return
         }
