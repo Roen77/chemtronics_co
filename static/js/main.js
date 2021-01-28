@@ -352,12 +352,13 @@ $(document).ready(function(){
         
       });
       //public 슬라이드
+      var publicBtn=$(".public .controls .play-btn");
       var publicSwiper = new Swiper('.swiper-container.news_slides', {
-        // autoplay: {
-        //     delay: 5000,
-        //     disableOnInteraction: false,
-        //   },
-          slidesPerView:1,
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false,
+          },
+          slidesPerView:1.5,
           spaceBetween: 20,
         autoHeight:true,
         loop:true,
@@ -395,6 +396,21 @@ $(document).ready(function(){
           }
        
       });
+
+      
+      publicBtn.on('click focus',function(e){
+        e.preventDefault();
+      $(this).toggleClass('on');
+      var publiIcon=$(this).find('i');
+      if($(this).hasClass('on')){
+          publicSwiper.autoplay.stop();
+          publiIcon.attr('class','fas fa-play');
+      }else{
+          console.log('시작');
+          publicSwiper.autoplay.start();
+          publiIcon.attr('class','fas fa-pause');
+      }
+    })
 
 
       //메뉴 리사이즈될때 메뉴 수정
@@ -475,13 +491,16 @@ $(document).ready(function(){
             mobileOffset($('.global'))
             mobileOffset($('.inform'))
             mobileOffset($('.public'))
+            mobileOffset($('.who'))
             numCount();
         }else{
             return
         }
       }
     
-   
+      $(".goTopBtn").click(function(){
+          $("html, body").stop().animate({scrollTop:0})
+      })
       
     
     $(window).on('resize',function(){

@@ -5,6 +5,7 @@
 .tit_info h3{margin-bottom: 20px; font-size: 38px;}
 .tit_info p{font-size: 16px;}
 
+
 /* ######################## SECTION:header ###################### */
 .navi_btns{display: none;}
 header{height: 80px; line-height: 80px; }
@@ -75,7 +76,28 @@ header .left_menu .gnb>li>a.on::after{content: '\f077';}
 .public .news span{left:22px; bottom:38px;}
 .public .controls{padding-top: 60px;}
 .public .controls .inner{padding: 0;}
+.who .des{margin: 0 30px;}
+.who .left_con .tit_info h3{font-size: 56px; margin-bottom: 26px;} 
+.footer{margin: 0 30px;}
+.footer .f_top .fnb .sitemap{display: none;}
+.footer .f_bom{height: auto; line-height: 26px; padding: 40px 0;}
+.footer .f_bom>ul,
+.footer .f_bom .copy{float: none;} 
+.footer .f_bom>ul li{font-size: 13px;}
+.goTopBtn{bottom:15px; opacity: 1; visibility: visible;}
 
+
+/* 1024px */
+@media all and (max-width:1024px){
+    .who{height: auto; padding-top: 95px;}
+    .who .rgiht_con{position: static;}
+    .who .left_con .menu_list{max-width: 100%;}
+    .who .left_con .recruit{width: 100%; box-sizing: border-box;}
+    .who .rgiht_con img{position: static; }
+    .who .rgiht_con{ max-width: none; width: 100%; margin: 59px 0 68px;}
+    .who .rgiht_con .pic{max-width:100%; width: 100%; height: auto;}
+    .who .rgiht_con .pic img{width: 100%; max-height: 414px;}
+}
 /* 800px */
 @media all and (max-width:800px){
     /* ######################## COMMON ###################### */
@@ -83,6 +105,8 @@ header .left_menu .gnb>li>a.on::after{content: '\f077';}
     .tit_info p b{display: none;}
     .menu_list>li>a{height: 38px; line-height: 38px; font-size: 13px;}
     .inner{padding: 0 20px;}
+    .banner .swiper-slide .bg .pc_bg{display:none;}
+    .banner .swiper-slide .bg .m_bg{display: block;}
     .banner .swiper-slide .main_con{transform: none; top:auto; bottom:100px;}
     .banner .swiper-slide .main_con h2{font-size: 36px; line-height: 1; padding-bottom:1.5rem;}
     .banner .swiper-slide .main_con b{display: block;}
@@ -129,9 +153,18 @@ header .left_menu .gnb>li>a.on::after{content: '\f077';}
     .public .news span{left:15px; bottom:14px;}
     .public .controls{padding: 65px 0;}
     .pub_bg{display: none;}
-
-
-
-
-    
+    .who{padding-top: 75px;}
+    .who_bg{display: none;}
+    .who .des{margin: 0 13px;}
+    .who .rgiht_con{margin: 47px 0 50px;}  
+    .who .left_con .recruit{font-size: 12px; padding:0 10px;}
+    .footer{margin: 0 15px;}
+    .footer .f_top{height: 60px; line-height: 60px;}
+    .footer .f_top .fnb{float: none; width: 100%;}
+    .footer .f_top>div{display: none;}
+    .footer .f_top .fnb li{margin-right: 26px; }
+    .footer .f_top .fnb li a{font-size: 12px;}
+    .footer .f_bom{padding: 20px 0; line-height: 23px;}
+    .footer .f_bom>ul li{display: block; font-size: 11px;}
+    .footer .f_bom .copy{font-size: 11px;}
 }

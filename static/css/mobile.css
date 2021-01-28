@@ -14,4 +14,6 @@ header .right_menu .fam{margin-right: 70px;}
     .trigger_menu{height: 60px;}
     .banner .swiper-slide .main_con h2{font-size: 8vw;}
     .banner .swiper-slide .main_con p{font-size: 3.5vw;}
+    .public .news_tit{font-size: 4vw;}
+    .who .left_con .tit_info h3{font-size: 11vw;}
 }

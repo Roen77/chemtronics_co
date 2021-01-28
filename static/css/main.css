@@ -3,8 +3,6 @@
 .pc{position: relative;width: 100%; height: 100vh; overflow: hidden;}
 .pc .main{position: absolute;left:0;top:0;width: 100%; transition: all 0.5s ease-in-out;}
 section{width: 100%; height: 100vh;}
-footer{height: 500px; background-color: lightcoral; width: 100%;}
-section.who{background-color: lightgreen;}
 /* ######################## COMMON ############################ */
 body{font-family: 'Play','Noto Sans KR', sans-serif; font-weight: 400; line-height: 1; color:#fff; font-size: 16px; min-width: 360px;}
 body.hidden{overflow: hidden;}
@@ -134,6 +132,7 @@ header .right_menu .fam .list a{color:#222;}
 .banner .swiper-slide{position: relative; height:100%; width: 100vw !important;}
 .banner .swiper-slide .bg{position: absolute; left:0; top:0; width: 100%; height: 100%; z-index: -1;}
 .banner .swiper-slide .bg img{position: absolute; left:0; top:0; width: 100%; height: 100%;}
+.banner .swiper-slide .bg .m_bg{display: none;}
 .banner .swiper-slide .main_con{position: absolute; left:0; top:50%; transform: translateY(-50%); width: 100%; }
 .banner .swiper-slide .main_con h2{font-size:55px; line-height: 60px; font-weight: 700; padding-bottom: 28px; overflow: hidden; letter-spacing: -0.5px;}
 .banner .main_con b{opacity: 0; transform: translateY(50px);}
@@ -248,7 +247,7 @@ header .right_menu .lang.over h2>a{color:#222;}
 /* ######################## SECTION:inform ###################### */
 .inform{position: relative; text-align: center; color:#222;}
 .inform>.tit_info{position: absolute; z-index: ; width: 100%; text-align: center; padding-top: 74px;}
-.inform .des{padding: 0 100px;}
+.des{padding: 0 100px;}
 .inform .info_con{position: relative; display: flex; height: 100vh;}
 .inform .info_con>li{flex:1; border-right: 1px solid #eee; padding-top: 280px;}
 .inform.info_con>li:first-child{border-left: 1px solid #eee;}
@@ -279,7 +278,9 @@ header .right_menu .lang.over h2>a{color:#222;}
 .public .tit_info{padding: 125px 0 72px;}
 .public .tit_info p{color:#fff;}
 .public .news_slides{width: 100%;}
-.public .news_slides .swiper-slide{ background-color: #fff; height: 380px;}
+.public .news_slides .swiper-slide{position: relative;  height: 380px;}
+.public .news_slides .swiper-slide>a{display: block; width: 100%; height: 100%; background-color: #fff;}
+.public .news_slides .swiper-slide>a.animate{position: absolute; left:0; top:0; width: 100%; height: 100%; background-color: #fff; clip: rect(0,100px,380px,0);}
 .public .news{position: relative; padding: 16.84% 9.8% 0;  height: 100%; box-sizing: border-box; letter-spacing: -0.5px;} 
 .public .news_tit{line-height: 39px; font-size: 30px; overflow: hidden;  color:#222; font-weight: normal; margin-bottom: 22px; }
 .public .news_tit p{white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
@@ -289,7 +290,44 @@ header .right_menu .lang.over h2>a{color:#222;}
 .controls .arrows{margin: 0;}
 .public .controls .inner{max-width: none;}
 
+/* active */
+.public .news_slides .swiper-slide>a.motion{animation: clipAni 1.5s forwards;}
+
+/* ######################## SECTION:who ###################### */
+.who{position: relative; padding-top: 220px; box-sizing: border-box;}
+.who_bg{position: absolute; right: 0; top:0; background-color: #e2ecd9; height: 100%; width: 450px;}
+.who .des{position: relative; margin:0 100px; padding: 0;}
+.who .left_con .tit_info h3{font-size: 78px;} 
+.who .left_con .menu_list{max-width: 252px; margin-top: 70px;}
+.who .left_con .menu_list a{color:#888; height: 60px; line-height: 60px;}
+.who .left_con .recruit{display:inline-block;  margin-top: 75px; height: 64px; line-height: 64px; padding:0 94px 0 27px; background: #222 url(../images/ico_down.jpg) no-repeat right 20px center;}
+.who .rgiht_con{position: absolute; left:50.2%; top:0; max-width: 857px; right: 0;}
+.who .rgiht_con .pic{position: relative; width: 100%; height: 490px;}
+.who .rgiht_con img{position: absolute; left:0; top:0; width: 100%;height: 100%; clip: rect(0,100px,490px,0); }
+
+.who .rgiht_con .pic.motion img{animation: clipAni 1.5s forwards;}
+@keyframes clipAni{
+    100%{clip: rect(0,700px,490px,0);}
 }
+/* ######################## FOOTER ###################### */
+.footer{position: relative; border-top: 1px solid #e5e5e5; color:#b0b0b0; margin: 0 100px;}
+.footer a{color:inherit;}
+.footer .f_top{height: 100px; line-height: 100px; border-bottom: 1px solid #e5e5e5; overflow: hidden;}
+.footer .f_top .fnb{float: left;font-size: 0; width: 50%;}
+.footer .f_top>div{float: right; width: 230px; height: 100px; text-align: right;}
+.footer .f_top .fnb li{display: inline-block; margin-right: 42px;}
+.footer .f_top .fnb li b{color:#787878;}
+.footer .f_top .fnb li a{font-size: 13px;}
+.footer .f_bom{height: 115px; line-height:115px; overflow: hidden;}
+.footer .f_bom>ul{float: left; font-size: 0;} 
+.footer .f_bom>ul li{display: inline-block; font-size: 14px; margin-right: 18px;}
+.footer .f_bom>ul li span{color:#787878; margin-right: 18px;}
+.footer .f_bom .copy{float: right; font-size: 13px;} 
+.footer .f_bom .copy b{color:#ed1c24; font-weight: bold;}
+.goTopBtn{position: absolute; right: 15px; bottom:-200px; width: 46px; height: 46px; background-color: #ed1c24; text-align: center; line-height: 46px; opacity: 0; visibility: hidden; transition:all 0.3s;}
+.goTopBtn .fas{color:#fff;}
+
+
 
 
 

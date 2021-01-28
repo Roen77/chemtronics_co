@@ -19,6 +19,13 @@
     <script src="static/js/main.js"></script>
 </head>
 <body>
+    <ul class="navi_btns">
+        <li><a href="#" title="section01"><span class="hide">1</span></a></li>
+        <li><a href="#" title="section02"><span class="hide">2</span></a></li>
+        <li class="white"><a href="#" title="section03"><span class="hide">3</span></a></li>
+        <li><a href="#" title="section04"><span class="hide">4</span></a></li>
+        <li class="white"><a href="#" title="section05"><span class="hide">5</span></a></li>
+    </ul>
     <div class="wrap pc">
         <div class="main">
             <section class="section header">
@@ -269,7 +276,10 @@
                     <div class="swiper-container slide">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
-                                <div class="bg"><img src="static/images/main_visual_01.jpg" alt="1"></div>
+                                <div class="bg">
+                                    <img class="pc_bg" src="static/images/main_visual_01.jpg" alt="ELECTRONIC BUSINESS">
+                                    <img class="m_bg" src="static/images/main_visual_01_m.jpg" alt="ELECTRONIC BUSINESS">
+                                </div>
                                 <div class="main_con">
                                     <div class="inner">
                                         <h2><b>ELECTRONIC BUSINESS</b></h2>
@@ -278,7 +288,10 @@
                                 </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="bg"><img src="static/images/main_visual_02.jpg" alt="1"></div>
+                                <div class="bg">
+                                    <img class="pc_bg" src="static/images/main_visual_02.jpg" alt="CHEMICAL BUSINESS">
+                                    <img class="m_bg" src="static/images/main_visual_02_m.jpg" alt="CHEMICAL BUSINESS">
+                                </div>
                                 <div class="main_con">
                                     <div class="inner">
                                         <h2><b>CHEMICAL BUSINESS</b></h2>
@@ -287,7 +300,10 @@
                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="bg"><img src="static/images/main_visual_03.jpg" alt="1"></div>
+                                <div class="bg">
+                                    <img class="pc_bg" src="static/images/main_visual_03.jpg" alt="DISPLAY BUSINESS">
+                                    <img class="m_bg" src="static/images/main_visual_03_m.jpg" alt="DISPLAY BUSINESS">
+                                </div>
                                 <div class="main_con">
                                    <div class="inner">
                                     <h2><b>DISPLAY BUSINESS</b></h2>
@@ -296,7 +312,10 @@
                                </div>
                             </div>
                             <div class="swiper-slide">
-                                <div class="bg"><img src="static/images/main_visual_04.jpg" alt="1"></div>
+                                <div class="bg">
+                                    <img class="pc_bg" src="static/images/main_visual_04.jpg" alt="AUTOMATED DRIVING >BUSINESS">
+                                    <img class="m_bg" src="static/images/main_visual_04_m.jpg" alt="AUTOMATED DRIVING >BUSINESS">
+                                </div>
                                 <div class="main_con">
                                     <div class="inner">
                                         <h2><b>AUTOMATED DRIVING<br>BUSINESS</b></h2>
@@ -467,7 +486,7 @@
                    <div class="swiper-container news_slides">
                     <div class="swiper-wrapper">
                       <div class="swiper-slide">
-                        <a href="#">
+                        <a href="#" class="animate">
                             <div class="news ">
                                 <h3 class="news_tit">켐트로닉스, 일터혁신 우수기업<p>선정으로 `고용노동부 장관상` 수상</p></h3>
                                 <p>켐트로닉스, 일터혁신 우수기업 선정으로 `고용노동부장관상` 수상</p>
@@ -476,7 +495,7 @@
                         </a>
                       </div>
                       <div class="swiper-slide ">
-                        <a href="#">
+                        <a href="#" class="animate">
                             <div class="news ">
                                 <h3 class="news_tit">켐트로닉스, 금융위원회 주관 `혁신기업 국가대표1000` 선정</h3>
                                 <p>켐트로닉스, 금융위원회 주관 `혁신기업 국가대표1000` 선정</p>
@@ -485,7 +504,7 @@
                         </a>
                       </div>
                       <div class="swiper-slide">
-                        <a href="#">
+                        <a href="#" class="animate">
                             <div class="news">
                                 <h3 class="news_tit">K-미래차, 세계의 도로를 질주하라!</h3>
                                 <p>K-미래차, 세계의 도로를 질주하라!KBS1 중견만리 시즌2 3화 미래차_켐트로닉스 소개</p>
@@ -662,16 +681,48 @@
                  </div><!-- CONTROL -->
                 </div>
             </section>
-            <section class="section who">sec5</section>
-            <footer class="section footer"></footer>
+            <section class="section who">
+                <div class="who_bg animate ani_width"></div>
+                <div class="des">
+                   <div class="left_con">
+                        <div class="tit_info black animate">
+                            <h3><b>Who we are?</b></h3>
+                            <p><b>열정과 도전으로 미래를 창조하는 Global No.1 기업,Chemtronics
+                            </b></p>
+                        </div>
+                        <ul class="menu_list">
+                            <li><a href="#">인사제도</a></li>
+                            <li><a href="#">직무소개</a></li>
+                            <li><a href="#">채용공고</a></li>
+                        </ul>
+                        <a href="#" class="recruit">입사지원서 다운로드</a>
+                   </div>
+                   <div class="rgiht_con">
+                    <div class="pic animate"><img src="static/images/main_recruit_img.jpg" alt="who we are?"></div>
+                </div>
+                </div>
+            </section>
+            <footer class="section footer">
+                <div class="f_top">
+                    <ul class="fnb">
+                        <li><a href="#">기업소개</a></li>
+                        <li class="sitemap"><a href="#">사이트맵</a></li>
+                        <li><a href="#"><b>개인정보처리방침</b></a></li>
+                        <li><a href="#">원격근무솔루션</a></li>
+                    </ul>
+                    <div class="f_logo"><img src="static/images/logo.png" alt="CHEMTRONICS"></div>
+                </div>
+                <div class="f_bom clearfix">
+                    <ul>
+                        <li><span>본사</span>경기도 성남시 분당구 대왕판교로 644번길 49 DTC타워 3층</li>
+                        <li><span>Tel</span>031-776-7690</li>
+                        <li><span>Fax</span>031-776-7691</li>
+                    </ul>
+                    <div class="copy">&copy; 2020 <b>CHEMTRONICS</b> All Rights Reserved.</div>
+                </div>
+                <a href="#" class="goTopBtn"><i class="fas fa-chevron-up"></i></a>
+            </footer>
        </div>
-       <ul class="navi_btns">
-        <li><a href="#" title="section01"><span class="hide">1</span></a></li>
-        <li><a href="#" title="section02"><span class="hide">2</span></a></li>
-        <li class="white"><a href="#" title="section03"><span class="hide">3</span></a></li>
-        <li><a href="#" title="section04"><span class="hide">4</span></a></li>
-        <li class="white"><a href="#" title="section05"><span class="hide">5</span></a></li>
-    </ul>
     </div>   
 </body>
 </html>
