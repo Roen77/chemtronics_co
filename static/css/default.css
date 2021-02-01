@@ -15,8 +15,9 @@ b{font-weight: normal;}
 .clearfix::after { content:""; display:block; clear:both;}
 .clear {clear:both;}
 
-.skip { position: absolute; left: 0; top:-50px; width: 100%; height: 40px; line-height: 40px; text-align: center; background: #000; color: #fff; transition: all 0.5s;}
-.skip:focus { top: 0;}
+.skip{position: relative; z-index: 9999; left:0; width: 100%;}
+.skip>a { position: absolute;  left: 0; top:0; top:-50px; width: 100%; height: 40px; line-height: 40px; text-align: center; background: #000; color: #fff; transition: all 0.5s;}
+.skip>a:focus { top: 0;}
 
 
 

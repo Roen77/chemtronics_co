@@ -95,6 +95,7 @@ $(document).ready(function(){
                     $('.navi_btns>li').removeClass('active');
                     $(this).addClass("active");
                 })
+              
         
                 var wheellstate=false;
                 $('.section').on('mousewheel',function(e){
@@ -173,8 +174,6 @@ $(document).ready(function(){
         subHieght=$(".gnb .sub_con").outerHeight();
         var total=headerHeight+subHieght;
         header.stop().animate({height:total+'px'},200)
-        }else{
-            return
         }
     })
     .on('mouseleave focusout', function(){
@@ -186,7 +185,7 @@ $(document).ready(function(){
         if(winWidth>1221){
             activate($('header'));
             fam.add(lang).addClass('over');
-            subMenu.hide();
+            // subMenu.hide();
             $(this).find(".sub_con").show();
            }
 

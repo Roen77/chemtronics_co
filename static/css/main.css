@@ -22,7 +22,7 @@ a{color:#fff;}
 .animate.ani_width.motion{animation: coverWitdhAni 1s 0.2s forwards;}
 
 /* 햄버거 메뉴 */
-.trigger{position: absolute; width: 18px; height: 12px; top:50%; left:50%; transform: translate(-50%,-50%);}
+.trigger{position: absolute; width: 18px; height: 12px; top:50%; left:50%; transform: translate(-50%,-50%); cursor: pointer;}
 .trigger>span{position: absolute; width: 100%; height: 2px; background-color: #fff; transition: all 0.5s;}
 .trigger>span:nth-child(1){top:0;}
 .trigger>span:nth-child(2){top:50%;}
@@ -71,10 +71,20 @@ a{color:#fff;}
 .navi_btns{position: fixed; z-index: 150; left:49px; top:42%;}
 .navi_btns>li>a{position: relative; display: block; width: 4px; height: 4px; background-color: #d5d5d5; border-radius: 50%; margin-bottom: 33px;}
 .navi_btns>li>a::before{content: ''; position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); width: 16px; height: 16px; border-radius: 50%;  border: 1px solid transparent;}
+.navi_btns>li>a::after{content:attr(title); position: absolute; left:15px; top:50%; transform: translateY(-50%); width: 150px;background-color:#222; font-size: 15px; padding: 3px 0; opacity: 0; visibility: hidden;}
 .navi_btns>li.active>a{background-color: #fff;}
 .navi_btns>li.active>a::before{border-color: #fff;}
 .navi_btns>li.white.active>a{background-color: #585858;}
 .navi_btns>li.white.active>a::before{border-color: #585858;}
+
+.navi_btns>li>a:focus::after{animation: skipAni 2s forwards; }
+
+@keyframes skipAni{
+    70%{opacity: 1; visibility: visible;}
+    100%{opacity: 0; visibility: hidden;}
+}
+
+
 
 /* ######################## SECTION:header ###################### */
 header{position: absolute; left:0; top:0; width: 100%; height:100px; z-index: 100; transition:background-color 0.5s; }
@@ -175,7 +185,7 @@ header.active{background-color: #fff;}
 header.active .gnb>li>a{color:#222;}
 header .left_menu .gnb>li>a.on,
 header .left_menu .gnb>li.active>a,
-header .left_menu .gnb>li>a:hover,
+header .left_menu .gnb>li:hover>a,
 header .left_menu .gnb .depth2>li>a:hover{color:#ed1c24;}
 header .left_menu .gnb .depth2>li>a:hover::after{color:#ed1c24;}
 header .left_menu .gnb .depth2>li>a:hover::before{width: 100%;}
