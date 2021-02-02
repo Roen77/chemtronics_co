@@ -33,7 +33,7 @@ $(document).ready(function(){
                         if(currentHeight != $(window).height()){
                             totalHeight=currentHeight+prevHeight-currentHeight*2-($(window).height()-currentHeight);
                           }
-                          console.log(currentHeight);
+                        //   console.log(currentHeight);
                         $(this).attr('data-index',totalHeight);
                     })
                     sections.css({height:allHeight+'px'});
@@ -139,27 +139,27 @@ $(document).ready(function(){
 
     function init(){
         winWidth=$(window).width();
-        var winHeight=$(window).height();
         if(winWidth<1240){
             console.log('모바일')
             wrap.removeClass('pc');
             sections.removeAttr("style");
-            section.removeAttr("data-index");         
+            section.removeAttr("data-index");    
+            if(winWidth<800){
+                section.each(function(){
+                    $(this).find(".animate").removeClass('animate');
+                })
+              }     
         }else{
             console.log('pc');
             wrap.addClass('pc');
             section.removeAttr("style");
-            fullpage();
             $('.navi_btns>li').eq(0).addClass("active");
+                if($('.main_page').length>0){
+                    fullpage();
+                }
         }
 
-        if(winWidth<800){
-            section.each(function(){
-                $(this).find(".animate").removeClass('animate');
-            })
-          }
     }
-
     function activate(Elem){
         gnb.removeClass('active');
         Elem.addClass('active');
@@ -173,13 +173,12 @@ $(document).ready(function(){
         if(winWidth>1221){
         subHieght=$(".gnb .sub_con").outerHeight();
         var total=headerHeight+subHieght;
-        header.stop().animate({height:total+'px'},200)
+        header.animate({height:total+'px'},200)
         }
     })
     .on('mouseleave focusout', function(){
         if(winWidth>1221){
-            header.stop().animate({height:headerHeight+'px'},200)
-        }
+            header.stop().animate({height:headerHeight+'px'},200)}
     })
     gnb.on('mouseenter focusin',function(){
         if(winWidth>1221){
@@ -194,20 +193,20 @@ $(document).ready(function(){
         if(winWidth>1221){
             inactivate(header)
             fam.add(lang).removeClass('over');
-            subMenu.hide();
+                subMenu.hide();;
         }
     })
     fam.add(lang).on('focusin',function(){
         inactivate(header)
             fam.add(lang).removeClass('over');
-            subMenu.hide();;
-       
+                subMenu.hide();;       
     })
 
 
     /* 모바일 버전 메뉴 */
-    $('.gnb>li>a').click(function(){
+    $('.gnb>li>a').click(function(e){
         if(winWidth<1220){
+            e.preventDefault();
                 if($(this).hasClass('on')){
                     subMenu.stop().slideUp(function(){
                         $('.gnb>li>a').removeClass('on');
@@ -261,16 +260,55 @@ $(document).ready(function(){
            }else{
             $('.pc_trigger_menu').addClass('close').removeClass('open');
            }
-      
-       
+            
        }
+    })
+    var excuted=false;
+    if($('.sub').length>0){
+        $('.sub_menu_list h3').on('click focusin',function(e){
+            e.stopPropagation();
+            if(!excuted){
+                $(this).addClass('over').next('ul').slideDown(function(){
+                    excuted=true;
+                });
+                $(this).parent('div').siblings().find('ul').slideUp();
+            }else{
+                $(this).next('ul').slideUp(function(){
+                    excuted=false;
+                });
+            }
+            console.log(excuted)
+      
+        })
+        $('.wrap').on('click',function(){
+            $('.sub_menu_list h3').removeClass("over");
+            $('.sub_menu_list h3').next('ul').slideUp(function(){
+                excuted=false;
+            });
+        })
+    }
+
+    
+    var pageUrl=window.location.href;
+    var activeMenu;
+    gnb.add($(".sub_gnb>li")).each(function(){
+        var $this=$(this);
+        var subUrl= $this.find('a').attr('href');
+        var blankLink=pageUrl.indexOf('#'); 
+        var activeUrl=pageUrl.indexOf(subUrl);
+        if(activeUrl>-1 && blankLink == -1){
+            activeMenu=$this;
+            activeMenu.addClass('over')
+        }
+ 
 
     })
 
+
     
 
-
-    /*banner 슬라이드 */
+    if($('.main_page').length>0){
+         /*banner 슬라이드 */
     var loading=$('.banner .loading>li');
     var playBtn=$('.banner .play-btn>a');
     var swiper = new Swiper('.banner .swiper-container', {
@@ -412,16 +450,20 @@ $(document).ready(function(){
     })
 
 
+    }//index
       //메뉴 리사이즈될때 메뉴 수정
       function MenuResize(){
-        nav.removeClass('on');
-        $('.gnb>li>a').removeClass('on');
-        subMenu.hide();
-        subMenu.removeAttr('style')
-          if(winWidth<=1220){
+        // nav.removeClass('on');
+          if(winWidth>1220){
             $('.pc_trigger_menu').removeClass('open');
             trigger.add(lang).add(fam).removeClass("on");
             $(this).add(nav).add('.right_menu').removeClass('on'); 
+            $('body').removeClass('hidden');
+          }
+          if(winWidth>1000){
+            subMenu.hide();
+            $('.gnb>li>a').removeClass('on');
+            subMenu.removeAttr('style')
           }
           //800px 이하일때는 애니메이션 주지 않음
           if(winWidth<800){
@@ -432,9 +474,10 @@ $(document).ready(function(){
           
       }
       function mobileHeight(){
-             var sec=$('section.header');
+             var sec=$('.section.header');
              sec.css({height:$(window).height()+'px'});
              console.log('높이수정');
+             console.log('aaaaaa')
       }
 
         //infrom  숫자 애니메이션
@@ -500,22 +543,28 @@ $(document).ready(function(){
       $(".goTopBtn").click(function(){
           $("html, body").stop().animate({scrollTop:0})
       })
-      
+       
     
     $(window).on('resize',function(){
         MenuResize();
         init();
+    
     })
-
     $(window).scroll(function(){
+        console.log("스크롤")
         Motion();
     })
-
-    init();
     
+    init();
+
     if(winWidth<1240){
         mobileHeight();
     }
 
+
+
+
+
+    
 
 })//end

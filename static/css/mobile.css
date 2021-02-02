@@ -1,11 +1,13 @@
 /* 600px */
 header .right_menu .lang{display: none;}
 header .right_menu .fam{margin-right: 70px;}
+.sub_menu_list>div{width: 30%; min-width: 80px;}
 /* 480px */
 @media all and (max-width:480px){
     header{height: 60px;}
     header>.inner{height: 60px;}
-    header>.inner{padding: 0 0 0 20px;}
+    header>.inner{padding: 0;}
+    header .left_menu h2{margin: 0 15px;}
     header .left_menu h2>a{height: 60px; line-height: 60px;}
     header .left_menu h2 .mobile{height: 15px; padding-top: 20px;}
     header .right_menu{padding-top: 14px;}
@@ -16,4 +18,10 @@ header .right_menu .fam{margin-right: 70px;}
     .banner .swiper-slide .main_con p{font-size: 3.5vw;}
     .public .news_tit{font-size: 4vw;}
     .who .left_con .tit_info h3{font-size: 11vw;}
+    /* ######################## SUB COMMON###################### */
+    .sub_menu_list{top:60px;}
+    .sub_menu_list a,
+    .sub_menu_list .home,
+    .sub_menu_list h3>a{height: 32px; line-height: 32px; font-size: 3vw;}
+    .sub_menu_list ul{top:32px;}
 }

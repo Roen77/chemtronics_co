@@ -47,6 +47,7 @@ header .right_menu{padding-top: 25px;}
 .controls .arrows{margin-right: 30px;}
 
 /* active */
+/* header .left_menu .gnb>li:hover>a{display: none;} */
 header .right_menu.on>div{background-color: #222;}
 header .right_menu.on .fam>h2>a,
 header .right_menu.on .fam .list>li>a{color:#fff;}
@@ -57,7 +58,7 @@ header .left_menu .gnb>li>a.on::after{content: '\f077';}
 .global .tit_info{left:27px; bottom:32px;}
 .global .tit_info h3{font-size: 30px; margin-bottom: 20px;}
 .global .tit_info p{font-size: 12px;}
-.inform{height: auto;}
+section.inform{height: auto;}
 /* .inform .info_con{height: 770px;} */
 .inform .info_con{height: 730px;}
 .inform .des{padding: 0 30px;}
@@ -85,11 +86,14 @@ header .left_menu .gnb>li>a.on::after{content: '\f077';}
 .footer .f_bom .copy{float: none;} 
 .footer .f_bom>ul li{font-size: 13px;}
 .goTopBtn{bottom:15px; opacity: 1; visibility: visible;}
+/* ######################## SUB COMMON###################### */
+.sub_menu_list{top:80px; padding: 0;}
+
 
 
 /* 1024px */
 @media all and (max-width:1024px){
-    .who{height: auto; padding-top: 95px;}
+    section.who{height: auto; padding-top: 95px;}
     .who .rgiht_con{position: static;}
     .who .left_con .menu_list{max-width: 100%;}
     .who .left_con .recruit{width: 100%; box-sizing: border-box;}
@@ -143,7 +147,7 @@ header .left_menu .gnb>li>a.on::after{content: '\f077';}
     .inform .inquiry .tit_info{width: 45%;}
     .inform .inquiry .tit_info h3{font-size: 20px;margin-bottom: 9px;}
     .inform .inquiry .tit_info p{font-size: 12px;}
-    .public{height: auto;}
+    section.public{height: auto;}
     .pub_inner{padding-left: 15px;}
     .public .tit_info{padding: 65px 0 117px;}
     .public .news_slides .swiper-slide{height:192px;}

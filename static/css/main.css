@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&family=Play:wght@400;700&display=swap');
 .pc{position: relative;width: 100%; height: 100vh; overflow: hidden;}
 .pc .main{position: absolute;left:0;top:0;width: 100%; transition: all 0.5s ease-in-out;}
-section{width: 100%; height: 100vh;}
+.main_page section{width: 100%; height: 100vh;}
 /* ######################## COMMON ############################ */
 body{font-family: 'Play','Noto Sans KR', sans-serif; font-weight: 400; line-height: 1; color:#fff; font-size: 16px; min-width: 360px;}
 body.hidden{overflow: hidden;}
@@ -95,7 +95,7 @@ header .left_menu h2{margin-right: 66px;}
 header .left_menu h2 .mobile{display: none;}
 header .left_menu h2>a,
 header .left_menu .gnb>li>a{line-height: 100px; font-weight: bold;}
-header .left_menu .gnb>li>a{padding: 0 30px; font-size: 18px; transition:color 0.5s;}
+header .left_menu .gnb>li>a{padding: 0 30px; font-size: 18px;}
 header .left_menu .gnb{display: flex;}
 header .left_menu .gnb .sub_con{display: none; overflow: hidden; position: absolute; left:0; top:100px; width: 100%; background-color: #f5f5f5; height: 250px;}
 header .left_menu .gnb .inner{width: 1200px; margin:0 auto; padding:40px 0;  overflow: hidden;}
@@ -182,14 +182,15 @@ header .right_menu .fam .list a{color:#222;}
 
 /* active */
 header.active{background-color: #fff;}
+header .left_menu .gnb.on{height: 100vh;}
 header.active .gnb>li>a{color:#222;}
-header .left_menu .gnb>li>a.on,
-header .left_menu .gnb>li.active>a,
+header .left_menu .gnb>li.over>a,
 header .left_menu .gnb>li:hover>a,
 header .left_menu .gnb .depth2>li>a:hover{color:#ed1c24;}
 header .left_menu .gnb .depth2>li>a:hover::after{color:#ed1c24;}
 header .left_menu .gnb .depth2>li>a:hover::before{width: 100%;}
 header .left_menu .gnb>li.active .sub_con{display: block;}
+header .right_menu.on .lang h2>a{color:#fff;}
 header .right_menu .fam.active h2>a::after,
 header .right_menu .lang.active h2>a::after{content: '\f0d8';}
 header .right_menu .fam.over,
@@ -234,6 +235,12 @@ header .right_menu .lang.over h2>a{color:#222;}
     .inner{ padding: 0 65px; width: 100%;}
     header .left_menu .gnb>li>a{padding:0 20px;}
     .banner .controls .loading{left: 22%; right: 2%;}
+    
+}
+/* 1370px */
+@media all and (max-width:1370px){
+    header>.inner{padding: 0;}
+    header .left_menu h2{margin: 0 30px;}
     
 }
 /* ######################## SECTION:global ###################### */
@@ -313,10 +320,11 @@ header .right_menu .lang.over h2>a{color:#222;}
 .who .left_con .recruit{display:inline-block;  margin-top: 75px; height: 64px; line-height: 64px; padding:0 94px 0 27px; background: #222 url(../images/ico_down.jpg) no-repeat right 20px center;}
 .who .rgiht_con{position: absolute; left:50.2%; top:0; max-width: 857px; right: 0;}
 .who .rgiht_con .pic{position: relative; width: 100%; height: 490px;}
-.who .rgiht_con img{position: absolute; left:0; top:0; width: 100%;height: 100%; clip: rect(0,100px,490px,0); }
+.who .rgiht_con img{position: absolute; left:0; top:0; width: 100%;height: 100%; }
 
 .who .rgiht_con .pic.motion img{animation: clipAni 1.5s forwards;}
 @keyframes clipAni{
+    0%{clip: rect(0,100px,490px,0);}
     100%{clip: rect(0,700px,490px,0);}
 }
 /* ######################## FOOTER ###################### */
@@ -337,7 +345,34 @@ header .right_menu .lang.over h2>a{color:#222;}
 .goTopBtn{position: absolute; right: 15px; bottom:-200px; width: 46px; height: 46px; background-color: #ed1c24; text-align: center; line-height: 46px; opacity: 0; visibility: hidden; transition:all 0.3s;}
 .goTopBtn .fas{color:#fff;}
 
-
+/* ######################## SUB COMMON###################### */
+.sub .navi_btns{display: none;}
+.sub header{position: fixed; background-color: #fff;}
+.sub header::after{content: ''; position: absolute; width: 100%; height: 1px; background-color: #e5e5e5;}
+.sub header .gnb>li>a{color:#222;}
+.sub header .fam{background-color: #222;}
+.sub header .lang {background-color: #ddd;}
+.sub header .fam h2>a{color:#fff;}
+.sub header .lang h2>a{color:#222;}
+.sub .trigger>span{background-color: #222;}
+.sub_menu_list{position: fixed; left:0; top:100px; width: 100%; background-color: #f5f5f5; padding-left: 22px; box-sizing: border-box; border-bottom: 1px solid #e5e5e5; z-index: 10;}
+.sub_menu_list .home{float: left;}
+.sub_menu_list>div{position: relative; float: left; background-color: #f5f5f5; width: 180px;}
+.sub_menu_list h3>a{color:#222;  height: 50px; line-height: 50px;}
+.sub_menu_list .home{padding: 0 21px; box-sizing: border-box; line-height: 50px; height: 50%;}
+.sub_menu_list .home img{ width: 15px; height: 15px; vertical-align: middle;}
+.sub_menu_list a{display: block; height: 40px; line-height: 40px;  color:#222; font-size: 13px; box-sizing: border-box; padding: 0 15px;}
+.sub_menu_list ul{position: absolute; background-color: #f5f5f5; left:0; top:50px; width: 100%; display: none; border: 1px solid #e5e5e5; border-top: none; height: auto;}
+.sub_menu_list ul>li{width: 100%;}
+.sub_menu_list>div:nth-of-type(1)::before,
+.sub_menu_list>div:nth-of-type(1)::after{content: ''; position: absolute; width: 1px; height: 20px; background-color:#e5e5e5; top:50%; transform: translateY(-50%);}
+.sub_menu_list>div:nth-of-type(1)::before{left:0;}
+.sub_menu_list>div:nth-of-type(1)::after{right: 0;}
+.sub_menu_list .sub_gnb>li.over>a{color:#ed1c24;} 
+.visual{position: relative;}
+.visual .sub_bg{height: 750px;}
+.visual img{width: 100%; height: 100%;}
+/* ######################## SUB-PR-뉴스###################### */
 
 
 
