@@ -87,11 +87,13 @@ section.inform{height: auto;}
 .footer .f_bom .copy{float: none;} 
 .footer .f_bom>ul li{font-size: 13px;}
 .goTopBtn{bottom:15px; opacity: 1; visibility: visible;}
-/* ######################## SUB COMMON###################### */
+/* ######################## SUB ###################### */
 .sub_pg .fix header{top:-80px;}
 .visual .sub_bg{height: 620px; margin-top: 60px;}
 .sub_menu_list{top:80px;}
 .visual .sub_con_list li>a{width: 147px;}
+.sub_pg .inner{width: 100%; padding: 0 13px;}
+.content{padding: 82px 0 101px;}
 
 
 
@@ -105,7 +107,7 @@ section.inform{height: auto;}
     .who .rgiht_con{ max-width: none; width: 100%; margin: 59px 0 68px;}
     .who .rgiht_con .pic{max-width:100%; width: 100%; height: auto;}
     .who .rgiht_con .pic img{width: 100%; max-height: 414px;}
-    /* ######################## SUB COMMON###################### */
+    /* ######################## SUB ###################### */
     .visual .sub_bg{height: 490px;}
     .sub_menu_list{padding: 0;}
     .sub .tit_info{top:192px;}
@@ -116,8 +118,8 @@ section.inform{height: auto;}
     .visual .sub_con_list ul{position: absolute; width: 100%; left:0;  background-color:rgba(0, 0, 0, 0.795); display: none;}
     .visual .sub_con_list li{display: block;}
     .visual .sub_con_list li>a{height: 35px; line-height: 35px; width: 100%; color:#fff; box-sizing: border-box; padding: 0 15px;}
-    .visual .sub_con_list li.on{background-color: transparent;}
-    .visual .sub_con_list li.on>a{color:#ed1c24; font-weight: bold;}
+    .visual .sub_con_list li.over{background-color: transparent;}
+    .visual .sub_con_list li.over>a{color:#ed1c24; font-weight: bold;}
     .visual .sub_con_list li>a::before{content:'\f054';position: absolute;font-family: fontawesome;right: 15px; top:50%; transform: translateY(-50%); font-size: 10px;}
     .visual .sub_con_list h3.on::after{content: '\f0de';}
 }
@@ -190,10 +192,28 @@ section.inform{height: auto;}
     .footer .f_bom{padding: 20px 0; line-height: 23px;}
     .footer .f_bom>ul li{display: block; font-size: 11px;}
     .footer .f_bom .copy{font-size: 11px;}
-     /* ######################## SUB COMMON###################### */
+     /* ######################## SUB###################### */
+     .content .notice li .num,
+     .content .notice li .or,
+     .content .notice li .tit{width: 100%;}
+     .content  #category-button{width: 150px;}
+
      .visual .sub_bg{height: 358px;}
      .sub_pg .tit_info{top:142px;}
      .sub_pg .tit_info p b{font-size: 11px; line-height: 20px;}
      .sub_pg .tit_info h3 b{font-size: 27px;}
      .visual .sub_con_list a{font-size: 15px;}
+     .content{padding: 61px 0 80px;}
+     .content .notice .main_head,
+     .content .notice .num{display: none;}
+     .content .notice li{ position: relative; height: auto; font-size: 12px; padding: 9px 16px; box-sizing: border-box;}
+     .content .notice li:nth-child(2){border-top: 1px solid #ddd;}
+     .content .notice li>div{line-height: 28px; text-align: left;}
+     .content .notice li .tit>a{font-weight:700; font-size: 15px;}
+     .content .notice li .date,
+     .content .notice li .count{width: auto; display: inline-block;}
+     .content .notice li .date{margin-right: 32px;}
+     .content .notice li .or::before,
+     .content .notice li .date::before,
+     .content .notice li .count::before{content: '작성자'; color:#afafaf; margin-right: 5px;} 
 }

@@ -299,6 +299,8 @@ $(document).ready(function(){
                     $(this).addClass("on").next("ul").stop().slideDown();
                 }
             })
+        //서브페이지 셀렉트 메뉴
+        $( "#category" ).selectmenu();
 
     }//sub
     //서브페이지 스크롤시 헤더 고정
@@ -321,7 +323,7 @@ $(document).ready(function(){
     
     var pageUrl=window.location.href;
     var activeMenu;
-    gnb.add($(".sub_gnb>li")).each(function(){
+    gnb.add($(".sub_gnb>li")).add($(".sub_con_list li")).each(function(){
         var $this=$(this);
         var subUrl= $this.find('a').attr('href');
         var blankLink=pageUrl.indexOf('#'); 
