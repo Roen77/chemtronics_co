@@ -352,7 +352,6 @@ header .right_menu .lang.over h2>a{color:#222;}
 .sub_goTopBtn.fix{opacity: 1; visibility: visible; bottom:12px;}
 .sub_pg .pc{height: auto;}
 .sub_pg .pc .main{position: static;}
-.sub_pg .navi_btns{display: none;}
 .sub_pg .inner{width: 1202px;  margin: 0 auto; padding: 0;}
 .sub_pg  .tit_info{position: absolute; left:50%; top:257px; transform: translateX(-50%); text-align: center; z-index: 10;} 
 .sub_pg  .tit_info p b{display: block; font-weight: bold; letter-spacing: 0.5px; color:#fff; line-height: 26px; font-size: 13px; border-bottom: 1px solid #fff;}

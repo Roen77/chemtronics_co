@@ -216,4 +216,6 @@ section.inform{height: auto;}
      .content .notice li .or::before,
      .content .notice li .date::before,
      .content .notice li .count::before{content: '작성자'; color:#afafaf; margin-right: 5px;} 
+     .content .notice li .date::before{content:'등록일';}
+     .content .notice li .count::before{content:'조회수';}
 }
