@@ -178,7 +178,9 @@ $(document).ready(function(){
     })
     .on('mouseleave focusout', function(){
         if(winWidth>1221){
-            header.stop().animate({height:headerHeight+'px'},200)}
+            header.stop().animate({height:headerHeight+'px'},200,function(){
+                header.removeAttr('style')
+            })}
     })
     gnb.on('mouseenter focusin',function(){
         if(winWidth>1221){
@@ -263,30 +265,58 @@ $(document).ready(function(){
             
        }
     })
-    var excuted=false;
-    if($('.sub').length>0){
-        $('.sub_menu_list h3').on('click focusin',function(e){
+    if($('.sub_pg').length>0){
+        $('.sub_menu_list h3').on('click',function(e){
+            e.preventDefault();
             e.stopPropagation();
-            if(!excuted){
-                $(this).addClass('over').next('ul').slideDown(function(){
-                    excuted=true;
-                });
-                $(this).parent('div').siblings().find('ul').slideUp();
+            if($(this).hasClass("over")){
+                $(this).removeClass("over").next('ul').stop().slideUp();
             }else{
-                $(this).next('ul').slideUp(function(){
-                    excuted=false;
-                });
+                $(this).addClass("over").next('ul').stop().slideToggle();
+                $(this).parent("div").siblings().find("h3").removeClass("over").next('ul').slideUp();
             }
-            console.log(excuted)
-      
         })
         $('.wrap').on('click',function(){
             $('.sub_menu_list h3').removeClass("over");
             $('.sub_menu_list h3').next('ul').slideUp(function(){
                 excuted=false;
             });
+            if(winWidth<1024){
+                $(".sub_con_list>h3").removeClass("on").next('ul').hide();
+                $(".sub_con_list>h3").next('ul').removeAttr("style")
+            }
         })
+
+        //서브페이지 1024px 이하 서브 메뉴 수정
+            $(".sub_con_list>h3").click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+                if($(this).hasClass("on")){
+                    $(this).removeClass("on").next("ul").stop().slideUp(function(){
+                        $(this).removeAttr('style')
+                    });
+                }else{
+                    $(this).addClass("on").next("ul").stop().slideDown();
+                }
+            })
+
+    }//sub
+    //서브페이지 스크롤시 헤더 고정
+    function ElemFix(){
+        if(winOffset > $('.sub_pg .content').offset().top){
+            $(".header").addClass("fix");
+        }else{
+            $(".header").removeClass('fix');
+        }
+
+        if(winOffset>0){
+            $(".sub_goTopBtn").addClass('fix');
+        }else{
+            $(".sub_goTopBtn").removeClass('fix');
+        }
     }
+
+  
 
     
     var pageUrl=window.location.href;
@@ -299,10 +329,10 @@ $(document).ready(function(){
         if(activeUrl>-1 && blankLink == -1){
             activeMenu=$this;
             activeMenu.addClass('over')
-        }
- 
+        }  
 
     })
+
 
 
     
@@ -517,15 +547,17 @@ $(document).ready(function(){
       var sectionOffset;
       var aniMotion;
       function mobileOffset(Elem){
-        winOffset=$(window).scrollTop();
-        sectionOffset=Elem.offset().top-$(window).outerHeight()*0.6;
-        aniMotion=Elem.find('.animate');
-
-        if(sectionOffset<winOffset){
-            if(!aniMotion.hasClass("motion")){
-                aniMotion.addClass("motion")
+          if(Elem.length>0){
+            sectionOffset=Elem.offset().top-$(window).outerHeight()*0.6;
+            aniMotion=Elem.find('.animate');
+    
+            if(sectionOffset<winOffset){
+                if(!aniMotion.hasClass("motion")){
+                    aniMotion.addClass("motion")
+                }
             }
-        }
+          }
+ 
       }
 
       function Motion(){
@@ -540,7 +572,8 @@ $(document).ready(function(){
         }
       }
     
-      $(".goTopBtn").click(function(){
+      $(".goTopBtn, .sub_goTopBtn").click(function(e){
+          e.preventDefault();
           $("html, body").stop().animate({scrollTop:0})
       })
        
@@ -551,8 +584,12 @@ $(document).ready(function(){
     
     })
     $(window).scroll(function(){
-        console.log("스크롤")
+        winOffset=$(window).scrollTop();
         Motion();
+        console.log($('.sub').length);
+        if($('.sub_pg').length>0){
+            ElemFix();
+        }
     })
     
     init();

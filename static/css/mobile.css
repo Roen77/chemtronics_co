@@ -2,6 +2,7 @@
 header .right_menu .lang{display: none;}
 header .right_menu .fam{margin-right: 70px;}
 .sub_menu_list>div{width: 30%; min-width: 80px;}
+.sub_pg .tit_info p b{font-size: 2vw;}
 /* 480px */
 @media all and (max-width:480px){
     header{height: 60px;}
@@ -19,9 +20,11 @@ header .right_menu .fam{margin-right: 70px;}
     .public .news_tit{font-size: 4vw;}
     .who .left_con .tit_info h3{font-size: 11vw;}
     /* ######################## SUB COMMON###################### */
+    .sub_pg .fix header{top:-60px;}
     .sub_menu_list{top:60px;}
     .sub_menu_list a,
     .sub_menu_list .home,
     .sub_menu_list h3>a{height: 32px; line-height: 32px; font-size: 3vw;}
     .sub_menu_list ul{top:32px;}
+    .sub_menu_list a, .sub_menu_list .home, .sub_menu_list h3>a{padding: 0 15px;}
 }
