@@ -352,7 +352,6 @@ header .right_menu .lang.over h2>a{color:#222;}
 .sub_goTopBtn.fix{opacity: 1; visibility: visible; bottom:12px;}
 .sub_pg .pc{height: auto;}
 .sub_pg .pc .main{position: static;}
-.sub_pg .inner{width: 1202px;  margin: 0 auto; padding: 0;}
 .sub_pg  .tit_info{position: absolute; left:50%; top:257px; transform: translateX(-50%); text-align: center; z-index: 10;} 
 .sub_pg  .tit_info p b{display: block; font-weight: bold; letter-spacing: 0.5px; color:#fff; line-height: 26px; font-size: 13px; border-bottom: 1px solid #fff;}
 .sub_pg  .tit_info h3{margin-top: 15px;}
@@ -391,7 +390,7 @@ header .right_menu .lang.over h2>a{color:#222;}
 .sub_menu_list>div:nth-of-type(1)::after{right: 0;}
 .sub_menu_list ul>li>a{position: relative;}
 .sub_menu_list ul>li>a::after{content: '\f054'; position: absolute; font-family: fontawesome; right: 20px; font-size: 10px;}
-.sub_menu_list .sub_gnb>li.over>a{color:#ed1c24;} 
+.sub_menu_list .sub_gnb>li.over>a{color:#ed1c24; font-weight: bold;} 
 .visual{position: relative;}
 .visual .sub_bg{position: relative; height: 650px; width: 100%; margin-top: 100px;  background: url(../images/sub_visual_pr.jpg) no-repeat center; background-size: cover;}
 .visual .sub_con_list{position: absolute; width: 100%; height: 80px; left:0; bottom:0; background-color: rgba(0, 0, 0, 0.719); text-align: center; font-size: 0; z-index: 20;}
@@ -417,10 +416,11 @@ header .right_menu .lang.over h2>a{color:#222;}
 .content .notice li:hover{background-color: rgba(221, 221, 221, 0.253);}
 
 .content{color:#666666; padding: 100px 0 130px;}
+.content .inner{width: 1202px;  margin: 0 auto; padding: 0;}
 .content a{color:#666;}
 .content .notice_info>div{float: left;}
 .content .notice_info .total{font-size: 14px; text-transform: uppercase; line-height: 36px;}
-.content .notice_info .total span{color:#ed1c24;}
+.content .notice_info .total span{color:#ed1c24; font-weight: bold; margin-left: 3px;}
 .content .notice_info>.search{float: right;}
 .content .notice_info>.search label{display: none;}
 .content  .ui-selectmenu-text{font-size: 13px; color:#666;}
@@ -433,8 +433,9 @@ header .right_menu .lang.over h2>a{color:#222;}
 .content .pager>li{display: inline-block; margin: 0 1.5px;}
 .content .pager>li>a{display: block; font-size: 12px; background-color:#fff;; width: 32px; height: 32px; border: 1px solid #ddd; box-sizing: border-box; line-height: 32px; }
 .content .pager>li.on>a{background-color: #4b4b4b; border-color: #4b4b4b; color:#fff;}
-
-
+/* ######################## SUB-PR-공지사항###################### */
+.content .notice.announce li .writer{width: 11%;}
+.content .notice.announce .fas{margin-left: 2px;} 
 
 
 

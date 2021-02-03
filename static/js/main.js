@@ -328,14 +328,28 @@ $(document).ready(function(){
         var subUrl= $this.find('a').attr('href');
         var blankLink=pageUrl.indexOf('#'); 
         var activeUrl=pageUrl.indexOf(subUrl);
-        if(activeUrl>-1 && blankLink == -1){
-            activeMenu=$this;
-            activeMenu.addClass('over')
-        }  
-
+            if(activeUrl>-1 && blankLink == -1){
+                activeMenu=$this;
+                activeMenu.addClass('over')
+            }  
+    })   
+    var topUrl=["COMPANY","BUSINESS","IR","PR","HR","MANAGE"];
+    topUrl.forEach(function(v,i){
+        if(pageUrl.indexOf(v)>-1){
+            var gnbOver=gnb.eq(i);
+            var subOver=$(".sub_gnb>li").eq(i);
+           if(!gnbOver.hasClass("over")){
+               gnbOver.addClass("over");
+           }
+           if(!subOver.hasClass("over")){
+              subOver.addClass("over");
+           }
+        }
+    
     })
+ 
 
-
+        
 
     
 
