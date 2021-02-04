@@ -94,6 +94,7 @@ section.inform{height: auto;}
 .visual .sub_con_list li>a{width: 147px;}
 .sub_pg .inner{width: 100%; padding: 0 13px;}
 .content{padding: 82px 0 101px;}
+.content .tabs{padding: 0 0 94px;}
 
 
 
@@ -110,7 +111,7 @@ section.inform{height: auto;}
     /* ######################## SUB ###################### */
     .visual .sub_bg{height: 490px;}
     .sub_menu_list{padding: 0;}
-    .sub .tit_info{top:192px;}
+    .sub_pg .tit_info{top:192px;}
     .visual .sub_con_list{ height: auto; text-align: left; bottom:0;}
     .visual .sub_con_list h3{position: relative; display: block; background-color: rgba(0, 0, 0, 0.425);font-weight: normal; font-size: 16px;}
     .visual .sub_con_list h3::after{content: '\f0dd'; position: absolute; font-family: fontawesome; right: 15px; top:50%; transform: translateY(-50%);}
@@ -122,6 +123,8 @@ section.inform{height: auto;}
     .visual .sub_con_list li.over>a{color:#ed1c24; font-weight: bold;}
     .visual .sub_con_list li>a::before{content:'\f054';position: absolute;font-family: fontawesome;right: 15px; top:50%; transform: translateY(-50%); font-size: 10px;}
     .visual .sub_con_list h3.on::after{content: '\f0de';}
+    .content .gallery .video_txt p{display: none;}
+    .content .gall_list .main_img{height: auto;}
 }
 /* 800px */
 @media all and (max-width:800px){
@@ -197,13 +200,15 @@ section.inform{height: auto;}
      .content .notice li .or,
      .content .notice li .tit{width: 100%;}
      .content  #category-button{width: 150px;}
+     .content .tabs{padding: 0 0 50px;}
+     .content .tabs>li>a{height: 40px; line-height: 40px; font-size: 14px;}
 
      .visual .sub_bg{height: 358px;}
      .sub_pg .tit_info{top:142px;}
      .sub_pg .tit_info p b{font-size: 11px; line-height: 20px;}
      .sub_pg .tit_info h3 b{font-size: 27px;}
      .visual .sub_con_list a{font-size: 15px;}
-     .content{padding: 61px 0 80px;}
+     .content{padding: 51px 0 80px;}
      .content .notice .main_head,
      .content .notice .num{display: none;}
      .content .notice li{ position: relative; height: auto; font-size: 12px; padding: 9px 16px; box-sizing: border-box;}
@@ -218,4 +223,14 @@ section.inform{height: auto;}
      .content .notice li .count::before{content: '작성자'; color:#afafaf; margin-right: 5px;} 
      .content .notice li .date::before{content:'등록일';}
      .content .notice li .count::before{content:'조회수';}
+     .content .gallery{padding-left: 0;}
+     .content .gallery .video_txt{position: static; padding:35px 17px 0;}
+     .content .gallery .video_txt h3{font-size: 20px; margin-bottom: 48px;}
+     .content .gallery .video_txt h3 br{display: none;}
+     .content .gall_list li{float: left; width: 49%;} 
+     .content .gall_list li:nth-child(3n){margin-right:2%;}
+     .content .gall_list li:nth-child(2n){margin-right: 0;}
+     .content .gall_list li .txt{height: 105px; padding: 28px 10px 0; line-height: 25px;}
+     .content .gall_list li .txt h4{font-size: 16px;}
+     .content .gall_list li .txt .date{left:10px;}
 }

@@ -323,7 +323,7 @@ $(document).ready(function(){
     
     var pageUrl=window.location.href;
     var activeMenu;
-    gnb.add($(".sub_gnb>li")).add($(".sub_con_list li")).each(function(){
+    gnb.add($(".sub_gnb>li")).add($(".sub_con_list li")).add(".tabs>li").each(function(){
         var $this=$(this);
         var subUrl= $this.find('a').attr('href');
         var blankLink=pageUrl.indexOf('#'); 

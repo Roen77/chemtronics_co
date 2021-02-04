@@ -1,8 +1,10 @@
 /* 600px */
 header .right_menu .lang{display: none;}
 header .right_menu .fam{margin-right: 70px;}
-.sub_menu_list>div{width: 30%; min-width: 80px;}
+.sub_menu_list>div{width: 28%; min-width:80px;}
 .sub_pg .tit_info p b{font-size: 2vw;}
+.content .gall_list li .txt h4{line-height: 22px;}
+.content .gallery .video_txt h3{font-size: 20px;}
 /* 480px */
 @media all and (max-width:480px){
     header{height: 60px;}
@@ -27,4 +29,6 @@ header .right_menu .fam{margin-right: 70px;}
     .sub_menu_list h3>a{height: 32px; line-height: 32px; font-size: 3vw;}
     .sub_menu_list ul{top:32px;}
     .sub_menu_list a, .sub_menu_list .home, .sub_menu_list h3>a{padding: 0 15px;}
+    .content .tabs>li{width: 50%;}
+    .content .tabs>li>a{width: 100%;}
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>켐트로닉스 - PR - 공지사항</title>
+    <title>켐트로닉스 - PR - 홍보갤러리</title>
     <link rel="stylesheet" href="../static/css/default.css">
     <link rel="stylesheet" href="../static/css/jquery-ui.min.css">
     <!-- JQUERY & JQUERY ui -->
@@ -278,11 +278,18 @@
                         </ul>
                     </div>
                     <div>
-                        <h3><a href="#">공지사항</a></h3>
+                        <h3><a href="#">홍보갤러리</a></h3>
                         <ul class="sub_gnb">
                             <li><a href="PR_news.html">뉴스</a></li>
                             <li><a href="PR_notice.html">공지사항</a></li>
                             <li><a href="PR_gallery.html">홍보갤러리</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3><a href="#">홍보영상</a></h3>
+                        <ul class="sub_gnb">
+                            <li><a href="PR_gallery.html">홍보영상</a></li>
+                            <li><a href="#">사진첩</a></li>
                         </ul>
                     </div>
                 </div>
@@ -292,11 +299,11 @@
                 <div class="tit_info">
                     <p><b>CHALLENGE THE NEW CHANGE THE WORLD
                     </b></p>
-                    <h3><b>Notice</b></h3>
+                    <h3><b>PR Gallery</b></h3>
                 </div>
                 <div class="sub_bg"></div>
                 <div class="sub_con_list">
-                    <h3><a href="#">공지사항</a></h3>
+                    <h3><a href="#">홍보갤러리</a></h3>
                     <ul>
                         <li><a href="PR_news.html">뉴스</a></li>
                         <li><a href="PR_notice.html">공지사항</a></li>
@@ -305,45 +312,94 @@
                 </div>
             </section>
             <!-- section:visual -->
-            <section class="content">
+            <section class="content promote">
                 <div class="inner">
+                    <ul class="gall_tabs tabs">
+                        <li><a href="PR_gallery.html">홍보영상</a></li>
+                        <li><a href="#">사진첩</a></li>
+                    </ul>
                     <div class="notice_info clearfix">
-                        <div class="total">Total:<span>3</span></div>
+                        <div class="total">Total:<span>11</span></div>
+                        <div class="search">
+                            <label for="category">제목</label>
+                            <select name="category" id="category">
+                                <option selected>제목</option>
+                                <option>내용</option>
+                                <option>작성자</option>
+                            </select>
+                            <label for="look">검색</label>
+                            <input type="text" id="look" placeholder="검색어를 입력해주세요">
+                            <button>search</button>
+                        </div>
                     </div>
-                    <div class="notice announce">
-                        <ul>
-                            <li class="main_head">
-                                <div class="num">번호</div>
-                                <div class="tit">제목</div>
-                                <div class="writer">작성자</div>
-                                <div class="date">등록일</div>
-                                <div class="count">조회수</div>
-                            </li>
-                            <li>
-                                <div class="num">3</div>
-                                <div class="tit"><a href="#">당사의 음해성기사에 대한 공식 입장</a></div>
-                                <div class="writer">관리자</div>
-                                <div class="date">2020-09-18</div>
-                                <div class="count">756</div>
-                            </li>
-                            <li>
-                                <div class="num">2</div>
-                                <div class="tit"><a href="#">전자증권 전환 대상 주권 권리자(주주) 보호 및 조치사항 안내<i class="fas fa-file-download"></i></a></div>
-                                <div class="writer">관리자</div>
-                                <div class="date">2020-08-26</div>
-                                <div class="count">250</div>
-                            </li>
-                            <li>
-                                <div class="num">1</div>
-                                <div class="tit"><a href="#">평택사업장 상반기 소화전훈련 및 심폐소생훈련 실시</a></div>
-                                <div class="writer">관리자</div>
-                                <div class="date">2020-07-22</div>
-                                <div class="count">239</div>
-                            </li>
-                        </ul>
+                    <div class="gallery">
+                        <div class="video">
+                            <iframe width="799" height="424" src="https://www.youtube.com/embed/4gEM07M5hAg" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="video_txt">
+                            <h3>중견만리2 켐트로닉스<br>자율주행(V2X기술) 소개 영상</h3>
+                            <p>중견만리2 켐트로닉스 자율주행 소개 영상</p>
+                        </div>
                     </div>
+                    <ul class="gall_list clearfix">
+                        <li><a href="#">
+                            <div class="main_img">
+                                <img src="../static/images/gallery_01.jpg" alt="중견만리2 켐트로닉스 자율주행(V2X기술) 소개 영상">
+                            </div>
+                            <div class="txt">
+                                <h4>중견만리2 켐트로닉스 자율주행(V2X기술) 소개 영상</h4>
+                                <p class="date">2021-01-26</p>
+                            </div>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="main_img">
+                                <img src="../static/images/gallery_02.jpg" alt="켐트로닉스 자율주행사업부 소개 영상 (Chemtronics's Automated Driving)">
+                            </div>
+                            <div class="txt">
+                                <h4>켐트로닉스 자율주행사업부 소개 영상 (Chemtronics's Automated Driving)</h4>
+                                <p class="date">2021-01-15</p>
+                            </div>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="main_img">
+                                <img src="../static/images/gallery_03.jpg" alt="중견만리2 켐트로닉스 자율주행(V2X기술) 소개 영상">
+                            </div>
+                            <div class="txt">
+                                <h4>V2X 사업 소개 영상 (Business Introduction Video)</h4>
+                                <p class="date">2021-01-15</p>
+                            </div>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="main_img">
+                                <img src="../static/images/gallery_04.jpg" alt="켐트로닉스 2018 한마음 체육대회">
+                            </div>
+                            <div class="txt">
+                                <h4>켐트로닉스 2018 한마음 체육대회</h4>
+                                <p class="date">2019-02-15</p>
+                            </div>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="main_img">
+                                <img src="../static/images/gallery_05.jpg" alt="켐트로닉스 V2X 홍보영상">
+                            </div>
+                            <div class="txt">
+                                <h4>켐트로닉스 V2X 홍보영상</h4>
+                                <p class="date">2018-06-15</p>
+                            </div>
+                        </a></li>
+                        <li><a href="#">
+                            <div class="main_img">
+                                <img src="../static/images/gallery_06.jpg" alt="[클릭! 이 기업] 켐트로닉스, 자율주행기술로 해외시장 넘본다">
+                            </div>
+                            <div class="txt">
+                                <h4>[클릭! 이 기업] 켐트로닉스, 자율주행기술로 해외시장 넘본다</h4>
+                                <p class="date">2018-05-18</p>
+                            </div>
+                        </a></li>
+                    </ul>
                     <ul class="pager">
                         <li class="on"><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
                     </ul>
                 </div>
             </section>
