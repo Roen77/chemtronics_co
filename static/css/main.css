@@ -413,7 +413,7 @@ header .right_menu .lang.over h2>a{color:#222;}
 .content .search {height: 40px; font-size: 0;}
 .content .search #category-button{width: 100px; height: 40px; box-sizing: border-box; vertical-align: top;}
 .content .search input[type=text]{height: 100%; vertical-align: top; box-sizing: border-box; border: 1px solid #ccc; width: 250px;}
-.content .search  button{position: relative; margin-left: -1px; height: 100%; border: none; font-size: 0; width: 40px; background-color: #333;}
+.content .search  button{position: relative; cursor: pointer; margin-left: -1px; height: 100%; border: none; font-size: 0; width: 40px; background-color: #333;}
 .content .search  button::after{content: '\f002'; position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); font-family: fontawesome; font-size: 16px; color:#fff;}
 /* tab메뉴 */
 .content .tabs{font-size: 0; text-align: center; padding:10px 0 98px;}
