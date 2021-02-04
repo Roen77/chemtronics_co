@@ -2,6 +2,7 @@
 header .right_menu .lang{display: none;}
 header .right_menu .fam{margin-right: 70px;}
 .sub_menu_list>div{width: 28%; min-width:80px;}
+.sub_pg .tit_info{width: 70%;}
 .sub_pg .tit_info p b{font-size: 2vw;}
 .content .gall_list li .txt h4{line-height: 22px;}
 .content .gallery .video_txt h3{font-size: 20px;}

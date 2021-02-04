@@ -343,11 +343,12 @@ $(document).ready(function(){
            }
            if(!subOver.hasClass("over")){
               subOver.addClass("over");
+              console.log(subOver);
            }
         }
     
     })
- 
+
 
         
 

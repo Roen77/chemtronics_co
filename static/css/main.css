@@ -449,7 +449,7 @@ header .right_menu .lang.over h2>a{color:#222;}
 .content .pager>li>a{display: block; font-size: 12px; background-color:#fff;; width: 32px; height: 32px; border: 1px solid #ddd; box-sizing: border-box; line-height: 32px; }
 .content .pager>li.on>a{background-color: #4b4b4b; border-color: #4b4b4b; color:#fff;}
 /* ######################## SUB-PR-공지사항###################### */
-.content .notice.announce li .writer{width: 11%;}
+.content .notice li .writer{width: 11%;}
 .content .notice.announce .fas{margin-left: 2px;} 
 /* ######################## SUB-PR-홍보갤러리###################### */
 .content .gallery{position: relative; padding-left:400px; border: 1px solid #eee; overflow: hidden;}
@@ -469,6 +469,12 @@ header .right_menu .lang.over h2>a{color:#222;}
 
 /* hover */
 .content .gall_list li img:hover{transform: scale(1.1);}
+/* ######################## SUB-IR-결산정보###################### */
+.IR.visual .sub_bg{background-image: url(../images/sub_visual_ir.jpg);}
+.IR_con.content .notice li .file{width: 13%;}
+.IR_con.content .notice li .tit{width: 57%;}
+.IR_con.content .notice li .file .fas{margin-right: 5px;}
+.IR_con.content .notice.book li .tit{width: 68%;}
 
 
 

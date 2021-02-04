@@ -199,6 +199,8 @@ section.inform{height: auto;}
      .content .notice li .num,
      .content .notice li .or,
      .content .notice li .tit{width: 100%;}
+     .content .notice li .writer,
+     .IR_con.content .notice li .file{width: auto; margin-right: 31px;}
      .content  #category-button{width: 150px;}
      .content .tabs{padding: 0 0 50px;}
      .content .tabs>li>a{height: 40px; line-height: 40px; font-size: 14px;}
@@ -220,9 +222,14 @@ section.inform{height: auto;}
      .content .notice li .date{margin-right: 32px;}
      .content .notice li .or::before,
      .content .notice li .date::before,
+     .content .notice li .writer::before, 
      .content .notice li .count::before{content: '작성자'; color:#afafaf; margin-right: 5px;} 
      .content .notice li .date::before{content:'등록일';}
      .content .notice li .count::before{content:'조회수';}
+     .content .notice li .writer::before{content:'작성자';}
+     .IR_con.content .notice li .file .fas{margin-right: 5px;}
+    .IR_con.content .notice li .tit{font-size: 15px; font-weight: bold;}
+    .IR_con.content .notice.book li .tit{width: 100%;}
      .content .gallery{padding-left: 0;}
      .content .gallery .video_txt{position: static; padding:35px 17px 0;}
      .content .gallery .video_txt h3{font-size: 20px; margin-bottom: 48px;}
