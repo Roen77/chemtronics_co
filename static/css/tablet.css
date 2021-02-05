@@ -240,4 +240,15 @@ section.inform{height: auto;}
      .content .gall_list li .txt{height: 105px; padding: 28px 10px 0; line-height: 25px;}
      .content .gall_list li .txt h4{font-size: 16px;}
      .content .gall_list li .txt .date{left:10px;}
+     /* input 요소 */
+     .content .notice_info>.search{width: 80%; text-align: right;}
+     .content .search #category-button{width: 20%;}
+     .content .ui-selectmenu-text{font-size: 11px;}
+     .content .search input[type=text]{width: 50%; font-size: 11px;}
+     /* 테이블 */
+     .content .tb_con{ overflow-x: auto;}
+     .content .tb_con .tb_bg{display: block;}
+     .content table{width: 700px;}
+     .content table thead th{font-size: 14px;}
+     .content table tbody td{font-size: 12px;}
 }

@@ -301,6 +301,10 @@ $(document).ready(function(){
             })
         //서브페이지 셀렉트 메뉴
         $( "#category" ).selectmenu();
+        //모바일에서 테이블 클릭시
+        $(".content .tb_con .tb_bg").on('touchstart click',function(){
+            $(this).fadeOut();
+        })
 
     }//sub
     //서브페이지 스크롤시 헤더 고정
@@ -334,6 +338,22 @@ $(document).ready(function(){
             }  
     })   
     var topUrl=["COMPANY","BUSINESS","IR","PR","HR","MANAGE"];
+    var subUrl=["gallery","refer"]
+    var menuOver=$(".sub_con_list li");
+    var topmenuOver=$(".sub_menu_list>div:nth-of-type(2) .sub_gnb>li");
+    function subUrlCk(subUrl,El){
+        if(pageUrl.indexOf(subUrl)>-1){
+            El.each(function(){
+                var url =$(this).find('a').attr('href');
+                if(url.includes(subUrl)){
+                    if(!$(this).hasClass("over")){
+                        $(this).addClass('over');
+                    }
+                }
+            })
+        }
+    }
+
     topUrl.forEach(function(v,i){
         if(pageUrl.indexOf(v)>-1){
             var gnbOver=gnb.eq(i);
@@ -343,11 +363,16 @@ $(document).ready(function(){
            }
            if(!subOver.hasClass("over")){
               subOver.addClass("over");
-              console.log(subOver);
            }
+           subUrl.forEach(function(v){
+            subUrlCk(v,menuOver);
+            subUrlCk(v,topmenuOver);
+           })
         }
     
     })
+
+
 
 
         
@@ -500,8 +525,7 @@ $(document).ready(function(){
     }//index
       //메뉴 리사이즈될때 메뉴 수정
       function MenuResize(){
-        // nav.removeClass('on');
-          if(winWidth>1220){
+          if(winWidth>800){
             $('.pc_trigger_menu').removeClass('open');
             trigger.add(lang).add(fam).removeClass("on");
             $(this).add(nav).add('.right_menu').removeClass('on'); 
@@ -596,9 +620,9 @@ $(document).ready(function(){
        
     
     $(window).on('resize',function(){
+        winWidth=$(window).width();
         MenuResize();
-        init();
-    
+        init();   
     })
     $(window).scroll(function(){
         winOffset=$(window).scrollTop();
@@ -611,6 +635,9 @@ $(document).ready(function(){
     
     init();
 
+    // window.addEventListener('resize',function(){
+    //     console.log('풀스크린')
+    // })
     if(winWidth<1240){
         mobileHeight();
     }
