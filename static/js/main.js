@@ -305,6 +305,16 @@ $(document).ready(function(){
         $(".content .tb_con .tb_bg").on('touchstart click',function(){
             $(this).fadeOut();
         })
+        //서브페이짖 재무정보 탭메뉴
+        $('.financial_tab>li').eq(0).addClass("on")
+        $('.financial_tab>li').click(function(e){
+            e.preventDefault();
+            var index=$(this).index();
+            var tabMenu=$('.content .tabs');
+            $('.financial_tab>li').removeClass("on");
+            $(this).addClass("on");
+            tabMenu.hide().eq(index).show();
+        })
 
     }//sub
     //서브페이지 스크롤시 헤더 고정

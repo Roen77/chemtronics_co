@@ -95,6 +95,9 @@ section.inform{height: auto;}
 .sub_pg .inner{width: 100%; padding: 0 13px;}
 .content{padding: 82px 0 101px;}
 .content .tabs{padding: 0 0 94px;}
+/* 테이블 */
+.content .financial tbody th,
+.content .financial tbody td{font-size: 14px;}
 
 
 
@@ -228,7 +231,7 @@ section.inform{height: auto;}
      .content .notice li .count::before{content:'조회수';}
      .content .notice li .writer::before{content:'작성자';}
      .IR_con.content .notice li .file .fas{margin-right: 5px;}
-    .IR_con.content .notice li .tit{font-size: 15px; font-weight: bold;}
+    .IR_con.content .notice li .tit{font-size: 15px; font-weight: bold; width: 100%;}
     .IR_con.content .notice.book li .tit{width: 100%;}
      .content .gallery{padding-left: 0;}
      .content .gallery .video_txt{position: static; padding:35px 17px 0;}
@@ -248,7 +251,10 @@ section.inform{height: auto;}
      /* 테이블 */
      .content .tb_con{ overflow-x: auto;}
      .content .tb_con .tb_bg{display: block;}
-     .content table{width: 700px;}
-     .content table thead th{font-size: 14px;}
+     .content table{width: 650px;}
+     .content table thead th,
      .content table tbody td{font-size: 12px;}
+     .content .financial tbody th,
+     .content .financial tbody td{font-size: 12px;}
+     .content .financial_tab>li>a{width: 100px;}
 }
