@@ -571,6 +571,20 @@ header .right_menu .lang.over h2>a{color:#222;}
 .et_con .main_txt>div>ul>li{position: relative; margin-bottom: 9px; margin-left: 15px;}
 .et_con .main_txt>div>ul>li::before{content: '\f0da'; position: absolute; font-family: fontawesome; left:-10px; top:1px; font-size: 17px;}
 .et_con .main_txt>div>ul>li>p{line-height: 24px; color:#888;}
+/* ######################## SUB-윤리경영-분쟁광물 관리정책###################### */
+.content.conflict .inner{padding: 0 15px; box-sizing: border-box;}
+.conflict ul>li>h4{position: relative; font-size: 17px; font-weight: bold; color:#222; line-height: 30px; margin-bottom: 8px;}
+.conflict ul>li>h4::before{content: '\f00c'; position: absolute; left:-17px; font-family: fontawesome; font-size: 9px; color:#ee2b39;}
+.conflict ul>li{margin-bottom: 38px;}
+.conflict ul.bom_txt>li:last-child{margin-bottom: 0;}
+.conflict ul>li>ul>li{ position: relative; margin-bottom: 8px; margin-left: 10px; }
+.conflict ul>li>ul>li::before{content:' \f0da'; position: absolute; font-family: fontawesome; top:2px; left:-10px;  }
+.conflict ul>li p{line-height: 24px; color:#888; letter-spacing: -0.5px;}
+.conflict ul>li p span{color:#ee2b33;}
+.conflict .conflict_img{position: relative; height: 488px;}
+.conflict .conflict_img>div{position: absolute; width: 100%; text-align: center; left:50%; top:50%; transform: translate(-50%,-50%);}
+
+
 
 
 

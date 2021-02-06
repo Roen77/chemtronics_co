@@ -7,6 +7,9 @@ header .right_menu .fam{margin-right: 70px;}
 .content .gall_list li .txt h4{line-height: 22px;}
 .content .gallery .video_txt h3{font-size: 20px;}
 .stock .stock_head table.tb_main tr.last td{padding: 0 8%;}
+.conflict .conflict_img{height: auto;}
+.conflict .conflict_img>div{position: static;  transform: none;}
+.conflict .conflict_img>div>img{width: 70%; max-width: 70%; margin: 10px 0;}
 /* 480px */
 @media all and (max-width:480px){
     header{height: 60px;}
@@ -24,13 +27,17 @@ header .right_menu .fam{margin-right: 70px;}
     .public .news_tit{font-size: 4vw;}
     .who .left_con .tit_info h3{font-size: 11vw;}
     /* ######################## SUB ###################### */
+    .sub_menu_list {min-width: 300px;}
+    .sub_menu_list h3>a::after{right: 1vw;}
+    .sub_menu_list a, .sub_menu_list .home, .sub_menu_list h3>a{font-size: 2vw; padding: 0 2vw; white-space:nowrap;}
     .sub_pg .fix header{top:-60px;}
     .sub_menu_list{top:60px;}
     .sub_menu_list a,
     .sub_menu_list .home,
-    .sub_menu_list h3>a{height: 32px; line-height: 32px; font-size: 3vw;}
+    .sub_menu_list h3>a{height: 32px; line-height: 32px; font-size: 2.5vw;}
     .sub_menu_list ul{top:32px;}
-    .sub_menu_list a, .sub_menu_list .home, .sub_menu_list h3>a{padding: 0 15px;}
+    .sub_menu_list a, .sub_menu_list .home, .sub_menu_list h3>a{padding: 0 2vw;}
+    .sub_menu_list ul>li>a::after{right: 6%;}
     .content .tabs>li{width: 50%;}
     .content .tabs>li>a{width: 100%;}
 }

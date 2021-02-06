@@ -106,6 +106,10 @@ section.inform{height: auto;}
 .stock .stock_head table tr th, .stock .stock_head table tr td {padding: 0 10px;}
 .et_con .main_txt>div>p{margin-bottom: 10px;}
 .et_con .main_txt>div>ul{width: 90%;}
+.content.conflict .inner{padding: 0 36px;}
+.conflict .conflict_img{height: 400px;}
+.conflict .conflict_img>div>img{max-width: 49%;}
+
 
 
 
@@ -284,4 +288,9 @@ section.inform{height: auto;}
      .et_con .main_txt>div>p{font-size: 13px; line-height: 20px;}
      .et_con .main_txt>div>ul{width: 100%;}
      .et_con .main_txt>div>ul>li>p{font-size: 14px; line-height: 17px;}
+     .conflict ul > li > h4{font-size: 14px;}
+     .conflict ul > li p{font-size: 13px;}
+     .conflict .conflict_img{height: 300px;}
+     .conflict ul.top_txt>li{margin-bottom: 0;}
+    
 }
