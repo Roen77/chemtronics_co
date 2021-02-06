@@ -104,6 +104,8 @@ section.inform{height: auto;}
 .stock .stock_head table tr.center em{font-size: 14px;}
 .stock .stock_head table.tb_main td{font-size: 15px;}
 .stock .stock_head table tr th, .stock .stock_head table tr td {padding: 0 10px;}
+.et_con .main_txt>div>p{margin-bottom: 10px;}
+.et_con .main_txt>div>ul{width: 90%;}
 
 
 
@@ -277,4 +279,9 @@ section.inform{height: auto;}
      .stock .stock_head table.tb_top th{height: 35px;}
      .stock .stock_head table.tb_main tr.last td{padding: 0 70px;}
      .content.stock .new>a{padding: 8px 20px; font-size: 12px;}
+     .content.et_con{padding: 50px 0;}
+     .et_con .main_haading h3{font-size: 33px; line-height: 50px;}
+     .et_con .main_txt>div>p{font-size: 13px; line-height: 20px;}
+     .et_con .main_txt>div>ul{width: 100%;}
+     .et_con .main_txt>div>ul>li>p{font-size: 14px; line-height: 17px;}
 }
