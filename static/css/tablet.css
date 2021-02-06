@@ -98,6 +98,13 @@ section.inform{height: auto;}
 /* 테이블 */
 .content .financial tbody th,
 .content .financial tbody td{font-size: 14px;}
+.stock .stock_head table tr.center td b{font-size: 40px;}
+.stock .stock_head table tr th,
+ .stock .stock_head table tr td,
+.stock .stock_head table tr.center em{font-size: 14px;}
+.stock .stock_head table.tb_main td{font-size: 15px;}
+.stock .stock_head table tr th, .stock .stock_head table tr td {padding: 0 10px;}
+
 
 
 
@@ -128,6 +135,7 @@ section.inform{height: auto;}
     .visual .sub_con_list h3.on::after{content: '\f0de';}
     .content .gallery .video_txt p{display: none;}
     .content .gall_list .main_img{height: auto;}
+
 }
 /* 800px */
 @media all and (max-width:800px){
@@ -257,4 +265,16 @@ section.inform{height: auto;}
      .content .financial tbody th,
      .content .financial tbody td{font-size: 12px;}
      .content .financial_tab>li>a{width: 100px;}
+     .content .tb_fix .tb_con{overflow-x: visible;}
+     .content .tb_fix table{width: 100%;}
+     .stock .stock_head>.tb{float: none; width: 100%; margin-right: 0;}
+     .stock .stock_head table.tb_main tr{height: 50px;}
+     .stock .stock_head table tr.center{height: 80px;}
+     .stock .stock_head table tr.center td b{font-size: 28px;}
+     .stock .stock_head table tr.center em{bottom:4px; font-size: 12px; padding: 8px 11px;}
+     .stock .stock_head table.tb_bom tr,
+     .stock .stock_head table.tb_bom td{height: 33px; font-size: 12px;}
+     .stock .stock_head table.tb_top th{height: 35px;}
+     .stock .stock_head table.tb_main tr.last td{padding: 0 70px;}
+     .content.stock .new>a{padding: 8px 20px; font-size: 12px;}
 }

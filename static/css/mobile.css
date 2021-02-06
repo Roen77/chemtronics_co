@@ -6,6 +6,7 @@ header .right_menu .fam{margin-right: 70px;}
 .sub_pg .tit_info p b{font-size: 2vw;}
 .content .gall_list li .txt h4{line-height: 22px;}
 .content .gallery .video_txt h3{font-size: 20px;}
+.stock .stock_head table.tb_main tr.last td{padding: 0 8%;}
 /* 480px */
 @media all and (max-width:480px){
     header{height: 60px;}

@@ -476,13 +476,15 @@ header .right_menu .lang.over h2>a{color:#222;}
 .content .tb_tit span{position: absolute; right: 0; top:7px; font-size: 13px;}
 .content table thead {background-color: #fafafa;}
 .content table thead tr{border-top: 2px solid #000; border-bottom: 1px solid #ddd;}
-.content table thead th{height: 55px; line-height: 55px;}
-.content table tbody tr{border-bottom: 1px solid #ddd; text-align: center;}
-.content table tbody td{height: 46px; line-height: 46px; font-size: 14px; color:#666;}
+.content table thead th{height: 55px; color:#222; font-weight: normal; font-size: 16px;}
+.content table tbody th{font-weight: normal; font-size: 14px;}
+.content table tbody tr{border-bottom: 1px solid #ddd; text-align: center; height: 46px;}
+.content table tbody tr td:last-child{border-right: none;}
+.content table tbody td{height: 46px; font-size: 14px; color:#666; border: 1px solid #ddd;}
 .content table tbody td.center{border: 1px solid #ddd;}
 .content table tbody tr.b{background-color: #f2f2f2;}
 .content .tb_con{position: relative;}
-.content .tb_con .tb_bg{display: none; position: absolute; text-align: center; left:0; top:0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.377);}
+.content .tb_con .tb_bg{display: none; position: absolute; text-align: center; left:0; top:0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.377); z-index: 5;}
 .content .tb_con .tb_bg p{position: relative; top:42%; color:#fff; font-size: 16px;}
 .content .tb_con .tb_bg .far{display: block; font-size: 27px; margin-bottom: 10px;}
 /* ######################## SUB-IR-결산정보###################### */
@@ -498,13 +500,55 @@ header .right_menu .lang.over h2>a{color:#222;}
 .content .financial_tab>li.on>a{background-color:#fff; border-color:#222;}
 .content .tb_tit.finan{margin-top: 60px;}
 .content .unit{position: relative; bottom:-22px; text-align: right; font-size: 14px;}
-.content .financial tbody th{font-weight: normal; font-size: 16px;}
-.content .financial thead th{font-weight: normal; font-size: 16px;}
+.content .financial tbody th,
 .content .financial tbody td{font-size: 16px;}
 .content .financial tbody td{border: 1px solid #ddd;}
 .content .financial tbody tr td:last-of-type{border-right: none;}
 .content .tabs.tab1{display: block;}
 .content .tabs{display: none;}
+/* ######################## SUB-IR-주가정보###################### */
+.content.stock .new{text-align: right; margin-bottom: 15px;}
+.content.stock .new>a{display: inline-block; font-size: 14px; color:#fff; background-color: #000; padding: 10px 37px; border-radius: 7px;}
+.content.stock .tb{margin-bottom: 28px;}
+.content.stock table tbody tr th{border: 1px solid #ddd; border-bottom: 1px solid #afafaf; border-top: 1px solid #afafaf;}
+.stock table tbody tr th:first-child{border-left:none;}
+.stock table tbody tr th:last-child{border-right:none;}
+.stock table tbody tr td:first-child{border-left: none;}
+.stock .stock_head>.tb{float: left; width: 48.125%; margin-right: 3.75%;}
+.stock .stock_head>.tb:last-child{margin-right: 0;}
+.stock .stock_head table td,
+.stock .stock_head table th{text-align: left; border: 1px solid #ddd;}
+.stock .stock_head table tbody td:first-child{border-left: 1px solid #ddd;}
+.stock .stock_head table tr th,
+.stock .stock_head table tr td{box-sizing: border-box; padding: 0 19px; font-size: 16px; color:#222;}
+.stock .stock_head table tbody tr td:last-child{border-right: 1px solid #ddd;}
+.stock .stock_head table.tb_main tr{height: 80px; background-color: #f1f1f1;}
+.stock .stock_head table.tb_main th{font-size: 23px;} 
+.stock .stock_head table.tb_main td{font-size: 19px;} 
+.stock .stock_head table.tb_main .date{font-size: 13px;}
+.stock .stock_head table.tb_main .last td .txt{position: relative; top:8px;}
+.stock .stock_head table tr.center{ height: 130px; background-color: #fff;}
+.stock .stock_head table tr.center td{text-align: center;}
+.stock .stock_head table tr.center td b{font-size: 54px; font-weight: bold; color:#c70e0e;}
+.stock .stock_head table tr.center em{position: relative; bottom:10px; margin-right: 52px; display: inline-block; padding: 9px 16px; border-radius: 7px; font-size: 17px; color:#fff; background-color: #333; line-height: 1;}
+.stock .stock_head table tr .right{text-align: right;}
+.stock .stock_head table tr td>span,
+.stock .stock_head table tr th>span{float: left; width: 50%;}
+.stock .stock_head table tr td>span:last-child,
+.stock .stock_head table tr th>span:last-child{float: right; text-align: right;}
+.stock .stock_head table .tr_haed{border-top: none; border-bottom:none;} 
+.stock .stock_head table.tb_top tr{background-color: #f1f1f1;}
+.stock .stock_head table.tb_bom td{height: 57px;}
+.stock .stock_head table.tb_bom tr:first-child td{border-top:none;} 
+.stock .stock_head table .day{font-size: 13px;}
+.stock .stock_head .tb_con.right table span:last-child{font-weight: bold;}
+.stock table .rank{ font-weight: bold;}
+.stock table .rank::before{content: '\f0d8'; display: inline-block; position: relative; top:4px; font-family: fontawesome; font-size: 25px;}
+.stock table .up{ color:#e52a2a;}
+.stock table .down{color:#5164c8; }
+.stock table .down::before{content: '\f0d7';}
+.stock .member .rank::before{display: none;}
+
 
 
 

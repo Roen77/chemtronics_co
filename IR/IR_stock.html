@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>켐트로닉스 - IR - 결산정보</title>
+    <title>켐트로닉스 - IR - 주가정보</title>
     <link rel="stylesheet" href="../static/css/default.css">
     <link rel="stylesheet" href="../static/css/jquery-ui.min.css">
     <!-- JQUERY & JQUERY ui -->
@@ -77,10 +77,10 @@
                                     <div class="sub_con">
                                         <div class="inner">
                                             <ul class="depth2">
-                                                <li><a href="#">주가정보</a></li>
-                                                <li><a href="#">재무정보</a></li>
+                                                <li><a href="IR_stock.html">주가정보</a></li>
+                                                <li><a href="IR_finance.html">재무정보</a></li>
                                                 <li><a href="IR_.account.html">결산정보</a></li>
-                                                <li><a href="#">공시정보</a></li>
+                                                <li><a href="IR_noti.html">공시정보</a></li>
                                                 <li><a href="IR_.refer_repo.html">IR 자료실</a></li>
                                             </ul> 
                                             <div class="sub_des clearfix">
@@ -222,10 +222,10 @@
                                 <div class="bg">
                                     <h2>IR</h2>
                                 <ul class="pc_depth2">
-                                    <li><a href="#">주가정보</a></li>
-                                    <li><a href="#">재무정보</a></li>
+                                    <li><a href="IR_stock.html">주가정보</a></li>
+                                    <li><a href="IR_finance.html">재무정보</a></li>
                                     <li><a href="IR_.account.html">결산정보</a></li>
-                                    <li><a href="#">공시정보</a></li>
+                                    <li><a href="IR_noti.html">공시정보</a></li>
                                     <li><a href="IR_.refer_repo.html">IR 자료실</a></li>
                                 </ul> 
                                 </div>
@@ -278,12 +278,12 @@
                         </ul>
                     </div>
                     <div>
-                        <h3><a href="#">결산정보</a></h3>
+                        <h3><a href="#">주가정보</a></h3>
                         <ul class="sub_gnb">
-                            <li><a href="#">주가정보</a></li>
-                            <li><a href="#">재무정보</a></li>
+                            <li><a href="IR_stock.html">주가정보</a></li>
+                            <li><a href="IR_finance.html">재무정보</a></li>
                             <li><a href="IR_.account.html">결산정보</a></li>
-                            <li><a href="#">공시정보</a></li>
+                            <li><a href="IR_noti.html">공시정보</a></li>
                             <li><a href="IR_.refer_repo.html">IR 자료실</a></li>
                         </ul>
                     </div>
@@ -294,56 +294,482 @@
                 <div class="tit_info">
                     <p><b>CHALLENGE THE NEW CHANGE THE WORLD
                     </b></p>
-                    <h3><b>Closing Information</b></h3>
+                    <h3><b>Stock Price Information</b></h3>
                 </div>
                 <div class="sub_bg"></div>
                 <div class="sub_con_list">
-                    <h3><a href="#">결산정보</a></h3>
+                    <h3><a href="#">주가정보</a></h3>
                     <ul>
-                        <li><a href="#">주가정보</a></li>
-                        <li><a href="#">재무정보</a></li>
+                        <li><a href="IR_stock.html">주가정보</a></li>
+                        <li><a href="IR_finance.html">재무정보</a></li>
                         <li><a href="IR_.account.html">결산정보</a></li>
-                        <li><a href="#">공시정보</a></li>
+                        <li><a href="IR_noti.html">공시정보</a></li>
                         <li><a href="IR_.refer_repo.html">IR 자료실</a></li>
                     </ul>
                 </div>
             </section>
             <!-- section:visual -->
-            <section class="content IR_con">
+            <section class="content IR_con stock">
                 <div class="inner">
-                    <div class="notice_info clearfix">
-                        <div class="total">Total:<span>2</span></div>
+                   <div class="new">
+                    <a href="#"><i class="fas fa-redo"></i>새로고침</a>
+                   </div>
+                    <div class="stock_head clearfix">
+                        <div class="tb tb_fix">
+                            <div class="tb_con">
+                                <table class="ir_tb tb_main">
+                                    <div class="hide">켐트로닉스 주식</div>
+                                    <colgroup>
+                                      <col style="width:50%">
+                                      <col style="width:50%">
+                                  </colgroup>
+                                  <thead>
+                                      <tr>
+                                          <th colspan="2"><span>켐트로닉스</span><span class="date">2021-02-06 12:55:51 기준</span></th>
+                                      </tr>
+                                  </thead>
+                                  <tbody>
+                                      <tr class="center">
+                                          <td colspan="2"><em>현재가</em><b class="up">33,600</b></td>
+                                      </tr>
+                                      <tr class="last">
+                                          <td><span class="txt">전일대비</span><span class="up rank right">1,450</span></td>
+                                          <td><span>전일종가</span><span>32,150</span></td>
+                                      </tr>
+                                  </tbody>
+                                </table>
+                            </div>
+                        </div>                
+                        <div class="tb tb_fix">
+                            <div class="tb_con right">
+                                <table class="ir_tb tb_top">
+                                    <div class="hide">주식 호가에 대한 안내표</div>
+                                    <colgroup>
+                                      <col style="width:33.3%">
+                                      <col style="width:33.3%">
+                                      <col style="width:33.4%">
+                                  </colgroup>
+                                  <thead>
+                                      <tr>
+                                          <th><span>시가</span><span>32,300</span></th>
+                                          <th><span>고가</span><span class="up">32,300</span></th>
+                                          <th><span>저가</span><span class="down">32,300</span></th>
+                                      </tr>
+                                      <tr class="tr_haed">
+                                          <th><span>상한가</span><span class="up">41,300</span></th>
+                                          <th><span>하한가</span><span class="down">22,300</span></th>
+                                          <th><span>PER</span><span>27.21</span></th>
+                                      </tr>
+                                  </thead>
+                                </table>
+                                <table class="tb_bom">
+                                    <colgroup>
+                                        <col style="width:50%">
+                                        <col style="width:50%">
+                                    </colgroup>
+                                    <tbody>
+                                        <tr>
+                                            <td><span>거래량</span><span>958,123</span></td>
+                                            <td><span style="width:40%" >거래대금</span><span style="width:60%">31,626,236,550</span></td>
+                                        </tr>
+                                        <tr>
+                                          <td><span>52주최고</span><span>33,600</span></td>
+                                          <td><span>52주최저</span><span>7,460</span></td>
+                                        </tr>
+                                        <tr>
+                                          <td><span>상장주식수</span><span>14,858,157</span></td>
+                                          <td><span>액면가</span><span>500</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>                
                     </div>
-                    <div class="notice">
-                        <ul>
-                            <li class="main_head">
-                                <div class="num">번호</div>
-                                <div class="tit">제목</div>
-                                <div class="file">첨부파일</div>
-                                <div class="writer">작성자</div>
-                                <div class="date">등록일</div>
-                            </li>
-                            <li>
-                                <div class="num">2</div>
-                                <div class="tit"><a href="
-                                    #">[공지]19년 결산공고(연결기준)</a></div>
-                                    <div class="file"><a href="#"><i class="fas fa-file-download"></i>Download</a></div>
-                                    <div class="writer">관리자</div>
-                                <div class="date">2021-01-26</div>
-                            </li>
-                            <li>
-                                <div class="num">1</div>
-                                <div class="tit"><a href="
-                                    #">	[공지]18년 결산공고(연결기준)</a></div>
-                                    <div class="file"><a href="#"><i class="fas fa-file-download"></i>Download</a></div>
-                                    <div class="writer">관리자</div>
-                                <div class="date">2021-01-26</div>
-                            </li>
-                        </ul>
+                    <!-- stock_head -->
+                    <div class="tb member tb_fix">
+                        <div class="tb_tit"><p>호가</p></div>
+                        <div class="tb_con">
+                            <table class="ir_tb">
+                                <div class="hide">주식 호가에 대한 안내표</div>
+                                <colgroup>
+                                  <col style="width:33.3%">
+                                  <col style="width:33.3%">
+                                  <col style="width:33.4%">
+                              </colgroup>
+                              <thead>
+                                  <tr>
+                                      <th>매도잔량</th>
+                                      <th>호가</th>
+                                      <th>매수잔량</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr>
+                                      <td class="up rank">0</td>
+                                      <td class="up rank">0</td>
+                                      <td></td>
+                                  </tr>
+                                  <tr>
+                                      <td class="up rank">0</td>
+                                      <td class="up rank">0</td>
+                                      <td></td>
+                                  </tr>
+                                  <tr>
+                                      <td class="up rank">564</td>
+                                      <td class="up rank">33,750</td>
+                                      <td></td>
+                                  </tr>
+                                  <tr>
+                                      <td class="up rank">201</td>
+                                      <td class="up rank">33,700</td>
+                                      <td></td>
+                                  </tr>
+                                  <tr>
+                                      <td class="up rank">2,889</td>
+                                      <td class="up rank">33,650</td>
+                                      <td></td>
+                                  </tr>
+                                  <tr>
+                                      <td></td>
+                                      <td class="down rank">33,600</td>
+                                      <td class="down rank">3,230</td>
+                                  </tr>
+                                  <tr>
+                                      <td></td>
+                                      <td class="down rank">33,550</td>
+                                      <td class="down rank">694</td>
+                                  </tr>
+                                  <tr>
+                                      <td></td>
+                                      <td class="down rank">33,500</td>
+                                      <td class="down rank">3,667</td>
+                                  </tr>
+                                  <tr>
+                                      <td></td>
+                                      <td class="down rank">0</td>
+                                      <td class="down rank">0</td>
+                                  </tr>
+                                  <tr>
+                                      <td></td>
+                                      <td class="down rank">0</td>
+                                      <td class="down rank">0</td>
+                                  </tr>
+                              </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <ul class="pager">
-                        <li class="on"><a href="#">1</a></li>
-                    </ul>
+                    <div class="tb time">
+                        <div class="tb_tit"><p>시간대별 체결가</p></div>
+                        <div class="tb_con">
+                            <div class="tb_bg">
+                                <p><i class="far fa-hand-pointer"></i>좌우로 드래그 해보세요</p>
+                            </div>
+                            <table class="ir_tb">
+                                <div class="hide">주식 시간대별 체결가에 대한 안내표</div>
+                                <colgroup>
+                                  <col style="width:16.6%">
+                                  <col style="width:16.6%">
+                                  <col style="width:16.7%">
+                                  <col style="width:16.7%">
+                                  <col style="width:16.7%">
+                                  <col style="width:16.7%">
+                              </colgroup>
+                              <thead>
+                                  <tr>
+                                      <th>시간</th>
+                                      <th>체결가</th>
+                                      <th>전일대비</th>
+                                      <th>매도호가</th>
+                                      <th>매수호가</th>
+                                      <th>체결량</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                     <td>18:00:40</td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td>155</td>
+                                 </tr>
+                                 <tr>
+                                     <td>17:50:20</td>
+                                     <td></td>
+                                     <td></td>
+                                     <td>0</td>
+                                     <td>0</td>
+                                     <td>119</td>
+                                 </tr>
+                                 <tr>
+                                     <td>17:40:20</td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td>432</td>
+                                 </tr>
+                                 <tr>
+                                     <td>17:30:20</td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td>249</td>
+                                 </tr>
+                                 <tr>
+                                     <td>17:20:20</td>
+                                     <td></td>
+                                     <td></td>
+                                     <td>0</td>
+                                     <td>0</td>
+                                     <td>464</td>
+                                 </tr>
+                                 <tr>
+                                     <td>17:10:40</td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td>250</td>
+                                 </tr>
+                                 <tr>
+                                     <td>17:10:40</td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td>250</td>
+                                 </tr>
+                                 <tr>
+                                     <td>17:00:40</td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td>250</td>
+                                 </tr>
+                                 <tr>
+                                     <td>16:50:40</td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td>237</td>
+                                 </tr>
+                                 <tr>
+                                     <td>16:40:40</td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td>484</td>
+                                 </tr>
+                                 <tr>
+                                     <td>16:30:40</td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td></td>
+                                     <td>1150</td>
+                                 </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tb member tb_fix">
+                        <div class="tb_tit"><p>회원별거래</p></div>
+                        <div class="tb_con">
+                            <table class="ir_tb">
+                                <div class="hide">주식 회원별거래에 대한 안내표</div>
+                                <colgroup>
+                                  <col style="width:25%">
+                                  <col style="width:25%">
+                                  <col style="width:25%">
+                                  <col style="width:25%">
+                              </colgroup>
+                              <thead>
+                                  <tr>
+                                      <th colspan="2">매도 상위</th>
+                                      <th colspan="2">매수 상위</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                    <th>증권사</th>
+                                    <th>거래량</th>
+                                    <th>증권사</th>
+                                    <th>거래량</th>
+                                </tr>
+                                <tr>
+                                    <td>키움증권</td>
+                                    <td>174,989</td>
+                                    <td>미래에셋대우</td>
+                                    <td>188,174</td>
+                                </tr>
+                                <tr>
+                                    <td>미래에셋대우</td>
+                                    <td>150,827</td>
+                                    <td>키움증권</td>
+                                    <td>151,991</td>
+                                </tr>
+                                <tr>
+                                    <td>NH투자증권</td>
+                                    <td>98,226</td>
+                                    <td>한국증권</td>
+                                    <td>72,874</td>
+                                </tr>
+                                <tr>
+                                    <td>KB증권</td>
+                                    <td>75,798</td>
+                                    <td>NH투자증권</td>
+                                    <td>72,874</td>
+                                </tr>
+                                <tr>
+                                    <td>삼성증권</td>
+                                    <td>72,511</td>
+                                    <td>신한투자</td>
+                                    <td>70,933</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="tb day">
+                        <div class="tb_tit"><p>일자별 시세</p></div>
+                        <div class="tb_con">
+                            <div class="tb_bg">
+                                <p><i class="far fa-hand-pointer"></i>좌우로 드래그 해보세요</p>
+                            </div>
+                            <table class="ir_tb">
+                                <div class="hide">주식 일자별 시세에 대한 안내표</div>
+                                <colgroup>
+                                  <col style="width:12.5%">
+                                  <col style="width:12.5%">
+                                  <col style="width:12.5%">
+                                  <col style="width:12.5%">
+                                  <col style="width:12.5%">
+                                  <col style="width:12.5%">
+                                  <col style="width:12.5%">
+                                  <col style="width:12.5%">
+                              </colgroup>
+                              <thead>
+                                  <tr>
+                                      <th>일자</th>
+                                      <th>종가</th>
+                                      <th>전일대비</th>
+                                      <th>시가</th>
+                                      <th>고가</th>
+                                      <th>저가</th>
+                                      <th>거래량</th>
+                                      <th>거래대금</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                 <tr>
+                                     <td>21/02/05</td>
+                                     <td>33,600</td>
+                                     <td class="up rank">1,450</td>
+                                     <td>32,300</td>
+                                     <td>34,100</td>
+                                     <td>31,400</td>
+                                     <td>958,123</td>
+                                     <td>31,626,236,550</td>
+                                 </tr>
+                                 <tr>
+                                     <td>21/02/04</td>
+                                     <td>32,600</td>
+                                     <td class="down rank">900</td>
+                                     <td>32,300</td>
+                                     <td>34,100</td>
+                                     <td>31,400</td>
+                                     <td>958,123</td>
+                                     <td>31,626,236,550</td>
+                                 </tr>
+                                 <tr>
+                                     <td>21/02/03</td>
+                                     <td>33,600</td>
+                                     <td class="up rank">1,500</td>
+                                     <td>32,300</td>
+                                     <td>34,100</td>
+                                     <td>31,400</td>
+                                     <td>958,123</td>
+                                     <td>31,626,236,550</td>
+                                 </tr>
+                                 <tr>
+                                     <td>21/02/02</td>
+                                     <td>33,600</td>
+                                     <td class="up rank">2,550</td>
+                                     <td>32,300</td>
+                                     <td>34,100</td>
+                                     <td>31,400</td>
+                                     <td>958,123</td>
+                                     <td>31,626,236,550</td>
+                                 </tr>
+                                 <tr>
+                                     <td>21/02/01</td>
+                                     <td>33,600</td>
+                                     <td>0</td>
+                                     <td>32,300</td>
+                                     <td>34,100</td>
+                                     <td>31,400</td>
+                                     <td>958,123</td>
+                                     <td>31,626,236,550</td>
+                                 </tr>
+                                 <tr>
+                                     <td>21/01/29</td>
+                                     <td>33,600</td>
+                                     <td class="down rank">1,750</td>
+                                     <td>32,300</td>
+                                     <td>34,100</td>
+                                     <td>31,400</td>
+                                     <td>958,123</td>
+                                     <td>31,626,236,550</td>
+                                 </tr>
+                                 <tr>
+                                     <td>21/01/28</td>
+                                     <td>33,600</td>
+                                     <td class="up rank">1,550</td>
+                                     <td>32,300</td>
+                                     <td>34,100</td>
+                                     <td>31,400</td>
+                                     <td>958,123</td>
+                                     <td>31,626,236,550</td>
+                                 </tr>
+                                 <tr>
+                                     <td>21/01/27</td>
+                                     <td>33,600</td>
+                                     <td class="up rank">750</td>
+                                     <td>32,300</td>
+                                     <td>34,100</td>
+                                     <td>31,400</td>
+                                     <td>958,123</td>
+                                     <td>31,626,236,550</td>
+                                 </tr>
+                                 <tr>
+                                     <td>21/01/26</td>
+                                     <td>33,600</td>
+                                     <td class="down rank">350</td>
+                                     <td>32,300</td>
+                                     <td>34,100</td>
+                                     <td>31,400</td>
+                                     <td>958,123</td>
+                                     <td>31,626,236,550</td>
+                                 </tr>
+                                 <tr>
+                                     <td>21/01/25</td>
+                                     <td>33,600</td>
+                                     <td class="up rank">200</td>
+                                     <td>32,300</td>
+                                     <td>34,100</td>
+                                     <td>31,400</td>
+                                     <td>958,123</td>
+                                     <td>31,626,236,550</td>
+                                 </tr>
+                              </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- section:content -->
