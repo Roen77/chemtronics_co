@@ -305,7 +305,7 @@ $(document).ready(function(){
         $(".content .tb_con .tb_bg").on('touchstart click',function(){
             $(this).fadeOut();
         })
-        //서브페이짖 재무정보 탭메뉴
+        //서브페이지 재무정보 탭메뉴
         $('.financial_tab>li').eq(0).addClass("on")
         $('.financial_tab>li').click(function(e){
             e.preventDefault();
@@ -314,6 +314,15 @@ $(document).ready(function(){
             $('.financial_tab>li').removeClass("on");
             $(this).addClass("on");
             tabMenu.hide().eq(index).show();
+        })
+        $('.wel_tabs li').eq(0).addClass('on')
+        $('.wel_tabs li').click(function(e){
+            e.preventDefault();
+            $(this).addClass("on").siblings('li').removeClass('on');
+            var idx=$(this).index();
+
+            var welOffset=$('.wel_list').eq(idx).offset().top-$('.wel_tabs').outerHeight()-$('.sub_menu_list').outerHeight();
+            $('html,body').stop().animate({scrollTop:welOffset});
         })
 
     }//sub
@@ -330,7 +339,20 @@ $(document).ready(function(){
         }else{
             $(".sub_goTopBtn").removeClass('fix');
         }
+        if($('.wel_tabs').length>0){
+            var welOffset= $('.wal_con').offset().top-$('.sub_menu_list').outerHeight();
+            if(winOffset > welOffset){
+                if(!$('.wel_tabs').hasClass("fix")){
+                    $('.wel_tabs').addClass('fix')
+                }
+            }else{
+                if($('.wel_tabs').hasClass("fix")){
+                    $('.wel_tabs').removeClass('fix')
+                }
+            }
+        }
     }
+
 
   
 
@@ -640,6 +662,7 @@ $(document).ready(function(){
         console.log($('.sub').length);
         if($('.sub_pg').length>0){
             ElemFix();
+
         }
     })
     

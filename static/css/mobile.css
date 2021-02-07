@@ -41,4 +41,16 @@ header .right_menu .fam{margin-right: 70px;}
     .content .tabs>li{width: 50%;}
     .content .tabs>li>a{width: 100%;}
     .et_con.card .user_info em{margin: 0 0.2%}
+    .hr .tit{padding-bottom: 10px;}
+    .hr .sub_tit{padding-bottom: 12px;}
+    .hr .person .txt p{padding-top: 0;}
+    .hr .promote ul{margin: 0;}
+    .hr .promote ul.admin>li, .hr .promote ul.research>li{width: 100%; margin: 1% 0;}
+    .hr .welfare .wel_tabs li>a{font-size: 1.5vw;}
+
+    /* active */
+    .hr .wel_tabs.fix{top:34px;}
+    
+    
+
 }
