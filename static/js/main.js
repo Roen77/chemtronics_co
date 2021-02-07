@@ -300,7 +300,7 @@ $(document).ready(function(){
                 }
             })
         //서브페이지 셀렉트 메뉴
-        $( "#category" ).selectmenu();
+        $( ".category" ).selectmenu();
         //모바일에서 테이블 클릭시
         $(".content .tb_con .tb_bg").on('touchstart click',function(){
             $(this).fadeOut();

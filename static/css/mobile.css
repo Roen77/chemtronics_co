@@ -40,4 +40,5 @@ header .right_menu .fam{margin-right: 70px;}
     .sub_menu_list ul>li>a::after{right: 6%;}
     .content .tabs>li{width: 50%;}
     .content .tabs>li>a{width: 100%;}
+    .et_con.card .user_info em{margin: 0 0.2%}
 }

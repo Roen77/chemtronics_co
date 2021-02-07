@@ -21,8 +21,6 @@ a{color:#fff;}
 .animate.ani_cover::before{content: ''; position: absolute; left:0; top:0; width: 100%; height: 100%; background-color: #fff; z-index: 10; }
 .animate.ani_cover.motion::before{animation: coverAni 1s forwards;}
 .animate.ani_width.motion{animation: coverWitdhAni 1s 0.2s forwards;}
-/* 버튼 공통요소 */
-.btn{display: inline-block; height: 57px; padding: 0 110px; color:#fff; background-color: #222; font-size: 16px; border:none;}
 /* 햄버거 메뉴 */
 .trigger{position: absolute; width: 18px; height: 12px; top:50%; left:50%; transform: translate(-50%,-50%); cursor: pointer;}
 .trigger>span{position: absolute; width: 100%; height: 2px; background-color: #fff; transition: all 0.5s;}
@@ -265,7 +263,7 @@ header .right_menu .lang.over h2>a{color:#222;}
 .global .right_con .driving img:hover{transform: scale(1.1);}
 /* ######################## SECTION:inform ###################### */
 .inform{position: relative; text-align: center; color:#222;}
-.inform>.tit_info{position: absolute; z-index: ; width: 100%; text-align: center; padding-top: 74px;}
+.inform>.tit_info{position: absolute;  width: 100%; text-align: center; padding-top: 74px;}
 .des{padding: 0 100px;}
 .inform .info_con{position: relative; display: flex; height: 100vh;}
 .inform .info_con>li{flex:1; border-right: 1px solid #eee; padding-top: 280px;}
@@ -348,6 +346,9 @@ header .right_menu .lang.over h2>a{color:#222;}
 .goTopBtn .fas{color:#fff;}
 
 /* ######################## SUB COMMON###################### */
+/* 서브페이지 버튼 공통요소 */
+.content .btn{display: inline-block; height: 57px; line-height: 57px; padding: 0 110px; color:#fff; background-color: #222; font-size: 16px; border:none;}
+.content .btn.btn_red{background-color: #ed1c24;}
 .sub_goTopBtn{position: fixed; right: 12px; bottom:-100px; width: 46px; height: 46px; background-color: #ed1c24; text-align: center; line-height: 46px; transition:all 0.3s; opacity: 0; visibility: hidden;}
 .sub_goTopBtn .fas{color:#fff;}
 .sub_goTopBtn.fix{opacity: 1; visibility: visible; bottom:12px;}
@@ -572,17 +573,60 @@ header .right_menu .lang.over h2>a{color:#222;}
 .et_con .main_txt>div>ul>li{position: relative; margin-bottom: 9px; margin-left: 15px;}
 .et_con .main_txt>div>ul>li::before{content: '\f0da'; position: absolute; font-family: fontawesome; left:-10px; top:1px; font-size: 17px;}
 .et_con .main_txt>div>ul>li>p{line-height: 24px; color:#888;}
+/* ######################## SUB-윤리경영-신고서 작성###################### */
+.card .main_txt>p{color:#222; margin-bottom: 22px;}
+.card .main_txt>p::before{content: '\f00c'; font-family:fontawesome; font-size: 13px; margin-right: 8px;}
+.card .main_txt>p span{color:#e52a2a;}
+.card .main_txt>.card_target{font-size: 0; margin-bottom: 20px;}
+.card .main_txt>.card_target span{display: inline-block; height: 80px; line-height: 80px; background-color: #f5f5f5; width: 268px; font-size: 16px; margin-right: 14px; text-align: center; color:#222;}
+.card .main_txt h4{margin-top: 29px;}
+.et_con.card .form_con{box-sizing: border-box; padding: 70px 148px;}
+.et_con.card .form_con h3{text-align: center; font-size: 37px; color:#222;}
+.et_con.card .form_con .require{text-align: right; font-size: 13px; margin-bottom: 13px; color:#222;}
+.et_con.card .form_con .require em{color:#e52a2a;}
+.et_con.card .form_con input[type=text],
+.et_con.card #category-button{width: 200px; border:none;}
+.et_con.card .ui-selectmenu-button.ui-button{width: 200px; height: 100%; box-sizing: border-box; padding: 0; border:none; background-color: transparent;}
+.et_con.card  .ui-selectmenu-text{height: 100%; line-height: 33px;}
+.et_con.card .user_info{width: 100%; max-width: 100%; padding: 0;}
+.et_con.card .user_info em{display: inline-block; margin: 0 7px 0 3px;}
+.et_con.card .user_info li.txtarea{position: relative; height: 222px;}
+.et_con.card .user_info li.txtarea label{line-height: 222px;}
+.et_con.card .user_info li.txtarea textarea{position: absolute; left:112px; width: calc(100% - 112px); height: 93%; border: none; resize: none; }
+.et_con.card .user_info input[type=file]{display: none;} 
+.et_con.card .user_info label[for=file_ck]{margin-left: 100px; cursor: pointer; width: 111px; height: 38px; line-height: 38px; color:#fff; background-color: #222; text-align: center;}
+.et_con.card .user_info label[for=file_ck]::before{display: none;}
+.et_con.card .noti_txt{font-size: 0; text-align: center; line-height: 26px; color:#888; padding-top: 50px;}
+.et_con.card .user_info.info_top li:first-child{border-top: 1px solid #000;}
+.et_con.card .user_info.info_top li{position: relative;}
+.et_con.card .user_info.info_top li::before{content: ''; position: absolute; left:105px; top:0; width: 1px; height: 100%; background-color: #e5e5e5;}
+.et_con.card .agree_box {counter-reset: num; margin-bottom: 44px;}
+.et_con.card .agree_box h4{color:#222; margin: 72px 0 15px; font-weight: normal; font-size: 18px; letter-spacing: -0.5px;}
+.et_con.card .agree_box .agree_con{font-family: NanumGothic, Arial; height: 170px; overflow-y: scroll; border: 1px solid #e5e5e5; padding: 20px;} 
+.et_con.card .agree_box .agree_con>p{font-size: 13px;  margin-bottom: 26px; color:#222; font-weight: bold;}
+.et_con.card .agree_box ol>li{font-size: 13px;font-weight: 300; color:#383d41; margin-bottom: 26px;}
+.et_con.card .agree_box ol>li p{margin-top: 26px;}
+.et_con.card .agree_box ol>li:last-child{margin-bottom: 0;}
+.et_con.card .agree_box ol>li::before{content: counter(num)'.'; counter-increment: num 1; margin-right: 2px; font-size: 12px;}
+.et_con.card .agree_box input[type=checkbox]{display: none;}
+.et_con.card .agree_box label[for=ckbox]{display: inline-block; cursor: pointer; padding-top: 9px; font-size: 15px;}
+.et_con.card .agree_box label[for=ckbox] em{display: inline-block; width: 18px; height: 18px; background: url(../images/checkbox-custom.png) no-repeat; background-position: left center; vertical-align: -2px; margin: 0 3px;}
+.et_con.card .agree_box input[type=checkbox]:checked + label em {background-position: right center;}
+.et_con.card .noti_txt p{margin-bottom: 30px; font-size: 16px;}
+.et_con.card .noti_txt span{color:#e52a2a;}
+.et_con.card .noti_txt .btn{margin: 0 7px;}
 /* ######################## SUB-윤리경영-신고서 확인###################### */
 .et_con .form_con{position: relative; border: 1px solid #e5e5e5; padding: 70px 0;}  
 .et_con .form_con::after{content: ''; position: absolute; left:50%; transform: translateX(-50%); top:-1px; width: 90px; background-color: #000; height: 1px;}
-.et_con .login{max-width: 530px; width: 100%; margin: 0 auto; padding: 0 10px; box-sizing: border-box;}
-.et_con .login label{display: inline-block; font-size: 16px; color:#222; width: 106px;}
-.et_con .login label::before{content: '*'; color:#e52a2a; margin-right: 2px;}
-.et_con .login li{height: 50px; box-sizing: border-box; padding: 7px 0;border-bottom: 1px solid #e5e5e5;}
-.et_con .login li input[type=text],
-.et_con .login li input[type=password]{height: 100%; box-sizing: border-box; width: 404px; border:none;}
-.et_con .login .submitBtn{text-align: center; margin-top: 30px; border-bottom:none; height: auto; padding: 0;}
-.et_con .login .btn{cursor: pointer;}
+.et_con .user_info{max-width: 530px; width: 100%; margin: 0 auto; padding: 0 10px; box-sizing: border-box;}
+.et_con .user_info label{display: inline-block; font-size: 16px; color:#222; width: 110px;}
+.et_con .user_info label::before{content: '*'; color:#e52a2a; margin-right: 2px;}
+.et_con .user_info label.norequire::before{display: none;}
+.et_con .user_info li{height: 50px; width: 100%; box-sizing: border-box; padding: 7px 0;border-bottom: 1px solid #e5e5e5;}
+.et_con .user_info li input[type=text],
+.et_con .user_info li input[type=password]{height: 100%; box-sizing: border-box; width: 404px; border:none;}
+.et_con .user_info .submitBtn{text-align: center; margin-top: 30px; border-bottom:none; height: auto; padding: 0;}
+.et_con .user_info .btn{cursor: pointer;}
 /* ######################## SUB-윤리경영-분쟁광물 관리정책###################### */
 .content.conflict .inner{padding: 0 15px; box-sizing: border-box;}
 .conflict ul>li>h4{position: relative; font-size: 17px; font-weight: bold; color:#222; line-height: 30px; margin-bottom: 8px;}

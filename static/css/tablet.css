@@ -100,7 +100,7 @@ section.inform{height: auto;}
 .content .financial tbody td{font-size: 14px;}
 .stock .stock_head table tr.center td b{font-size: 40px;}
 .stock .stock_head table tr th,
- .stock .stock_head table tr td,
+.stock .stock_head table tr td,
 .stock .stock_head table tr.center em{font-size: 14px;}
 .stock .stock_head table.tb_main td{font-size: 15px;}
 .stock .stock_head table tr th, .stock .stock_head table tr td {padding: 0 10px;}
@@ -109,6 +109,8 @@ section.inform{height: auto;}
 .content.conflict .inner{padding: 0 36px;}
 .conflict .conflict_img{height: 400px;}
 .conflict .conflict_img>div>img{max-width: 49%;}
+.et_con.card .form_con{padding: 70px;}
+.et_con.card .user_info input[type=password]+span{font-size: 1.5vw; letter-spacing: -0.5px;}
 
 
 
@@ -261,7 +263,7 @@ section.inform{height: auto;}
      /* input 요소 */
      .content .notice_info>.search{width: 80%; text-align: right;}
      .content .search #category-button{width: 20%;}
-     .content .ui-selectmenu-text{font-size: 11px;}
+     .content .ui-selectmenu-text{font-size: 13px;}
      .content .search input[type=text]{width: 50%; font-size: 11px;}
      /* 테이블 */
      .content .tb_con{ overflow-x: auto;}
@@ -294,8 +296,34 @@ section.inform{height: auto;}
      .conflict .conflict_img{height: 300px;}
      .conflict ul.top_txt>li{margin-bottom: 0;}
      .et_con .form_con{padding: 25px 0;}
-     .et_con .login li{height: auto;}
-     .et_con .login label{display: block; font-size: 14px; margin-bottom: 10px; font-weight: bold;}
-     .et_con .login li input[type=text], .et_con .login li input[type=password]{width: 100%; height: 36px; background-color: #f0f0f0;}
+     .et_con .user_info li{height: auto;}
+     .et_con .user_info label{display: block; font-size: 14px; margin-bottom: 10px; font-weight: bold;}
+     .et_con .user_info li input[type=text], .et_con .user_info li input[type=password]{width: 100%; height: 36px; background-color: #f0f0f0;}
+     .card .main_txt>p{font-size: 13px;}
+     .card .main_txt h4{margin-top: 7px;}
+     .et_con .main_txt>div>ul{margin-bottom: 23px;}
+     .et_con .main_txt>div>ul>li>p{font-size: 13px;}    
+     .card .main_txt>.card_target span{display: block; width: 100%; font-size: 13px; height: 40px; line-height: 40px; margin-bottom: 5px;}
+     .et_con.card .agree_box label[for=ckbox]{font-size: 13px;}
+     .et_con.card .agree_box label[for=ckbox] em{vertical-align: -5px;}
+     .et_con.card .form_con{padding: 15px;}
+     .et_con.card .form_con h3{font-size: 22px;}
+     .et_con.card .form_con .file_submit input[type=text]{width: 60%;}
+     .et_con.card .user_info label[for=file_ck]{display: inline-block; margin-left: 0; margin-bottom: 0; width: 73px; font-size: 13px; font-weight: normal;}
+     .et_con.card .form_con input[type=text]{width: 100%;}
+     .et_con.card .form_con input[type=text],
+     .et_con.card .user_info li.txtarea label{line-height: 1;}
+     .et_con.card .user_info.info_top li::before{display: none;}
+     .et_con.card .user_info li.txtarea{width: 100%; height: auto;}
+     .et_con.card .user_info li.txtarea textarea{position: static; height: 100px; background-color: #f0f0f0; width: 100%;}
+     .et_con.card .ui-selectmenu-button.ui-button{background-color: #f0f0f0;}
+     .et_con.card .user_info .tel input[type=text],
+     .et_con.card .user_info .tel .ui-selectmenu-button.ui-button{width: 30%;}
+     .et_con.card .user_info .email_txt input[type=text]{ max-width: 47.7%; width: 100%;}
+     .et_con.card .user_info .email_txt .ui-selectmenu-button.ui-button{width: 100%; margin-top: 5px;}
+     .et_con.card .user_info em{margin: 0 0.5%}
+     .et_con.card .noti_txt p{font-size: 13px; line-height: 20px; padding-top: 26px;}
+     .et_con.card .noti_txt .btn{padding: 0 42px; margin: 0 2px; height: 35px; line-height: 35px;}
+     .et_con.card .user_info input[type=password]+span{display: block; margin-top: 5px; text-align: right;}
     
 }
