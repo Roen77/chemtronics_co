@@ -305,7 +305,7 @@ $(document).ready(function(){
         $(".content .tb_con .tb_bg").on('touchstart click',function(){
             $(this).fadeOut();
         })
-        //서브페이지 재무정보 탭메뉴
+        //서브페이지 IR 재무정보, HR 채용공고 탭메뉴
         $('.common_tab>li').eq(0).addClass("on")
         $('.common_tab>li').click(function(e){
             e.preventDefault();
@@ -324,6 +324,27 @@ $(document).ready(function(){
             var welOffset=$('.wel_list').eq(idx).offset().top-$('.wel_tabs').outerHeight()-$('.sub_menu_list').outerHeight();
             $('html,body').stop().animate({scrollTop:welOffset});
         })
+        
+        //서브페이지 HR 직무소개 아코디언 메뉴
+        $('.accodian_tab>h4').click(function(e){
+            e.preventDefault();
+            if($(this).hasClass("on")){
+                $(this).removeClass("on");
+            }else{
+                $('.accodian_tab>h4').removeClass("on");
+                $(this).addClass("on");
+            }
+            $(this).next('ul').stop().slideToggle().parent().parent().siblings('.accodian').find('ul').slideUp();
+        })
+        $('.accodian_tab>ul>li').click(function(e){
+            e.preventDefault();
+            var idx=$(this).index();
+            $('.accodian_tab>ul>li').removeClass("on");
+            $(this).addClass("on");
+            $('.job_con>div').hide()
+            $(this).parent().parent().siblings(".job_con").find('.main_con').eq(idx).show();
+        })
+        $('.accodian_tab>ul>li.on').trigger("click")
 
     }//sub
     //서브페이지 스크롤시 헤더 고정

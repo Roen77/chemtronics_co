@@ -115,6 +115,9 @@ section.inform{height: auto;}
 /* active */
 .hr .wel_tabs.fix ul{width: 100%;}
 
+.hr .accodian .job_con{padding-left: 250px;}
+.hr .accodian .job_con .main_con{padding-right: 13px;}
+
 
 
 
@@ -227,6 +230,13 @@ section.inform{height: auto;}
      .content  #category-button{width: 150px;}
      .content .tabs{padding: 0 0 50px;}
      .content .tabs>li>a{height: 40px; line-height: 40px; font-size: 14px;}
+     /* 테이블 타입1 공통요소 */
+     .content table.ty1{width: 100%;}
+    .content table.ty1 tbody tr:first-child th,
+    .content table.ty1 tbody tr:first-child td{border-top: 1px solid #000;}
+    .content table.ty1 th,
+    .content table.ty1 td{padding-left: 10px; font-size: 13px; }
+    table.ty1 td{padding: 10px 0;}
 
      .visual .sub_bg{height: 358px;}
      .sub_pg .tit_info{top:142px;}
@@ -373,6 +383,21 @@ section.inform{height: auto;}
      .hr .recruit .recruit_list>li .noti_box{margin-right: 20px; width: 50px; height: 50px; font-size: 13px;}
      .hr .recruit .recruit_list>li h3{font-size: 15px;}
      .hr .recruit .recruit_list>li .more{font-size: 13px;}
+      
+     .hr .accodian_tab{width: 140px;}
+     .hr .accodian_tab h4>a,
+     .hr .accodian_tab ul>li{padding: 0 10px;}
+     .hr .accodian_tab h4>a,
+     .hr .accodian_tab ul>li>a{height: 42px;  line-height: 42px; font-size: 13px;} 
+     .hr .accodian .job_con{padding-left: 160px;}
+     .hr.job_info .job_con .main_tit{margin-bottom: 16px; line-height: 30px;}
+     .hr.job_info .job_con .main_tit h3{font-size: 20px; }
+     .hr.job_info .job_con .main_tit span{font-size: 14px;}
+     .hr.job_info .job_con .main_tit.sub_txt{padding: 30px 0;}
+     .hr.job_info .job_con .main_tit.sub_txt h3{font-size: 15px; font-weight: bold;}
+     .hr.job_info .job_con .main_tit.sub_txt span{font-size: 13px;}
+     
+
 
 
  

@@ -63,6 +63,10 @@ header .right_menu .fam{margin-right: 70px;}
     .hr .recruit .recruit_list>li .day{display: block; font-size: 12px; margin-top: 33px;}
     .hr .recruit .recruit_list>li .more{position: relative; font-size: 0; height: 30px; width: 30px; border-radius:50%;}
     .hr .recruit .recruit_list>li .more::before{content: '\f105'; font-family: fontawesome; position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); font-size: 15px;}
+    .hr.job_info .inner{height: auto;}
+    .hr .accodian_tab {width: 100%;}
+    .hr .accodian .job_con {position: static; padding: 0;}
+    .hr .accodian .job_con .main_con{padding-right: 0;}
 
     
     
