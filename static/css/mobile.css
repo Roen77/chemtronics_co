@@ -10,6 +10,9 @@ header .right_menu .fam{margin-right: 70px;}
 .conflict .conflict_img{height: auto;}
 .conflict .conflict_img>div{position: static;  transform: none;}
 .conflict .conflict_img>div>img{width: 70%; max-width: 70%; margin: 10px 0;}
+.hr .recruit .recruit_list>li>a>div{width: 100%;}
+.hr .recruit .recruit_list>li h3{width: 70%;}
+.hr .recruit .recruit_list>li h3 span{margin-right: 5px;}
 /* 480px */
 @media all and (max-width:480px){
     header{height: 60px;}
@@ -44,12 +47,23 @@ header .right_menu .fam{margin-right: 70px;}
     .hr .tit{padding-bottom: 10px;}
     .hr .sub_tit{padding-bottom: 12px;}
     .hr .person .txt p{padding-top: 0;}
-    .hr .promote ul{margin: 0;}
-    .hr .promote ul.admin>li, .hr .promote ul.research>li{width: 100%; margin: 1% 0;}
+    .hr .hr_list{margin: 0;}
+    .hr .hr_list.admin>li, .hr .hr_list.research>li{width: 100%; margin: 1% 0;}
     .hr .welfare .wel_tabs li>a{font-size: 1.5vw;}
 
     /* active */
     .hr .wel_tabs.fix{top:34px;}
+
+    .hr .recruit .hr_list>li{height: 120px;}
+    .hr .recruit li>p{padding-top: 60px; font-size: 13px;}
+    .hr .hr_list>li::before{font-size: 45px;}
+    .hr .recruit .recruit_btn .btn{font-size: 3vw;}
+    .hr .recruit .recruit_list>li>a>div{width: 80%;}
+    .hr .recruit .recruit_list>li h3{position: relative; width: 60%;}
+    .hr .recruit .recruit_list>li .day{display: block; font-size: 12px; margin-top: 33px;}
+    .hr .recruit .recruit_list>li .more{position: relative; font-size: 0; height: 30px; width: 30px; border-radius:50%;}
+    .hr .recruit .recruit_list>li .more::before{content: '\f105'; font-family: fontawesome; position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); font-size: 15px;}
+
     
     
 

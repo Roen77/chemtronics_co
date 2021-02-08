@@ -331,26 +331,49 @@ section.inform{height: auto;}
      .hr h3 b{font-size: 14px; line-height: 22px;}
      .hr .tit{font-size: 14px;}
      .hr .tit span{font-size: 12px; margin-left: 5px;}
-     .hr .promote ul{margin: 0 -2%;}
-     .hr .promote ul.admin>li,
-     .hr .promote ul.research>li{width: 29.3%; margin: 2%;}
-    .hr .promote ul>li::after{display: none;}
-    .hr .promote ul>li>p{font-size: 14px;}
-    .hr .promote ul>li>p span{font-size: 11px;}
-    .hr .person>div{float:none; width: 100%; padding:35px 15px 0; box-sizing: border-box; margin: 0;}
-    .hr .person .sub_tit{font-size: 14px; margin-top: 20px;}
-    .hr .person .txt p{font-size: 13px; line-height: 22px;}
-    .hr .person .grow .txt{padding-bottom: 10px;}
-    .hr .person .grow .photo{margin-top: 10%;}
-    .hr .photo img{width: 30px;}
-    .hr .welfare h3 {padding: 72px 0 31px;}
-    .hr .welfare .wel_tabs>li>a{font-size: 13px;}
-    .hr .welfare .wel_list ul>li{position: relative; display: block; height: auto; padding: 28px 0; overflow: hidden;}
-    .hr .welfare .wel_list ul>li span{float: none; display: block; width: 100%; text-align: left; font-size: 14px; margin-bottom: 2px;}
-    .hr .welfare .wel_list ul>li .photo{position: relative; width: 20%; height: 100%; text-align: center;}
-    .hr .welfare .wel_list ul>li img{width: 40px;}
-    .hr .welfare .wel_list ul>li p{width: 80%;font-size: 13px; line-height: 22px; letter-spacing: -0.5px;}
-    .hr .welfare .wel_tabs li>a{padding: 12px 0; font-size: 13px;}
+     .hr .hr_list{margin: 0 -2%;}
+     .hr .hr_list.admin>li,
+     .hr .hr_list.research>li{width: 29.3%; margin: 2%;}
+     .hr .hr_list>li::after{display: none;}
+     .hr .hr_list>li>p{font-size: 14px;}
+     .hr .hr_list>li>p span{font-size: 11px;}
+     .hr .person>div{float:none; width: 100%; padding:35px 15px 0; box-sizing: border-box; margin: 0;}
+     .hr .person .sub_tit{font-size: 14px; margin-top: 20px;}
+     .hr .person .txt p{font-size: 13px; line-height: 22px;}
+     .hr .person .grow .txt{padding-bottom: 10px;}
+     .hr .person .grow .photo{margin-top: 10%;}
+     .hr .photo img{width: 30px;}
+     .hr .welfare h3 {padding: 72px 0 31px;}
+     .hr .welfare .wel_tabs>li>a{font-size: 13px;}
+     .hr .welfare .wel_list ul>li{position: relative; display: block; height: auto; padding: 28px 0; overflow: hidden;}
+     .hr .welfare .wel_list ul>li span{float: none; display: block; width: 100%; text-align: left; font-size: 14px; margin-bottom: 2px;}
+     .hr .welfare .wel_list ul>li .photo{position: relative; width: 20%; height: 100%; text-align: center;}
+     .hr .welfare .wel_list ul>li img{width: 40px;}
+     .hr .welfare .wel_list ul>li p{width: 80%;font-size: 13px; line-height: 22px; letter-spacing: -0.5px;}
+     .hr .welfare .wel_tabs li>a{padding: 12px 0; font-size: 13px;}
+     .hr .recruit .ui-selectmenu-button.ui-button{width: 150px;}
+     .hr .recruit .step{margin: 12px 0 45px;}
+     .hr .recruit .step>li{padding: 15px 0;}
+     .hr .recruit .step .step_order{font-size: 14px;}
+     .hr .recruit .step>li em,
+     .hr .recruit .step>li span{display: block; padding: 0 0 0 13px; font-size: 13px; line-height: 20px;}
+     .hr .recruit .recruit_info>div h3{width: 100%; margin-bottom: 11px;}
+     .hr .recruit h3 b{font-size: 14px;}
+     .hr .recruit .recruit_info>div{margin-bottom: 45px;}
+     .hr .recruit .recruit_info>div ul>li{font-size: 13px;}
+     .hr .recruit .recruit_info>div ul>li em{font-size: 11px;}
+     .hr .recruit .qna{font-size: 17px; padding: 14px 0;}
+     .hr .recruit .qna span,
+     .hr .recruit .qna em{padding: 0 13px;}
+     .hr .recruit .recruit_btn .btn{width: 48%; margin: 0 1%; height: 50%; line-height: 50px; font-size: 14px;}
+
+     .hr .recruit.recruit_noti>.tit{padding-bottom: 36px; font-size: 17px;}
+     .hr .recruit.recruit_noti>.tit::before{bottom:16px;}
+     .hr .recruit .recruit_list>li>a{padding: 15px; height: 84px;}
+     .hr .recruit .recruit_list>li .noti_box{margin-right: 20px; width: 50px; height: 50px; font-size: 13px;}
+     .hr .recruit .recruit_list>li h3{font-size: 15px;}
+     .hr .recruit .recruit_list>li .more{font-size: 13px;}
+
 
  
 

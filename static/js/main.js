@@ -173,7 +173,7 @@ $(document).ready(function(){
         if(winWidth>1221){
         subHieght=$(".gnb .sub_con").outerHeight();
         var total=headerHeight+subHieght;
-        header.animate({height:total+'px'},200)
+        header.stop().animate({height:total+'px'},200)
         }
     })
     .on('mouseleave focusout', function(){
@@ -306,12 +306,12 @@ $(document).ready(function(){
             $(this).fadeOut();
         })
         //서브페이지 재무정보 탭메뉴
-        $('.financial_tab>li').eq(0).addClass("on")
-        $('.financial_tab>li').click(function(e){
+        $('.common_tab>li').eq(0).addClass("on")
+        $('.common_tab>li').click(function(e){
             e.preventDefault();
             var index=$(this).index();
-            var tabMenu=$('.content .tabs');
-            $('.financial_tab>li').removeClass("on");
+            var tabMenu=$('.content .tabs_menu');
+            $('.common_tab>li').removeClass("on");
             $(this).addClass("on");
             tabMenu.hide().eq(index).show();
         })

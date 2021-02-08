@@ -438,9 +438,9 @@ header .right_menu .lang.over h2>a{color:#222;}
 .content .notice li .count{width: 9%;}
 .content .notice li:hover{background-color: rgba(221, 221, 221, 0.253);}
 
-.content{color:#666666; padding: 100px 0;}
+.content{color:#888;  padding: 100px 0;}
 .content .inner{width: 1200px;  margin: 0 auto; padding: 0;}
-.content a{color:#666;}
+.content a{color:#888;}
 .content .notice_info>div{float: left;}
 .content .notice_info .total{font-size: 14px; text-transform: uppercase; line-height: 36px;}
 .content .notice_info .total span{color:#ed1c24; font-weight: bold; margin-left: 3px;}
@@ -511,8 +511,8 @@ header .right_menu .lang.over h2>a{color:#222;}
 .content .financial tbody td{font-size: 16px;}
 .content .financial tbody td{border: 1px solid #ddd;}
 .content .financial tbody tr td:last-of-type{border-right: none;}
-.content .tabs.tab1{display: block;}
-.content .tabs{display: none;}
+.content.finace .tabs_menu .tab1{display: block;}
+.content.finace .tabs_menu {display: none;}
 /* ######################## SUB-IR-주가정보###################### */
 .content.stock .new{text-align: right; margin-bottom: 15px;}
 .content.stock .new>a{display: inline-block; font-size: 14px; color:#fff; background-color: #000; padding: 10px 37px; border-radius: 7px;}
@@ -562,19 +562,20 @@ header .right_menu .lang.over h2>a{color:#222;}
 .hr .tit{font-size: 19px; color:#444; border-bottom: 1px solid #e5e5e5; padding-bottom: 20px;;}
 .hr .tit span{color:#888; font-size: 15px; margin-left: 14px;}
 .hr .sub_tit{color:#222; margin-top: 33px;}
+.hr .hr_list{overflow: hidden; counter-reset: num; margin: 13px -2% 0;}
+.hr .hr_list>li{position: relative; float: left; border: 1px solid #ddd; box-sizing: border-box; margin: 0 2%; text-align: center;}
+.hr .hr_list>li::before{content: '0'counter(num); position: absolute; color:#eee; left:50%; top:50%; transform: translate(-50%,-50%); font-size: 55px; counter-increment: num 1; z-index: -1; font-style: italic; font-weight: bold;}
+.hr .hr_list>li::after{content: url(../images/hr_arrow_icon.png); position: absolute; right: -20%; top:50%; transform: translateY(-50%)}
 /* ######################## SUB-HR-인사제도###################### */
 .hr .promote .tit{margin-top: 30px;}
-.hr .promote ul{overflow: hidden; counter-reset: num; margin: 13px -2% 0;}
-.hr .promote ul>li{position: relative; float: left; display: flex; justify-content: center; align-items: center; height: 120px; border: 1px solid #ddd; box-sizing: border-box; text-align: center; margin: 0 2%}
-.hr .promote ul>li span{display: block; color:#8e908e; font-size: 13px;  margin-top: 6px;}
-.hr .promote ul>li::before{content: '0'counter(num); position: absolute; color:#eee; left:50%; top:50%; transform: translate(-50%,-50%); font-size: 55px; counter-increment: num 1; z-index: -1; font-style: italic; font-weight: bold;}
-.hr .promote ul>li::after{content: url(../images/hr_arrow_icon.png); position: absolute; right: -25%; top:50%; transform: translateY(-50%)}
-.hr .promote ul>li:last-child::after{display: none;}
-.hr .promote ul.research>li::after{right: -20%;}
-.hr .promote ul>li>p{color:#222;}
-.hr .promote ul>li>span{font-size: 12px;}
-.hr .promote ul.admin>li{width: 12.66%;}
-.hr .promote ul.research>li{width: 16%;}
+.hr .hr_list>li{ display: flex; justify-content: center; align-items: center; height: 120px;}
+.hr .hr_list>li span{display: block; color:#8e908e; font-size: 13px;  margin-top: 6px;}
+.hr .hr_list>li:last-child::after{display: none;}
+.hr .hr_list .research>li::after{right: -15%;}
+.hr .promote .hr_list>li>p{color:#222;}
+.hr .promote .hr_list>li>span{font-size: 12px;}
+.hr .hr_list.admin>li{width: 12.66%;}
+.hr .hr_list.research>li{width: 16%;}
 .hr .person{margin: 0 -1.5%;}
 .hr .person>div{float: left; width: 47%; margin: 90px 1.5% 0;}
 .hr .person .txt>div{float: left; width: 72.7%;}
@@ -597,6 +598,59 @@ header .right_menu .lang.over h2>a{color:#222;}
 .hr .wel_tabs.fix{position: fixed;top:50px; left:0; width: 100%; z-index: 50; }
 .hr .wel_tabs.fix ul{width: 1200px; margin: 0 auto;}
 .hr .wel_tabs li.on{border-top: 1px solid #000; border-bottom-color: transparent;}
+/* ######################## SUB-HR-채용공고###################### */
+.hr .common_tab>li.on{background-color: #222;}
+.hr .common_tab>li.on>a{color:#fff;}
+.hr .recruit .tabs_menu{display: none;}
+.hr .recruit h3{text-align: left;}
+.hr .recruit h3 b{font-size: 17px; font-weight: bold; letter-spacing: -0.5px;}
+.hr .recruit .hr_list>li{height: 170px;}
+.hr .hr_list>li::after{right: -15%;}
+.hr .hr_list>li::before{font-size: 57px; top:73%; font-style: normal;}
+.hr .recruit li>p{padding-top: 79px; background-repeat: no-repeat; background-position: top center;}
+.hr .recruit .hr_list>li:nth-child(1)>p{background-image: url(../images/hr_recruit_icon_01.png);}
+.hr .recruit .hr_list>li:nth-child(2)>p{background-image: url(../images/hr_recruit_icon_02.png);}
+.hr .recruit .hr_list>li:nth-child(3)>p{background-image: url(../images/hr_recruit_icon_03.png);}
+.hr .recruit .hr_list>li:nth-child(4)>p{background-image: url(../images/hr_recruit_icon_04.png);}
+.hr .recruit .hr_list>li:nth-child(5)>p{background-image: url(../images/hr_recruit_icon_05.png);}
+.hr .recruit .step{counter-reset: num; margin: 40px 0 80px;}
+.hr .recruit .step>li{border-bottom: 1px solid #ddd; padding: 30px 0; overflow: hidden;}
+.hr .recruit .step>li:first-child{border-top: 1px solid #ddd;}
+.hr .recruit .recruit_info>div ul,
+.hr .recruit .step>li>div{float: left; width: 81.5%;}
+.hr .recruit .step .step_order{width: 18.5%; text-align: center; font-size: 18px; font-weight: bold; font-style: italic;}
+.hr .recruit .step .step_order::before{content: 'step 0'counter(num); counter-increment: num 1; color:#ccc;}
+.hr .recruit .step .step_order.on::before{color:#ed1d25;}
+.hr .recruit .step>li em{background: url(../images/hr_arrow_icon.png) no-repeat left center; padding: 0 20px 0 44px; color:#444;}
+.hr .recruit .recruit_info>div{overflow: hidden; margin-bottom: 65px;} 
+.hr .recruit .recruit_info>div h3{float: left; width: 18.5%;}
+.hr .recruit .recruit_info>div ul>li{line-height: 28px; color:#444;}
+.hr .recruit .recruit_info>div ul>li em{color:#aaa; font-size: 13px; line-height: 26px;}
+.hr .recruit .qna{padding: 30px 0; border: 1px solid #ddd; text-align: center; font-size:19px; color:#222;}
+.hr .recruit .qna span{padding: 0 30px; font-weight: bold; border-right: 1px solid #ddd;}
+.hr .recruit .qna em{padding: 0 30px;}
+.hr .recruit .recruit_btn{text-align: center; margin-top: 50px;}
+.hr .recruit .recruit_btn .btn{height: 70px; line-height: 70px; width: 350px; padding: 0; margin: 0 6px;}
+
+.hr .recruit .notice_info{margin-bottom: 20px;}
+.hr .recruit.recruit_noti>.tit{position: relative; text-align: center;  font-size: 24px; border-bottom: 0; font-weight: bold; padding-bottom: 75px;}
+.hr .recruit.recruit_noti>.tit::before{content: ''; position: absolute; width: 53px; height: 1px; background-color: #222; left:50%; transform: translateX(-50%); bottom:30px;}
+.hr .recruit .ui-selectmenu-button.ui-button{width: 200px; height: 34px;  padding: 0;  line-height: 34px; background-color: #fff;}
+.hr .recruit .recruit_list>li{margin-bottom: 3px; border: 1px solid #dedede; transition: border 0.5s;}
+.hr .recruit .recruit_list>li>a{height: 140px;  display: flex; align-items: center; padding: 30px; box-sizing: border-box; }
+.hr .recruit .recruit_list>li .noti_box{float: left; display: flex; align-items: center; justify-content: center; width: 80px; height: 80px;  margin-right: 30px; color:#fff; background-color: #aaa;}
+.hr .recruit .recruit_list>li h3{float: left; overflow: hidden;text-overflow: ellipsis; white-space: nowrap; color:#222; font-weight: normal; letter-spacing: -0.8px; font-size: 18px;}
+.hr .recruit .recruit_list>li h3 span{color:#e52a2a; margin-right: 10px; }
+.hr .recruit .recruit_list>li .more{margin-left: auto; border: 1px solid #dedede; height: 30px; width: 80px; text-align: center; line-height: 30px; transition: all 0.5s;}
+.hr .recruit .pager{margin-top: 27px;}
+.hr .recruit .recruit_list>li .day{display: none;}
+
+/* active */
+.hr .recruit .recruit_list>li:hover{border-color: #ed1c24;}
+.hr .recruit .recruit_list>li:hover .more{background-color: #ed1c24; color:#fff;}
+
+
+
 /* ######################## SUB-윤리경영-COMMON###################### */
 /* ######################## SUB-윤리경영-임직원 행동지침###################### */
 .content.et_con{padding: 100px 0;}
