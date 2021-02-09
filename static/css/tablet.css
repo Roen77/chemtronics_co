@@ -263,6 +263,7 @@ section.inform{height: auto;}
      .company .comment p:first-child{width: 100%;}
      .company .comment p{font-size: 15px; width: 100%; line-height: 23px; margin: 30px 0; text-align: center;}
      .company .comment p br{display: none;}
+     .company_list .company_slide{height: 60px;}
 
      .content .notice .main_head,
      .content .notice .num{display: none;}

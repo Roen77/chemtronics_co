@@ -436,6 +436,10 @@ header .right_menu .lang.over h2>a{color:#222;}
 .content table.ty1 td{padding-left: 20px; font-size: 16px; height: auto; text-align: left;}
 .content table.ty1 th{background-color: #f5f5f5; color:#222;}
 table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
+/* ######################## SUB-COMPANY-COMMON###################### */
+.company_list .company_slide{height: 100px; width: 100%; background-color:#f5f5f5;}
+.company_list .company_slide .swiper-slide{display: flex; justify-content: center; align-items: center; text-align: center;}
+.company_list .company_slide img{width: 75%; }
 /* ######################## SUB-COMPANY-CEO 인사말###################### */
 .company .main_txt{font-size: 35px; line-height: 52px; color:#222; font-weight: 300; padding: 42px 0 78px;}
 .company .main_txt em{position: relative; color:#ff222b; font-weight: 500;}
