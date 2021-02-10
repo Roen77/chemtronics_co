@@ -384,7 +384,7 @@ header .right_menu .lang.over h2>a{color:#222;}
 .HR.visual .sub_bg{background-image: url(../images/sub_visual_hr.jpg);}
 .company_vg.visual .sub_bg{background-image: url(../images/sub_visual_company.jpg);}
 /* 서브 메뉴 리스트 */
-.sub_menu_list{position: fixed; left:0; top:100px; width: 100%;  background-color: #f5f5f5; padding-left: 22px; box-sizing: border-box; border-bottom: 1px solid #e5e5e5; z-index: 40; transition: top 0.5s;border-top: 1px solid #e5e5e5; box-sizing: border-box;}
+.sub_menu_list{position: fixed; left:0; top:100px; width: 100%;  background-color: #f5f5f5; padding-left: 22px; box-sizing: border-box; border-bottom: 1px solid #e5e5e5; z-index: 100; transition: top 0.5s;border-top: 1px solid #e5e5e5; box-sizing: border-box;}
 .sub_menu_list>div{position: relative; float: left; background-color: #f5f5f5; width: 180px;}
 .sub_menu_list h3>a{position: relative; color:#222;  height: 48px; line-height: 48px;}
 .sub_menu_list h3>a::after{content: '\f0dd'; position: absolute; font-family: fontawesome; right: 16px; top:50%; transform: translateY(-50%);}
@@ -450,6 +450,16 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .record_list>div h3{float: left; width: 18.5%;}
 .record_list>div ul>li{line-height: 28px; color:#444;}
 .record_list>div ul>li em{color:#aaa; font-size: 13px; line-height: 26px;}
+/* 고정 리스트 공통 요소 */
+.fix_tabs{position: relative; transition: width 0.5s;}
+.fix_tabs li{float: left; width: 33.33333%; border: 1px solid #ddd; box-sizing: border-box; border-right: none; background-color: #fff;}
+.fix_tabs li:last-child{border-right: 1px solid #ddd;}
+.fix_tabs li>a{display: block; color:#222; text-align: center; padding:20px 0;}
+
+/* active */
+.fix_tabs.fix{position: fixed;top:50px; left:0; width: 100%; z-index: 50; }
+.fix_tabs.fix ul{width: 1200px; margin: 0 auto;}
+.fix_tabs li.on{border-top: 1px solid #000; border-bottom-color: transparent;}
 /* ######################## SUB-COMPANY-COMMON###################### */
 .company_list .company_slide{height: 100px; width: 100%; background-color:#f5f5f5;}
 .company_list .company_slide .swiper-slide{display: flex; justify-content: center; align-items: center; text-align: center;}
@@ -509,7 +519,32 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .company .vision_area .policy ul>li{float: left; width: 31.33%; margin: 0 1%;} 
 .company .vision_area .policy ul>li img{width: 100%;}
 .company .vision_area .policy ul>li span{display: block; font-size: 18px; font-weight: 500; margin: 10px 0;}
-/* ######################## SUB-PR-뉴스###################### */
+/* ######################## SUB-COMPANY-연혁/수상###################### */
+/* 연혁 */
+.company.history .history_tit{padding: 50px 0; text-align: center; background: url(../images/history_top_bg.jpg) no-repeat center; background-size: cover; margin-bottom: 50px;}
+.company.history  .history_tabs li{width: 25%;}
+.company.history .history_list{position: relative;}
+.company.history .print_btn{position: absolute; right: 0; top:80px; width: 175px; height: 48px; z-index: 1; font-size: 15px; border: 1px solid #dddd; text-align: center; line-height: 48px; color:#222;}
+.company.history .print_btn .fas{margin-right: 7px; vertical-align: -2px; ;}
+.company.history .history_list .history_tab{position: relative; display: none; padding: 108px 0 0;}
+.company.history .history_list .history_tab.tab1{display: block;}
+.company.history .history_list .main_year{position: absolute;  font-size: 27px; font-weight: bold; color:#222;}
+.company.history .history_list .main_year::after{content: ''; display: inline-block; position: relative; top:-5px; margin-left: 20px; width: 60px; height: 3px; background-color: #e52a2a;}
+.company.history .history_list .history_area{ padding-left: 230px; box-sizing: border-box;} 
+.company.history .history_list .history_area>ul>li{overflow: hidden; line-height: 30px; padding-bottom: 30px;}
+.company.history .history_list .history_area>ul>li:last-child{padding-bottom: 0;}
+.company.history .history_list .history_area>ul>li>*{float: left;}
+.company.history .history_list .history_area>ul>li>.year{position: relative; color:#222;font-weight: bold; font-size: 23px; padding: 0 5% 0 10px; font-style: italic;}
+.company.history .history_list .history_area>ul>li>.year::after{content: ''; position: absolute; right: -1px; top:0; height: 500px; width: 1px; background-color: #ddd;}
+.company.history .history_list .history_area>ul>li:first-child>.year::after{top:8px;}
+.company.history .history_list .history_area>ul>li:last-child>.year::after{top:-8px; height: 20px;}
+.company.history .history_list .history_area>ul>li .story{position: relative; width: 80%;}
+.company.history .history_list .history_area>ul>li .story::after{content: '';position: absolute; z-index: 1; left:0; top:8px; transform: translateX(-50%); width: 7px; height: 7px; border-radius: 50%; background-color: #e52a2a;}
+.company.history .history_list .history_area>ul>li .story>li{position: relative;}
+.company.history .history_list .history_area>ul>li .story>li p{display: inline-block; font-size: 15px; padding-left: 50px; color:#5b5b5b; font-weight: 300;}
+.company.history .history_list .history_area>ul>li .story>li span{position: absolute; left:0; top:0; color:#222; padding: 0 19px; font-weight: bold;}
+/* 수상 */
+.company.history .history_tabs .award>li{width: 50%;}
 /* 리스트 영역 */
 .content .notice li .num{width: 7%;}
 .content .notice li .or{width: 11%;}
@@ -519,7 +554,7 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .content .notice li:hover{background-color: rgba(221, 221, 221, 0.253);}
 
 .content{color:#888;  padding: 100px 0;}
-.content .inner{width: 1200px;  margin: 0 auto; padding: 0;}
+.content .inner{width: 1200px;  margin: 0 auto; padding: 0; box-sizing: border-box;}
 .content a{color:#888;}
 .content .notice_info>div{float: left;}
 .content .notice_info .total{font-size: 14px; text-transform: uppercase; line-height: 36px;}
@@ -663,20 +698,11 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .hr .person .grow .txt{border-bottom: 1px solid #ddd; padding-bottom: 40px;}
 .hr .welfare h3{padding: 137px 0 30px;}
 .hr .welfare .wel_list{padding: 47px 0 0;}
-.hr .welfare .wel_tabs{position: relative; transition: width 0.5s;}
-.hr .welfare .wel_tabs li{float: left; width: 33.33333%; border: 1px solid #ddd; box-sizing: border-box; border-right: none; background-color: #fff;}
-.hr .welfare .wel_tabs li:last-child{border-right: 1px solid #ddd;}
-.hr .welfare .wel_tabs li>a{display: block; color:#222; text-align: center; padding:20px 0;}
 .hr .welfare .wel_list ul>li{height: 120px; display: flex;  align-items: center; justify-content: center; border-bottom: 1px solid #ddd;}
 .hr .welfare .wel_list ul>li>*{float: left; }
 .hr .welfare .wel_list ul>li .photo{width: 12.25%; text-align: center;}
 .hr .welfare .wel_list ul>li span{width: 17%; font-weight: bold; color:#222; text-align: center;}
 .hr .welfare .wel_list ul>li p{width: 70.75%; line-height: 25px; color:#999; font-size: 15px;}
-
-/* active */
-.hr .wel_tabs.fix{position: fixed;top:50px; left:0; width: 100%; z-index: 50; }
-.hr .wel_tabs.fix ul{width: 1200px; margin: 0 auto;}
-.hr .wel_tabs li.on{border-top: 1px solid #000; border-bottom-color: transparent;}
 /* ######################## SUB-HR-직무소개###################### */
 .hr.job_info .inner{position: relative; max-height: 650px; height: 650px;}
 .hr .accodian .job_con>div{display: none;}

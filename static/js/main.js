@@ -305,8 +305,11 @@ $(document).ready(function(){
         $(".content .tb_con .tb_bg").on('touchstart click',function(){
             $(this).fadeOut();
         })
+
         //서브페이지 IR 재무정보, HR 채용공고 탭메뉴
-        $('.common_tab>li').eq(0).addClass("on")
+        if( !$('.common_tab>li').eq(0).hasClass('on')){
+            $('.common_tab>li').eq(0).addClass("on")
+        }
         $('.common_tab>li').click(function(e){
             e.preventDefault();
             var index=$(this).index();
@@ -314,15 +317,32 @@ $(document).ready(function(){
             $('.common_tab>li').removeClass("on");
             $(this).addClass("on");
             tabMenu.hide().eq(index).show();
+            if($('.history_tabs.fix_tabs').length>0){
+                $('.history_tabs.fix_tabs').removeClass('fix');
+            }
+
         })
-        $('.wel_tabs li').eq(0).addClass('on')
-        $('.wel_tabs li').click(function(e){
+        $('.fix_tabs li').eq(0).addClass('on')
+        $('.fix_tabs li').click(function(e){
             e.preventDefault();
             $(this).addClass("on").siblings('li').removeClass('on');
             var idx=$(this).index();
+            if($('.move_list').length>0){
+                var welOffset=$('.move_list').eq(idx).offset().top-$('.fix_tabs').outerHeight()-$('.sub_menu_list').outerHeight();
+                $('html,body').stop().animate({scrollTop:welOffset});
+            }
+        })
+        // 히스토리탭메뉴
+        $('.history_list .history_tabs li').click(function(e){
+            e.preventDefault();
+            var index=$(this).index();
+            var historyTab=$('.company.history .history_list .history_tab');
+            var historyfixMenu=$('.history_tabs.fix_tabs');
+            // $('.history_list .history_tabs>li').removeClass("on");
+            // $(this).addClass("on");
+            historyTab.hide().eq(index).show();
+    
 
-            var welOffset=$('.wel_list').eq(idx).offset().top-$('.wel_tabs').outerHeight()-$('.sub_menu_list').outerHeight();
-            $('html,body').stop().animate({scrollTop:welOffset});
         })
         
         //서브페이지 HR 직무소개 아코디언 메뉴
@@ -370,6 +390,7 @@ $(document).ready(function(){
 
     }//sub
     //서브페이지 스크롤시 헤더 고정
+   
     function ElemFix(){
         if(winOffset > $('.sub_pg .content').offset().top){
             $(".header").addClass("fix");
@@ -382,15 +403,19 @@ $(document).ready(function(){
         }else{
             $(".sub_goTopBtn").removeClass('fix');
         }
-        if($('.wel_tabs').length>0){
-            var welOffset= $('.wal_con').offset().top-$('.sub_menu_list').outerHeight();
-            if(winOffset > welOffset){
-                if(!$('.wel_tabs').hasClass("fix")){
-                    $('.wel_tabs').addClass('fix')
+
+        if($('.fix_tabs').length>0){
+            var welOffset= $('.fix_con').offset().top-$('.sub_menu_list').outerHeight();
+            var realwinOffset=winOffset+$('.sub_menu_list').outerHeight();
+            if( realwinOffset > welOffset){
+                if(!$('.fix_tabs').hasClass("fix")){
+                    $('.fix_tabs').addClass('fix')
+                    console.log("픽스붙임")
                 }
             }else{
-                if($('.wel_tabs').hasClass("fix")){
-                    $('.wel_tabs').removeClass('fix')
+                if($('.fix_tabs').hasClass("fix")){
+                    $('.fix_tabs').removeClass('fix')
+             
                 }
             }
         }

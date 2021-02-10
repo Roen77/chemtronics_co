@@ -96,6 +96,9 @@ section.inform{height: auto;}
 .content{padding: 82px 0 101px;}
 .content .tabs{padding: 0 0 94px;}
 
+/* active */
+.fix_tabs.fix ul{width: 100%;}
+
 .company .ceo_txt .ceo_img{width: 390px; top:-100px;}
 .company .ceo_txt .ceo_img img{width: 100%;}
 /* 테이블 */
@@ -114,9 +117,6 @@ section.inform{height: auto;}
 .conflict .conflict_img>div>img{max-width: 49%;}
 .et_con.card .form_con{padding: 70px;}
 .et_con.card .user_info input[type=password]+span{font-size: 1.5vw; letter-spacing: -0.5px;}
-
-/* active */
-.hr .wel_tabs.fix ul{width: 100%;}
 
 .hr .accodian .job_con{padding-left: 250px;}
 .hr .accodian .job_con .main_con{padding-right: 13px;}
@@ -248,6 +248,10 @@ section.inform{height: auto;}
     .record_list>div ul>li{font-size: 13px;}
     .record_list>div ul>li em{font-size: 11px;}
 
+    /* 고정 리스트 공통 요소 */
+    .fix_tabs>li>a{font-size: 13px;}
+    .fix_tabs li>a{padding: 12px 0; font-size: 13px;}
+
      .visual .sub_bg{height: 358px;}
      .sub_pg .tit_info{top:142px;}
      .sub_pg .tit_info p b{font-size: 11px; line-height: 20px;}
@@ -292,6 +296,18 @@ section.inform{height: auto;}
      .company .vision_area .value>li .des{font-size: 13px; line-height: 20px;}
      .company .vision_area .policy{padding: 50px 0;}
      .company .vision_area .policy ul>li span{font-size: 14px;}
+
+     .company.history .print_btn{display: none;}
+     .company.history .history_tit{padding: 30px 0; margin-bottom: 26px;}  
+     .company.history .history_tit img{width: 60%;}
+     .company.history .history_list .history_tab{padding-top: 20px;}
+     .company.history .history_list .main_year{position: static; padding-bottom: 20px; font-size: 20px;}
+     .company.history .history_list .main_year::after{ display: block; margin-left: 0; margin-top: 10px;}
+     .company.history .history_list .history_area{padding-left: 0;}
+     .company.history .history_list .history_area>ul>li{line-height: 26px;}
+     .company.history .history_list .history_area>ul>li>.year{min-width: 70px; padding: 0;}
+     .company.history .history_list .history_area>ul>li .story>li p{font-size: 14px; line-height: 20px;}
+
 
 
      .content .notice .main_head,
@@ -404,13 +420,11 @@ section.inform{height: auto;}
      .hr .person .grow .photo{margin-top: 10%;}
      .hr .photo img{width: 30px;}
      .hr .welfare h3 {padding: 72px 0 31px;}
-     .hr .welfare .wel_tabs>li>a{font-size: 13px;}
      .hr .welfare .wel_list ul>li{position: relative; display: block; height: auto; padding: 28px 0; overflow: hidden;}
      .hr .welfare .wel_list ul>li span{float: none; display: block; width: 100%; text-align: left; font-size: 14px; margin-bottom: 2px;}
      .hr .welfare .wel_list ul>li .photo{position: relative; width: 20%; height: 100%; text-align: center;}
      .hr .welfare .wel_list ul>li img{width: 40px;}
      .hr .welfare .wel_list ul>li p{width: 80%;font-size: 13px; line-height: 22px; letter-spacing: -0.5px;}
-     .hr .welfare .wel_tabs li>a{padding: 12px 0; font-size: 13px;}
      .hr .recruit .ui-selectmenu-button.ui-button{width: 150px;}
      .hr .recruit .step{margin: 12px 0 45px;}
      .hr .recruit .step>li{padding: 15px 0;}

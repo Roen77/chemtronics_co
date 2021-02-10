@@ -9,7 +9,6 @@ header .right_menu .fam{margin-right: 70px;}
 .company .vision_area .value>li{display: block; text-align: center; padding: 20px 10px;}
 .company .vision_area .value>li .txt{width: 100%; font-size: 16px; margin: 7px 0;}
 .company .vision_area .value>li p{text-align: left;}
-.company .vision_area .value>li p br{display: none;}
 .content .gall_list li .txt h4{line-height: 22px;}
 .content .gallery .video_txt h3{font-size: 20px;}
 .stock .stock_head table.tb_main tr.last td{padding: 0 8%;}
@@ -47,22 +46,28 @@ header .right_menu .fam{margin-right: 70px;}
     .sub_menu_list ul{top:32px;}
     .sub_menu_list a, .sub_menu_list .home, .sub_menu_list h3>a{padding: 0 2vw;}
     .sub_menu_list ul>li>a::after{right: 6%;}
+    .company.history .history_list .history_area>ul>li .story{width: 100%;}
+    .company.history .history_list .history_area>ul>li .story::after{display: none;}
+    .company.history .history_list .history_area>ul>li>.year{font-size: 20px;}
+    .company.history .history_list .history_area>ul>li .story>li span{padding: 0 0 0 5px;}
+    .company.history .history_list .history_area>ul>li .story>li p{padding-left: 29px;}
+    .company.history .history_list .history_area>ul>li>*{float: none;}
     .et_con.card .user_info em{margin: 0 0.2%}
     .hr .tit{padding-bottom: 10px;}
     .hr .sub_tit{padding-bottom: 12px;}
     .hr .person .txt p{padding-top: 0;}
     .hr .hr_list{margin: 0;}
     .hr .hr_list.admin>li, .hr .hr_list.research>li{width: 100%; margin: 1% 0;}
-    .hr .welfare .wel_tabs li>a{font-size: 1.5vw;}
+    .fix_tabs li>a{font-size: 1.5vw;}
 
     /* active */
-    .hr .wel_tabs.fix{top:34px;}
+    .fix_tabs.fix{top:34px;}
 
     .hr .recruit .hr_list>li{height: 120px;}
     .hr .recruit li>p{padding-top: 60px; font-size: 13px;}
     .hr .hr_list>li::before{font-size: 45px;}
     .hr .recruit .recruit_btn .btn{font-size: 3vw;}
-    .hr .recruit .recruit_list>li>a>div{width: 80%;}
+    .hr .recruit .recruit_list>li>a>div{width: 85%;}
     .hr .recruit .recruit_list>li h3{position: relative; width: 60%;}
     .hr .recruit .recruit_list>li .day{display: block; font-size: 12px; margin-top: 33px;}
     .hr .recruit .recruit_list>li .more{position: relative; font-size: 0; height: 30px; width: 30px; border-radius:50%;}
