@@ -346,25 +346,27 @@ $(document).ready(function(){
         })
         $('.accodian_tab>ul>li.on').trigger("click")
 
-        var swiper = new Swiper('.swiper-container.company_slide', {
-            slidesPerView: 4,
-            loop: true,
-            autoplay: {
-                delay: 4000,
-                disableOnInteraction: false,
-              },
-              breakpoints: {
-                640: {
-                    slidesPerView: 4,
+        if($('.companys').length>0){
+            var swiper = new Swiper('.swiper-container.company_slide', {
+                slidesPerView: 4,
+                loop: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
                   },
-                800: {
-                  slidesPerView: 8,
-                },
-                1220: {
-                  slidesPerView: 10,
-                },
-              }
-          });
+                  breakpoints: {
+                    640: {
+                        slidesPerView: 4,
+                      },
+                    800: {
+                      slidesPerView: 8,
+                    },
+                    1220: {
+                      slidesPerView: 10,
+                    },
+                  }
+              });
+        }
 
     }//sub
     //서브페이지 스크롤시 헤더 고정

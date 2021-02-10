@@ -232,14 +232,21 @@ section.inform{height: auto;}
      .IR_con.content .notice li .file{width: auto; margin-right: 31px;}
      .content  #category-button{width: 150px;}
      .content .tabs{padding: 0 0 50px;}
-     .content .tabs>li>a{height: 40px; line-height: 40px; font-size: 14px;}
+     .content .tabs>li>a{height: 40px; line-height: 40px; font-size: 14px; width: 25vw;}
      /* 테이블 타입1 공통요소 */
-     .content table.ty1{width: 100%;}
+    .content table.ty1{width: 100%;}
     .content table.ty1 tbody tr:first-child th,
     .content table.ty1 tbody tr:first-child td{border-top: 1px solid #000;}
     .content table.ty1 th,
     .content table.ty1 td{padding-left: 10px; font-size: 13px; }
     table.ty1 td{padding: 10px 0;}
+
+    /* 리스트 공통 요소 */
+    .record_list>div h3{width: 100%; margin-bottom: 11px;}
+    .record_list>div{margin-bottom: 45px;}
+    .record_list>div ul{width: 100%;}
+    .record_list>div ul>li{font-size: 13px;}
+    .record_list>div ul>li em{font-size: 11px;}
 
      .visual .sub_bg{height: 358px;}
      .sub_pg .tit_info{top:142px;}
@@ -264,6 +271,28 @@ section.inform{height: auto;}
      .company .comment p{font-size: 15px; width: 100%; line-height: 23px; margin: 30px 0; text-align: center;}
      .company .comment p br{display: none;}
      .company_list .company_slide{height: 60px;}
+     .company .vision_area .head p b{font-size: 15px; line-height: 24px;} 
+     .company .vision_area .head h2{padding: 39px 0 19px; font-size: 27px;}
+     .company .vision_area .head .txt{font-size: 18px; line-height: 26px;}
+     .company .vision_area .head .txt em{display: block;}
+     .company .vision_area .vision_info>li:first-child{border-top: 1px solid #ddd; border-left: none;}
+     .company .vision_area .vision_info>li>div{padding: 22px 0;}
+     .company .vision_area .vision_info>li{float: none; width: 100%; border: none; border-bottom: 1px solid #ddd;}
+     .company .vision_area .vision_info>li>div .tit{font-size: 17px; padding: 10px 0 7px;}
+     .company .vision_area .vision_info>li>div em{font-size: 13px;}
+     .company .vision_area .vision_info>li>div .fas{padding: 20px 0; font-size: 14px;}
+     .company .vision_area .vision_info>li>div .txt{font-size: 13px; line-height: 24px;}
+     .company .vision_area .vision_info>li>div .txt br{display: none;}
+     .company .vision_area .slogan{padding: 49px 0; font-size: 27px;} 
+     .company .vision_area .mind_info h3 b{font-size: 17px;}
+     .company .vision_area .mind_info>div li{font-size: 14px; line-height: 24px;}
+
+     .company .vision_area .value>li .img img{width: 90px;}
+     .company .vision_area .value>li .txt{font-size: 18px;}
+     .company .vision_area .value>li .des{font-size: 13px; line-height: 20px;}
+     .company .vision_area .policy{padding: 50px 0;}
+     .company .vision_area .policy ul>li span{font-size: 14px;}
+
 
      .content .notice .main_head,
      .content .notice .num{display: none;}
@@ -388,11 +417,7 @@ section.inform{height: auto;}
      .hr .recruit .step .step_order{font-size: 14px;}
      .hr .recruit .step>li em,
      .hr .recruit .step>li span{display: block; padding: 0 0 0 13px; font-size: 13px; line-height: 20px;}
-     .hr .recruit .recruit_info>div h3{width: 100%; margin-bottom: 11px;}
      .hr .recruit h3 b{font-size: 14px;}
-     .hr .recruit .recruit_info>div{margin-bottom: 45px;}
-     .hr .recruit .recruit_info>div ul>li{font-size: 13px;}
-     .hr .recruit .recruit_info>div ul>li em{font-size: 11px;}
      .hr .recruit .qna{font-size: 17px; padding: 14px 0;}
      .hr .recruit .qna span,
      .hr .recruit .qna em{padding: 0 13px;}

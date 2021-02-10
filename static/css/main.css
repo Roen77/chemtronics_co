@@ -382,6 +382,7 @@ header .right_menu .lang.over h2>a{color:#222;}
 .IR.visual .sub_bg{background-image: url(../images/sub_visual_ir.jpg);}
 .ethical.visual .sub_bg{background-image: url(../images/sub_visual_ethical.jpg);}
 .HR.visual .sub_bg{background-image: url(../images/sub_visual_hr.jpg);}
+.company_vg.visual .sub_bg{background-image: url(../images/sub_visual_company.jpg);}
 /* 서브 메뉴 리스트 */
 .sub_menu_list{position: fixed; left:0; top:100px; width: 100%;  background-color: #f5f5f5; padding-left: 22px; box-sizing: border-box; border-bottom: 1px solid #e5e5e5; z-index: 40; transition: top 0.5s;border-top: 1px solid #e5e5e5; box-sizing: border-box;}
 .sub_menu_list>div{position: relative; float: left; background-color: #f5f5f5; width: 180px;}
@@ -425,8 +426,10 @@ header .right_menu .lang.over h2>a{color:#222;}
 .content .search  button::after{content: '\f002'; position: absolute; left:50%; top:50%; transform: translate(-50%,-50%); font-family: fontawesome; font-size: 16px; color:#fff;}
 /* tab메뉴 */
 .content .tabs{font-size: 0; text-align: center; padding:10px 0 98px;}
-.content .tabs>li{display: inline-block; border: 1px solid #e5e5e5; box-sizing: border-box;}
-.content .tabs>li:nth-child(2){margin-left: -1px;}
+.content .tabs>li{position: relative; display: inline-block; border-top: 1px solid #e5e5e5; border-bottom: 1px solid #e5e5e5; box-sizing: border-box;}
+.content .tabs>li:first-child{border-left: 1px solid #e5e5e5;}
+.content .tabs>li:last-child{border-right: 1px solid #e5e5e5;}
+.content .tabs>li::before{content: '';position: absolute; right: -1px; top:50%; transform: translateY(-50%); background-color: #e5e5e5; height: 50%; width: 1px;}
 .content .tabs>li>a{display: block; width: 198px; height: 60px; line-height: 60px; color:#222; font-size: 16px;}
 .content .tabs>li.over>a{background-color: #222; color:#fff;}
 /* 테이블 타입1 공통요소 */
@@ -436,6 +439,17 @@ header .right_menu .lang.over h2>a{color:#222;}
 .content table.ty1 td{padding-left: 20px; font-size: 16px; height: auto; text-align: left;}
 .content table.ty1 th{background-color: #f5f5f5; color:#222;}
 table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
+/* 공통 탭메뉴 */
+.common_tab>li.on{background-color: #222;}
+.common_tab>li.on>a{color:#fff;}
+.tabs_menu {display: none;}
+.tabs_menu.tab1{display: block;}
+/* 리스트 공통 요소 */
+.record_list>div ul{float: left; width: 81.5%;}
+.record_list>div{overflow: hidden; margin-bottom: 65px;} 
+.record_list>div h3{float: left; width: 18.5%;}
+.record_list>div ul>li{line-height: 28px; color:#444;}
+.record_list>div ul>li em{color:#aaa; font-size: 13px; line-height: 26px;}
 /* ######################## SUB-COMPANY-COMMON###################### */
 .company_list .company_slide{height: 100px; width: 100%; background-color:#f5f5f5;}
 .company_list .company_slide .swiper-slide{display: flex; justify-content: center; align-items: center; text-align: center;}
@@ -453,6 +467,48 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .company .comment p:first-child{width: 70%;}
 .company .comment p{line-height: 37px; color:#222; font-weight: 300; font-size: 19px; width: 90%; margin: 48px 0;}
 .company .comment p span{color:#ff222b; font-weight: 500;}
+/* ######################## SUB-COMPANY-비전###################### */
+/* 비전 */
+.company .vision_area .head{text-align: center; color:#222;}
+.company .vision_area .head p b{display: inline-block; font-size: 20px; line-height: 37px; border-bottom: 1px solid #000; font-weight: bold;}
+.company .vision_area .head h2{font-size: 40px; padding: 40px 0; letter-spacing: -1px;}
+.company .vision_area .head .txt{line-height: 42px; font-size: 25px;color:#444;  letter-spacing: -1px;}
+.company .vision_area .head .txt em{color:#e52a2a;font-weight: bold;}
+.company .vision_area .head .txt b{color:#222;}
+.company .vision_area .vision_img{padding: 63px 0;}
+.company .vision_area .vision_img img{width: 100%;}
+.company .vision_area .vision_info>li:first-child{border-left: 1px solid #ddd;}
+.company .vision_area .vision_info>li{float: left; width: 33.333%; text-align: center; border-right: 1px solid #ddd; box-sizing: border-box;}
+.company .vision_area .vision_info>li>div{box-sizing: border-box; padding: 30px 17px;}
+.company .vision_area .vision_info>li>div p b{font-size: 15px; line-height: 1; font-style: italic; font-weight: bold; color:#222; border-bottom: 1px solid #000;}
+.company .vision_area .vision_info>li>div .tit{font-size: 26px;  font-weight: bold; color:#222; padding: 20px 0 14px;}
+.company .vision_area .vision_info>li>div .fas{display: block; padding: 30px 0; color:#e52a2a;}
+.company .vision_area .vision_info>li>div .em{color:#aaa;}
+.company .vision_area .vision_info>li>div .txt{line-height: 30px; color:#666; }
+.company .vision_area .slogan{font-size: 48px; font-weight: bold; padding:100px 0 106px; letter-spacing: -0.5px;}
+.company .vision_area .slogan p{padding-bottom: 28px;}
+/* 경영정신 */
+.company .vision_area .mind_info h3 b{font-size: 25px; color:#222; font-weight: 300;}
+.company .vision_area .mind_info h3 em{font-weight: 500;}
+.company .vision_area .mind_info>div{border-bottom: 1px solid #ddd; padding-bottom: 45px;}
+.company .vision_area .mind_info>div:last-child{padding-bottom: 0; border-bottom:none;}
+.company .vision_area .mind_info>div li{font-weight: 300; color:#222; font-size: 18px; line-height: 30px;}
+.company .vision_area .mind_info>div li>b{font-weight: 500;}
+/* 핵심가치 */
+.company .vision_area .value{margin-top: 50px;}
+.company .vision_area .value>li{display: flex;  border-bottom: 1px solid #ddd;  align-items: center; padding: 35px 0;color:#222;}
+.company .vision_area .value>li:first-child{border-top: 1px solid #ddd;}
+.company .vision_area .value>li .img{padding: 0 25px;}
+.company .vision_area .value>li .txt{width: 150px; font-size: 22px;}
+.company .vision_area .value>li .txt em{font-weight: bold;}
+.company .vision_area .value>li .des{padding: 0; width: 100%;}
+.company .vision_area .value>li .des p{margin-left: 22px; line-height: 28px;}
+.company .vision_area .value>li .des p::before{content: ''; display: inline-block; position: relative; top:-5px; left:-20px;  width: 4px; height: 4px; background-color: #222; border-radius: 50%;}
+.company .vision_area .policy{padding: 100px 0;}
+.company .vision_area .policy ul{margin-top: 30px;}
+.company .vision_area .policy ul>li{float: left; width: 31.33%; margin: 0 1%;} 
+.company .vision_area .policy ul>li img{width: 100%;}
+.company .vision_area .policy ul>li span{display: block; font-size: 18px; font-weight: 500; margin: 10px 0;}
 /* ######################## SUB-PR-뉴스###################### */
 /* 리스트 영역 */
 .content .notice li .num{width: 7%;}
@@ -536,7 +592,6 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .content .financial tbody td{border: 1px solid #ddd;}
 .content .financial tbody tr td:last-of-type{border-right: none;}
 .content.finace .tabs_menu .tab1{display: block;}
-.content.finace .tabs_menu {display: none;}
 /* ######################## SUB-IR-주가정보###################### */
 .content.stock .new{text-align: right; margin-bottom: 15px;}
 .content.stock .new>a{display: inline-block; font-size: 14px; color:#fff; background-color: #000; padding: 10px 37px; border-radius: 7px;}
@@ -642,8 +697,6 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .hr.job_info .job_con .main_tit.sub_txt h3{font-size: 20px; font-weight: normal;}
 .hr.job_info .job_con .main_tit.sub_txt span{color:#444;}
 /* ######################## SUB-HR-채용공고###################### */
-.hr .common_tab>li.on{background-color: #222;}
-.hr .common_tab>li.on>a{color:#fff;}
 .hr .recruit .tabs_menu{display: none;}
 .hr .recruit h3{text-align: left;}
 .hr .recruit h3 b{font-size: 17px; font-weight: bold; letter-spacing: -0.5px;}
@@ -659,16 +712,11 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .hr .recruit .step{counter-reset: num; margin: 40px 0 80px;}
 .hr .recruit .step>li{border-bottom: 1px solid #ddd; padding: 30px 0; overflow: hidden;}
 .hr .recruit .step>li:first-child{border-top: 1px solid #ddd;}
-.hr .recruit .recruit_info>div ul,
 .hr .recruit .step>li>div{float: left; width: 81.5%;}
 .hr .recruit .step .step_order{width: 18.5%; text-align: center; font-size: 18px; font-weight: bold; font-style: italic;}
 .hr .recruit .step .step_order::before{content: 'step 0'counter(num); counter-increment: num 1; color:#ccc;}
 .hr .recruit .step .step_order.on::before{color:#ed1d25;}
 .hr .recruit .step>li em{background: url(../images/hr_arrow_icon.png) no-repeat left center; padding: 0 20px 0 44px; color:#444;}
-.hr .recruit .recruit_info>div{overflow: hidden; margin-bottom: 65px;} 
-.hr .recruit .recruit_info>div h3{float: left; width: 18.5%;}
-.hr .recruit .recruit_info>div ul>li{line-height: 28px; color:#444;}
-.hr .recruit .recruit_info>div ul>li em{color:#aaa; font-size: 13px; line-height: 26px;}
 .hr .recruit .qna{padding: 30px 0; border: 1px solid #ddd; text-align: center; font-size:19px; color:#222;}
 .hr .recruit .qna span{padding: 0 30px; font-weight: bold; border-right: 1px solid #ddd;}
 .hr .recruit .qna em{padding: 0 30px;}
