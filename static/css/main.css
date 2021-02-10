@@ -461,6 +461,8 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .fix_tabs.fix ul{width: 1200px; margin: 0 auto;}
 .fix_tabs li.on{border-top: 1px solid #000; border-bottom-color: transparent;}
 /* ######################## SUB-COMPANY-COMMON###################### */
+.company .head{text-align: center; color:#222;}
+.company .head p b{display: inline-block; font-size: 20px; line-height: 37px; border-bottom: 1px solid #000; font-weight: bold;}
 .company_list .company_slide{height: 100px; width: 100%; background-color:#f5f5f5;}
 .company_list .company_slide .swiper-slide{display: flex; justify-content: center; align-items: center; text-align: center;}
 .company_list .company_slide img{width: 75%; }
@@ -479,8 +481,6 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .company .comment p span{color:#ff222b; font-weight: 500;}
 /* ######################## SUB-COMPANY-비전###################### */
 /* 비전 */
-.company .vision_area .head{text-align: center; color:#222;}
-.company .vision_area .head p b{display: inline-block; font-size: 20px; line-height: 37px; border-bottom: 1px solid #000; font-weight: bold;}
 .company .vision_area .head h2{font-size: 40px; padding: 40px 0; letter-spacing: -1px;}
 .company .vision_area .head .txt{line-height: 42px; font-size: 25px;color:#444;  letter-spacing: -1px;}
 .company .vision_area .head .txt em{color:#e52a2a;font-weight: bold;}
@@ -545,6 +545,41 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .company.history .history_list .history_area>ul>li .story>li span{position: absolute; left:0; top:0; color:#222; padding: 0 19px; font-weight: bold;}
 /* 수상 */
 .company.history .history_tabs .award>li{width: 50%;}
+/* ######################## SUB-COMPANY-ci###################### */
+.company.ci{overflow: hidden;}
+.company.ci .ci_info{overflow: hidden; margin-bottom: 40px;}
+.company.ci .ci_info .logo_info{background: url(../images/ci_bg.jpg); width: 100%; padding: 70px 0; margin: 50px 0 20px; text-align: center; border-top: 1px solid #000; border-bottom: 1px solid #ddd;}
+.company.ci .ci_tit{color:#222; font-size: 19px;}
+.company.ci .ci_tit .fas{margin-right: 5px;}
+.company.ci .ci_des{line-height: 24px; color:#444;}
+.company.ci .ci_info .ci_des em{color:#ed1c24;}
+.company.ci .ci_info.ci_top>*,
+.company.ci .ci_info.ci_bom .slogan>div>div{float: left;} 
+.company.ci .ci_info.ci_top .ci_tit{width: 20%;}
+.company.ci .ci_info.ci_top .ci_des{width: 80%;}
+.company.ci .ci_basic{overflow: hidden; margin: 0 -1%; }
+.company.ci .ci_basic>div{float: left; width: 48%; margin: 0 1%;}
+.company.ci .ci_basic>div .logo_info{padding: 54px 0;}
+.company.ci .ci_basic .ci_des{width: 100%; color:#444; margin-top: 20px;}
+.company.ci .ci_color{ margin: 0 -2.5%; padding-top: 60px; border-top: 1px solid #eee; margin-top: 80px; } 
+.company.ci .ci_color .color_name{display: inline-block; font-weight: bold; color:#222; padding: 10px 0;}
+.company.ci .ci_color em{color:#666666; font-size: 15px; margin-right: 14px; line-height: 20px;}
+.company.ci .ci_color>div{float: left; margin: 0 2.5%;}
+.company.ci .ci_color .ci_tit{margin-bottom: 19px;}
+.company.ci .ci_color .main_color{width: 36%;}
+.company.ci .ci_color .sub_color{width: 54%; }
+.company.ci .ci_color .color_box{width: 100%; height: 40px;}
+.company.ci .ci_color .main_color .ci_info>div{float: left; width: 48%; margin: 0 1%;}
+.company.ci .ci_color .sub_color .ci_info>div{float: left; width: 31.333%; margin: 0 1%;} 
+.company.ci .ci_color .main_color .ci_info>div:first-child .color_box{background-color: #ed1c24;}
+.company.ci .ci_color .main_color .ci_info>div:last-child .color_box{background-color: #0c4da2;}
+.company.ci .ci_color .sub_color .ci_info>div:first-child .color_box{background-color: #6f89aa;}
+.company.ci .ci_color .sub_color .ci_info>div:nth-child(2) .color_box{background-color: #6e6e6e;}
+.company.ci .ci_color .sub_color .ci_info>div:last-child .color_box{background-color: #959595;}
+.company.ci .ci_info.ci_bom{padding: 60px 0; margin-top: 80px; border-top: 1px solid #eee; border-bottom: 1px solid #eee;}
+.company.ci .ci_info.ci_bom .slogan>div{overflow: hidden;}
+.company.ci .ci_info.ci_bom .ci_tit{padding-bottom: 24px;}
+.company.ci .ci_info.ci_bom .slogan .ci_tit{font-weight: bold; font-size: 24px; width: 25%;}
 /* 리스트 영역 */
 .content .notice li .num{width: 7%;}
 .content .notice li .or{width: 11%;}

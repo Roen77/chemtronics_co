@@ -91,7 +91,7 @@ section.inform{height: auto;}
 .sub_pg .fix header{top:-80px;}
 .visual .sub_bg{height: 620px; margin-top: 60px;}
 .sub_menu_list{top:80px;}
-.visual .sub_con_list li>a{width: 147px;}
+.visual .sub_con_list li>a{width: 140px;}
 .sub_pg .inner{width: 100%; padding: 0 13px;}
 .content{padding: 82px 0 101px;}
 .content .tabs{padding: 0 0 94px;}
@@ -152,6 +152,12 @@ section.inform{height: auto;}
     .visual .sub_con_list h3.on::after{content: '\f0de';}
     .content .gallery .video_txt p{display: none;}
     .content .gall_list .main_img{height: auto;}
+
+    .company.ci .ci_info.ci_top .ci_tit{width: 100%;}
+    .company.ci .ci_info.ci_top .ci_des{width: 100%; margin-top: 20px;}
+    .company.ci .ci_info.ci_bom .ci_tit{padding-bottom: 0;}
+    .company.ci .ci_info.ci_bom .slogan .ci_tit{width: 100%; padding: 16px 0;}
+    .company.ci .ci_color em{font-size: 1.4vw; margin-right: 1vw;}
 
 }
 /* 800px */
@@ -275,7 +281,7 @@ section.inform{height: auto;}
      .company .comment p{font-size: 15px; width: 100%; line-height: 23px; margin: 30px 0; text-align: center;}
      .company .comment p br{display: none;}
      .company_list .company_slide{height: 60px;}
-     .company .vision_area .head p b{font-size: 15px; line-height: 24px;} 
+     .company .head p b{font-size: 15px; line-height: 24px;} 
      .company .vision_area .head h2{padding: 39px 0 19px; font-size: 27px;}
      .company .vision_area .head .txt{font-size: 18px; line-height: 26px;}
      .company .vision_area .head .txt em{display: block;}
@@ -307,6 +313,35 @@ section.inform{height: auto;}
      .company.history .history_list .history_area>ul>li{line-height: 26px;}
      .company.history .history_list .history_area>ul>li>.year{min-width: 70px; padding: 0;}
      .company.history .history_list .history_area>ul>li .story>li p{font-size: 14px; line-height: 20px;}
+
+     .company.ci .head{margin-bottom: 30px;}
+     .company.ci .ci_info{margin-bottom: 0;}
+     .company.ci .ci_tit{font-size: 16px;}
+     .company.ci .ci_des{font-size: 14px;}
+     .company.ci .ci_info .logo_info{margin: 50px 0 16px; padding: 60px 0;}
+     .company.ci .ci_info .logo_info img{width: 80%;}
+     .company.ci .ci_info.ci_top .ci_tit{margin-top: 16px;}
+     .company.ci .ci_info.ci_top .ci_des{margin: 16px 0;}
+     .company.ci .ci_basic>div{width: 100%; margin: 0;}
+     .company.ci .ci_basic>div .logo_info{margin: 0;}
+     .company.ci .ci_basic>div .logo_info img{width: 45%;}
+     .company.ci .ci_basic .ci_tit{padding: 10px 0;}
+     .company.ci .ci_basic .ci_des{margin: 0;}
+     .company.ci .ci_color{margin: 0;}
+     .company.ci .ci_color,
+     .company.ci .ci_info.ci_bom{padding: 30px 0 0; margin-top: 40px;}
+     .company.ci .ci_color .main_color,
+     .company.ci .ci_color .sub_color{width: 100%; margin: 0; padding-bottom: 26px;}
+     .company.ci .ci_color .main_color .ci_info>div{width: 31.33%;}
+     .company.ci .ci_color .color_box{height: 26px;}
+     .company.ci .ci_color .color_name{font-size: 13px;}
+     .company.ci .ci_color em{font-size: 12px;; margin-right: 2%;}
+     .company.ci .ci_info .logo_info{margin: 0;}
+     .company.ci .ci_info.ci_bom .slogan>div{margin-bottom: 16px;}
+     .company.ci .ci_info.ci_bom .ci_tit{padding: 16px 0;}
+     .company.ci .ci_info.ci_bom .slogan .ci_tit{padding: 0; font-size: 17px;}
+
+
 
 
 
