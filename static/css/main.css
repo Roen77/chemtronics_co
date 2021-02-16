@@ -451,6 +451,9 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .record_list>div h3{float: left; width: 18.5%;}
 .record_list>div ul>li{line-height: 28px; color:#444;}
 .record_list>div ul>li em{color:#aaa; font-size: 13px; line-height: 26px;}
+/* 박스 리스트 공통 요소 */
+.content .box_list{overflow: hidden;}
+.content .box_list>li{position: relative; float: left; border: 1px solid #ddd; box-sizing: border-box; margin: 0 2%; text-align: center;}
 /* 고정 리스트 공통 요소 */
 .fix_tabs{position: relative; transition: width 0.5s;}
 .fix_tabs li{float: left; width: 33.33333%; border: 1px solid #ddd; box-sizing: border-box; border-right: none; background-color: #fff;}
@@ -599,6 +602,26 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 
 /* fix */
 .company .subsidiary .subsidiary_tabs.fix li:nth-child(1){margin-top: 40px;}
+
+/* ######################## SUB-COMPANY-고객문의###################### */
+.company.inquiry .inquiry_head{position: relative; text-align: center; border-bottom: 1px solid #ddd;}
+.company.inquiry .inquiry_head::after{content: ''; position: absolute; left:50%; bottom:-1px; transform: translateX(-50%); width: 75px; height: 1px; background-color: #222;}
+.company.inquiry .inquiry_head h2{font-size: 50px; color:#222;}
+.company.inquiry .inquiry_head p{line-height: 26px; margin: 45px 0 70px;}
+.company.inquiry .fna_box{margin-bottom: 34px;}
+.company.inquiry .fna_box h3{font-size: 30px; font-weight: bold; color:#222; margin: 65px 0 20px;}
+.company.inquiry .box_list>li{margin:1%; width: 23%;}
+.company.inquiry .box_list>li>div{display: flex; justify-content: center; align-items: center; height: 80px; color:#222;font-size: 20px; font-weight: 300;}
+.company.inquiry .box_list>li>div b{font-weight: 500;}
+.company.inquiry .box_list>li>div span{display: block;}
+.company.inquiry .box_list>li>.qua_info{display: block; height: 130px; box-sizing: border-box; margin:0 5%; padding: 40px 0; border-top: 1px solid #dddd;}
+.company.inquiry .box_list>li>.qua_info>p{margin-bottom: 15px; font-size: 15px; color:#888;}
+.company.inquiry .box_list>li>.qua_info>p:last-child{margin-bottom: 0;}
+.company.inquiry .box_list>li>.qua_info .fas{color:#222; margin-right: 8px; font-size: 13px;}
+.company.inquiry .box_list>li>.qua_info .fa-phone{transform: rotate(90deg);}
+.company.inquiry .box_list.contact>li>div>p{font-weight: 500;}
+.company.inquiry .box_list.contact>li>.qua_info{height: 100px;}
+.company.inquiry .box_list.contact>li>.qua_info>p{font-weight: normal;}
 /* 리스트 영역 */
 .content .notice li .num{width: 7%;}
 .content .notice li .or{width: 11%;}
@@ -730,8 +753,7 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .hr .tit{font-size: 19px; color:#444; border-bottom: 1px solid #e5e5e5; padding-bottom: 20px;;}
 .hr .tit span{color:#888; font-size: 15px; margin-left: 14px;}
 .hr .sub_tit{color:#222; margin-top: 33px;}
-.hr .hr_list{overflow: hidden; counter-reset: num; margin: 13px -2% 0;}
-.hr .hr_list>li{position: relative; float: left; border: 1px solid #ddd; box-sizing: border-box; margin: 0 2%; text-align: center;}
+.hr .hr_list{ counter-reset: num; margin: 13px -2% 0;}
 .hr .hr_list>li::before{content: '0'counter(num); position: absolute; color:#eee; left:50%; top:50%; transform: translate(-50%,-50%); font-size: 55px; counter-increment: num 1; z-index: -1; font-style: italic; font-weight: bold;}
 .hr .hr_list>li::after{content: url(../images/hr_arrow_icon.png); position: absolute; right: -20%; top:50%; transform: translateY(-50%)}
 /* ######################## SUB-HR-인사제도###################### */
@@ -782,7 +804,7 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .hr .recruit h3 b{font-size: 17px; font-weight: bold; letter-spacing: -0.5px;}
 .hr .recruit .hr_list>li{height: 170px;}
 .hr .hr_list>li::after{right: -15%;}
-.hr .hr_list>li::before{font-size: 57px; top:73%; font-style: normal;}
+.hr .recruit .hr_list>li::before{font-size: 57px; top:73%; font-style: normal;}
 .hr .recruit li>p{padding-top: 79px; background-repeat: no-repeat; background-position: top center;}
 .hr .recruit .hr_list>li:nth-child(1)>p{background-image: url(../images/hr_recruit_icon_01.png);}
 .hr .recruit .hr_list>li:nth-child(2)>p{background-image: url(../images/hr_recruit_icon_02.png);}

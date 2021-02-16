@@ -53,12 +53,14 @@ header .right_menu .fam{margin-right: 70px;}
     .company.history .history_list .history_area>ul>li .story>li p{padding-left: 29px;}
     .company.history .history_list .history_area>ul>li>*{float: none;}
     .company.ci .ci_color em{font-size: 2.6vw;}
+    /* company 고객문의 */
+    .company.inquiry .box_list>li{width: 100%; margin: 1% 0;}
     .et_con.card .user_info em{margin: 0 0.2%}
     .hr .tit{padding-bottom: 10px;}
     .hr .sub_tit{padding-bottom: 12px;}
     .hr .person .txt p{padding-top: 0;}
-    .hr .hr_list{margin: 0;}
-    .hr .hr_list.admin>li, .hr .hr_list.research>li{width: 100%; margin: 1% 0;}
+    .content .box_list{margin: 0;}
+    .content .box_list>li,.hr .hr_list.admin>li, .hr .hr_list.research>li{width: 100%; margin: 1% 0;}
     .fix_tabs li>a{font-size: 1.5vw;}
 
     /* active */

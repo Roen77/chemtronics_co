@@ -331,10 +331,10 @@ $(document).ready(function(){
         $('.common_tab>li').click(function(e){
             e.preventDefault();
             var index=$(this).index();
-            var tabMenu=$('.content .tabs_menu');
+
             $('.common_tab>li').removeClass("on");
             $(this).addClass("on");
-            tabMenu.hide().eq(index).show();
+            tabMenu.hide().removeClass('active').eq(index).show().addClass('active');
             if($('.history_tabs.fix_tabs').length>0){
                 $('.history_tabs.fix_tabs').removeClass('fix');
             }
@@ -345,14 +345,7 @@ $(document).ready(function(){
         $('.fix_tabs li').click(function(e){
             e.preventDefault();
             var idx=$(this).index();
-            if(!scrollState){
-                var welOffset=$('.move_list').eq(idx).offset().top;-$('.sub_menu_list').outerHeight();
-                scrollState=true;
-            }else{
-                var welOffset=$('.move_list').eq(idx).offset().top-$('.fix_tabs').outerHeight()-$('.sub_menu_list').outerHeight()+1;
-            }
-          
-      
+            
             if($('.move_list').length>0){
                 // if($('.fix_tabs').hasClass("fix")){
                 //     var welOffset=$('.move_list').eq(idx).offset().top-$('.fix_tabs').outerHeight()-$('.sub_menu_list').outerHeight()+1;
@@ -360,6 +353,12 @@ $(document).ready(function(){
                 //     console.log("aaa")
                 //     var welOffset=$('.move_list').eq(idx).offset().top+$('.sub_menu_list').outerHeight()+$('.fix_tabs').outerHeight();
                 // }
+                if(!scrollState){
+                    var welOffset=$('.move_list').eq(idx).offset().top;-$('.sub_menu_list').outerHeight();
+                    scrollState=true;
+                }else{
+                    var welOffset=$('.move_list').eq(idx).offset().top-$('.fix_tabs').outerHeight()-$('.sub_menu_list').outerHeight()+1;
+                }
                 var self=$(this);
                 $('html,body').stop().animate({scrollTop:welOffset},function(){
                     if(!self.hasClass("on")){
@@ -367,6 +366,9 @@ $(document).ready(function(){
                         self.addClass("on");
                     }
                 });
+            }else{
+                $('.fix_tabs li').removeClass("on");
+                $(this).addClass('on');
             }
         })
         // 히스토리탭메뉴
