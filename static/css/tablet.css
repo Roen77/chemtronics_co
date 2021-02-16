@@ -89,7 +89,7 @@ section.inform{height: auto;}
 .goTopBtn{bottom:15px; opacity: 1; visibility: visible;}
 /* ######################## SUB ###################### */
 .sub_pg .fix header{top:-80px;}
-.visual .sub_bg{height: 620px; margin-top: 60px;}
+.visual .sub_bg{height: 620px; /* margin-top: 60px; */}
 .sub_menu_list{top:80px;}
 .visual .sub_con_list li>a{width: 140px;}
 .sub_pg .inner{width: 100%; padding: 0 13px;}
@@ -98,6 +98,7 @@ section.inform{height: auto;}
 
 /* active */
 .fix_tabs.fix ul{width: 100%;}
+.company .subsidiary .subsidiary_tabs.fix{left:20px;}
 
 .company .ceo_txt .ceo_img{width: 390px; top:-100px;}
 .company .ceo_txt .ceo_img img{width: 100%;}
@@ -159,6 +160,25 @@ section.inform{height: auto;}
     .company.ci .ci_info.ci_bom .slogan .ci_tit{width: 100%; padding: 16px 0;}
     .company.ci .ci_color em{font-size: 1.4vw; margin-right: 1vw;}
 
+    .company .subsidiary .move_list{ padding: 0;}
+    .company .subsidiary .tab_wrap{position: relative; width: 100%; z-index: 10;}
+    .fix_tabs.fix{padding: 0 10px; box-sizing: border-box;}
+    .company .subsidiary .subsidiary_tabs h2{ position: relative; display: block;}
+    .company .subsidiary .subsidiary_tabs h2::after{content: '\f0dd'; font-family: fontawesome; position: absolute; right:15px; top:50%; transform: translateY(-50%);}
+    .company .subsidiary .subsidiary_tabs ul{position: absolute; left:0; width: 100%; top: 45px; display: none;box-sizing: border-box;}
+    .company .subsidiary .subsidiary_tabs li{width: 100%; margin: 0; padding:0 10px; box-sizing: border-box; border: 1px solid #ddd; border-top: none;}
+    .company .subsidiary .subsidiary_tabs li:nth-child(1){border-bottom: none;}
+    .company .subsidiary .subsidiary_tabs.fix li:nth-child(1){margin: 0;}
+    .company .subsidiary .subsidiary_tabs.fix li:nth-child(1)>a{border-bottom: 1px solid #ddd;}
+    .company .subsidiary .subsidiary_tabs li>a{height: 35px; line-height: 35px; padding: 0; font-size: 14px; border-bottom: 1px solid #ddd;}
+    .fix_tabs li:last-child{border: none;}
+    .company .subsidiary .move_list .main_tit{margin: 35px 0 45px;}
+
+    /* active */
+    .company .subsidiary .subsidiary_tabs h2.on::after{content:'\f0de';}
+    .company .subsidiary .subsidiary_tabs.fix{left:0;}
+    .company .subsidiary .subsidiary_tabs.fix ul{padding: 0 10px;}
+    .company .subsidiary .subsidiary_tabs li.on>a{color:#ed1c24; background-color: #fff;}
 }
 /* 800px */
 @media all and (max-width:800px){
@@ -341,8 +361,10 @@ section.inform{height: auto;}
      .company.ci .ci_info.ci_bom .ci_tit{padding: 16px 0;}
      .company.ci .ci_info.ci_bom .slogan .ci_tit{padding: 0; font-size: 17px;}
 
-
-
+    /* company 계열사 소개 */
+    .company .subsidiary .move_list .main_tit{margin: 27px 0 15px;}
+    .company .subsidiary .move_list .main_tit h3{font-size: 20px;}
+    .company .subsidiary .move_list .main_tit .print_btn{display: none;}
 
 
      .content .notice .main_head,

@@ -88,7 +88,7 @@ a{color:#fff;}
 
 
 /* ######################## SECTION:header ###################### */
-header{position: absolute; left:0; top:0; width: 100%; height:100px; z-index: 100; transition:background-color 0.5s; }
+header{position: absolute; left:0; top:0; width: 100%; height:100px; z-index: 999; transition:background-color 0.5s; }
 header>.inner{display: flex; width: 100%; max-width:none; padding: 0 0 0 40px;}
 header a{display: block;}
 header .left_menu{display: flex; height: 100px; overflow: hidden;}
@@ -185,8 +185,9 @@ header .right_menu .fam .list a{color:#222;}
 header.active{background-color: #fff;}
 header .left_menu .gnb.on{height: 100vh;}
 header.active .gnb>li>a{color:#222;}
+header .inner .left_menu .gnb:hover li>a{color:#222;}
 header .left_menu .gnb>li.over>a,
-header .left_menu .gnb>li:hover>a,
+header .inner .left_menu .gnb>li:hover>a,
 header .left_menu .gnb .depth2>li>a:hover{color:#ed1c24;}
 header .left_menu .gnb .depth2>li>a:hover::after{color:#ed1c24;}
 header .left_menu .gnb .depth2>li>a:hover::before{width: 100%;}
@@ -378,7 +379,7 @@ header .right_menu .lang.over h2>a{color:#222;}
 .sub_pg header .right_menu .lang.active .list>li:hover{background-color: #ddd;}
 .sub_pg .trigger>span{background-color: #222;}
 /* 배경 공통 요소 */
-.visual .sub_bg{position: relative; height: 650px; width: 100%; margin-top: 100px;  background: url(../images/sub_visual_pr.jpg) no-repeat center; background-size: cover;}
+.visual .sub_bg{position: relative; height: 650px; width: 100%; /* margin-top: 100px; */  background: url(../images/sub_visual_pr.jpg) no-repeat center; background-size: cover;}
 .IR.visual .sub_bg{background-image: url(../images/sub_visual_ir.jpg);}
 .ethical.visual .sub_bg{background-image: url(../images/sub_visual_ethical.jpg);}
 .HR.visual .sub_bg{background-image: url(../images/sub_visual_hr.jpg);}
@@ -404,7 +405,7 @@ header .right_menu .lang.over h2>a{color:#222;}
 .sub_menu_list ul>li>a::after{content: '\f054'; position: absolute; font-family: fontawesome; right: 20px; font-size: 10px;}
 .sub_menu_list .sub_gnb>li.over>a{color:#ed1c24; font-weight: bold;} 
 .visual{position: relative;}
-.visual .sub_con_list{position: absolute; width: 100%; height: 80px; left:0; bottom:0; background-color: rgba(0, 0, 0, 0.719); text-align: center; font-size: 0; z-index: 20;}
+.visual .sub_con_list{position: absolute; width: 100%; height: 80px; left:0; bottom:0; background-color: rgba(0, 0, 0, 0.719); text-align: center; font-size: 0; z-index: 60;}
 .visual .sub_con_list h3{display: none;}
 .visual .sub_con_list li{position: relative; display: inline-block;}
 .visual .sub_con_list li.over{background-color: #fff;}
@@ -455,6 +456,9 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .fix_tabs li{float: left; width: 33.33333%; border: 1px solid #ddd; box-sizing: border-box; border-right: none; background-color: #fff;}
 .fix_tabs li:last-child{border-right: 1px solid #ddd;}
 .fix_tabs li>a{display: block; color:#222; text-align: center; padding:20px 0;}
+/* 프린트 버튼 */
+.print_btn{display: block; width: 175px; height: 48px; z-index: 1; font-size: 15px; border: 1px solid #dddd; text-align: center; line-height: 48px; color:#222;}
+.print_btn .fas{margin-right: 7px; vertical-align: -2px; ;}
 
 /* active */
 .fix_tabs.fix{position: fixed;top:50px; left:0; width: 100%; z-index: 50; }
@@ -580,6 +584,21 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .company.ci .ci_info.ci_bom .slogan>div{overflow: hidden;}
 .company.ci .ci_info.ci_bom .ci_tit{padding-bottom: 24px;}
 .company.ci .ci_info.ci_bom .slogan .ci_tit{font-weight: bold; font-size: 24px; width: 25%;}
+/* ######################## SUB-COMPANY-계열사 소개###################### */
+.company .subsidiary{position: relative;}
+.company .subsidiary .tab_wrap{position: absolute; left:0; top:0;}
+.company .subsidiary .subsidiary_tabs h2{display: none; background-color: #222; color:#fff; cursor: pointer; padding: 15px 10px; font-size: 16px; font-weight: normal;}
+.company .subsidiary .subsidiary_tabs li{width: 200px; float: none; box-sizing: border-box; margin-bottom: 10px;}
+.company .subsidiary .subsidiary_tabs li>a{ width: 100%; box-sizing: border-box; height: 58px;; line-height: 58px; text-align-last: left; padding: 0 20px;}
+.company .subsidiary .subsidiary_tabs li.on>a{background-color: #222; color:#fff;}
+.company .subsidiary .move_list{box-sizing: border-box; width: 100%; padding: 40px 0 40px 270px;}
+.company .subsidiary .move_list .main_tit {position: relative; margin-bottom: 45px;}
+.company .subsidiary .move_list .main_tit h3{font-size: 30px; color:#222; font-weight: 500;}
+.company .subsidiary .move_list .main_tit .print_btn{position: absolute; right: 0; top:0; color:#222;}
+
+
+/* fix */
+.company .subsidiary .subsidiary_tabs.fix li:nth-child(1){margin-top: 40px;}
 /* 리스트 영역 */
 .content .notice li .num{width: 7%;}
 .content .notice li .or{width: 11%;}

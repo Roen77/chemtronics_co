@@ -284,6 +284,8 @@ $(document).ready(function(){
             if(winWidth<1024){
                 $(".sub_con_list>h3").removeClass("on").next('ul').hide();
                 $(".sub_con_list>h3").next('ul').removeAttr("style")
+                 //서브페이지 1024px 이하 company 계열사 메뉴 수정
+                $(".company .subsidiary .subsidiary_tabs h2").removeClass("on").next('ul').stop().slideUp();
             }
         })
 
@@ -299,6 +301,22 @@ $(document).ready(function(){
                     $(this).addClass("on").next("ul").stop().slideDown();
                 }
             })
+        //서브페이지 1024px 이하 company 계열사 메뉴 수정
+            $(".company .subsidiary .subsidiary_tabs h2").click(function(e){
+                e.preventDefault();
+                e.stopPropagation();
+               if(winWidth<1024){
+                $(this).toggleClass("on").next('ul').stop().slideToggle()
+               }
+            })
+              //서브페이지 1024px 이하 company 계열사 메뉴 수정
+              $(".company .subsidiary .subsidiary_tabs ul>li").click(function(){
+                var onText=$(this).find('a').text();
+                $(".company .subsidiary .subsidiary_tabs h2").text(onText);
+                if($(".company .subsidiary .subsidiary_tabs h2").hasClass('on')){
+                    $(".company .subsidiary .subsidiary_tabs h2").removeClass('on')
+                }
+              })
         //서브페이지 셀렉트 메뉴
         $( ".category" ).selectmenu();
         //모바일에서 테이블 클릭시
@@ -322,14 +340,33 @@ $(document).ready(function(){
             }
 
         })
+        var scrollState=false;
         $('.fix_tabs li').eq(0).addClass('on')
         $('.fix_tabs li').click(function(e){
             e.preventDefault();
-            $(this).addClass("on").siblings('li').removeClass('on');
             var idx=$(this).index();
+            if(!scrollState){
+                var welOffset=$('.move_list').eq(idx).offset().top;-$('.sub_menu_list').outerHeight();
+                scrollState=true;
+            }else{
+                var welOffset=$('.move_list').eq(idx).offset().top-$('.fix_tabs').outerHeight()-$('.sub_menu_list').outerHeight()+1;
+            }
+          
+      
             if($('.move_list').length>0){
-                var welOffset=$('.move_list').eq(idx).offset().top-$('.fix_tabs').outerHeight()-$('.sub_menu_list').outerHeight();
-                $('html,body').stop().animate({scrollTop:welOffset});
+                // if($('.fix_tabs').hasClass("fix")){
+                //     var welOffset=$('.move_list').eq(idx).offset().top-$('.fix_tabs').outerHeight()-$('.sub_menu_list').outerHeight()+1;
+                // }else{
+                //     console.log("aaa")
+                //     var welOffset=$('.move_list').eq(idx).offset().top+$('.sub_menu_list').outerHeight()+$('.fix_tabs').outerHeight();
+                // }
+                var self=$(this);
+                $('html,body').stop().animate({scrollTop:welOffset},function(){
+                    if(!self.hasClass("on")){
+                        $('.fix_tabs li').removeClass("on")
+                        self.addClass("on");
+                    }
+                });
             }
         })
         // 히스토리탭메뉴
@@ -390,8 +427,33 @@ $(document).ready(function(){
 
     }//sub
     //서브페이지 스크롤시 헤더 고정
+    var reascrll=false;
+    function sectionTop(){
+
+                $('.move_list').each(function(i){
+                    var rel=winOffset;
+   
+                    if(! reascrll){
+                        var sec=$('.move_list').eq(i).offset().top;-50;
+                        reascrll=true;
+                    }else{
+                        var sec=$('.move_list').eq(i).offset().top-$('.fix_tabs').outerHeight()-$('.sub_menu_list').outerHeight()+1;
+                    }
+ 
+                    console.log("섹션의..",sec);
+                    console.log("###############3",rel);
+                    if(sec<=winOffset){
+                        console.log("인덱스",i)
+                        $('.fix_tabs li').removeClass("on")
+                        $('.fix_tabs li').eq(i).addClass("on");
+                    }
+                })
+
+
+    }
    
     function ElemFix(){
+        sectionTop();
         if(winOffset > $('.sub_pg .content').offset().top){
             $(".header").addClass("fix");
         }else{
@@ -405,12 +467,14 @@ $(document).ready(function(){
         }
 
         if($('.fix_tabs').length>0){
-            var welOffset= $('.fix_con').offset().top-$('.sub_menu_list').outerHeight();
+            sectionTop();
+            var welOffset= $('.fix_con').offset().top;
             var realwinOffset=winOffset+$('.sub_menu_list').outerHeight();
             if( realwinOffset > welOffset){
                 if(!$('.fix_tabs').hasClass("fix")){
                     $('.fix_tabs').addClass('fix')
                     console.log("픽스붙임")
+                    sectionTop();
                 }
             }else{
                 if($('.fix_tabs').hasClass("fix")){
@@ -419,6 +483,7 @@ $(document).ready(function(){
                 }
             }
         }
+
     }
 
 
@@ -641,6 +706,9 @@ $(document).ready(function(){
             section.each(function(){
                 $(this).find(".animate").removeClass('animate');
             })
+          }
+          if(winWidth>1024){
+            $('.company .subsidiary .fix_tabs ul').removeAttr('style');
           }
           
       }
