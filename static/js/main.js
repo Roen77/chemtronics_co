@@ -324,19 +324,31 @@ $(document).ready(function(){
             $(this).fadeOut();
         })
 
-        //서브페이지 IR 재무정보, HR 채용공고 탭메뉴
+        //서브페이지 IR 재무정보, HR 채용공고,business 영역 공통 탭메뉴
         if( !$('.common_tab>li').eq(0).hasClass('on')){
             $('.common_tab>li').eq(0).addClass("on")
         }
-        $('.common_tab>li').click(function(e){
+        var tabMenu=$('.content .tabs_menu');
+        var commonTab=$('.common_tab>li');
+        var subTab=$('.sub_tab_menu .sub_gnb>li');
+        commonTab.add(subTab).click(function(e){
             e.preventDefault();
             var index=$(this).index();
-
-            $('.common_tab>li').removeClass("on");
-            $(this).addClass("on");
+            commonTab.add(subTab).removeClass("on");
+            commonTab.eq(index).addClass('on');
+            subTab.eq(index).addClass('on');
             tabMenu.hide().removeClass('active').eq(index).show().addClass('active');
+            if(subTab.length>0){
+                var subTxt=subTab.eq(index).text();
+                $(".sub_tab_menu h3").find('a').text(subTxt);
+                var contentOffset=$('.content').offset().top-headerHeight;
+                $('body,html').animate({scrollTop:contentOffset})
+            }
             if($('.history_tabs.fix_tabs').length>0){
                 $('.history_tabs.fix_tabs').removeClass('fix');
+            }
+            if($('.bs_tabs.fix_tabs').length>0){
+                $('.bs_tabs.fix_tabs').removeClass('fix');
             }
 
         })

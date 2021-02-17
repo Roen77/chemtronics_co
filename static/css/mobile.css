@@ -65,7 +65,12 @@ header .right_menu .fam{margin-right: 70px;}
 
     /* active */
     .fix_tabs.fix{top:34px;}
-
+    /* ######################## SUB-BUSINESS-전자산업###################### */
+    /* 사업소개 */
+    .business.electro .business_area .bs_plan ul>li{width: 100%; border: none; border-bottom: 1px solid #ddd; padding-bottom: 30px;}
+    .business.electro .business_area .bs_plan ul>li:last-child{border-bottom:none;}
+    /* 사업군 소개 */
+    .business.electro .business_area .bs_group>li{width: 48%;}
     .hr .recruit .hr_list>li{height: 120px;}
     .hr .recruit li>p{padding-top: 60px; font-size: 13px;}
     .hr .hr_list>li::before{font-size: 45px;}
