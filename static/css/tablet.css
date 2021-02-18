@@ -170,7 +170,7 @@ section.inform{height: auto;}
 
     .company .subsidiary .move_list{ padding: 0;}
     .company .subsidiary .tab_wrap{position: relative; width: 100%; z-index: 10;}
-    .fix_tabs.fix{padding: 0 10px; box-sizing: border-box;}
+    .company .subsidiary .fix_tabs.fix{padding: 0 10px; box-sizing: border-box;}
     .company .subsidiary .subsidiary_tabs h2{ position: relative; display: block;}
     .company .subsidiary .subsidiary_tabs h2::after{content: '\f0dd'; font-family: fontawesome; position: absolute; right:15px; top:50%; transform: translateY(-50%);}
     .company .subsidiary .subsidiary_tabs ul{position: absolute; left:0; width: 100%; top: 45px; display: none;box-sizing: border-box;}
@@ -179,7 +179,7 @@ section.inform{height: auto;}
     .company .subsidiary .subsidiary_tabs.fix li:nth-child(1){margin: 0;}
     .company .subsidiary .subsidiary_tabs.fix li:nth-child(1)>a{border-bottom: 1px solid #ddd;}
     .company .subsidiary .subsidiary_tabs li>a{height: 35px; line-height: 35px; padding: 0; font-size: 14px; border-bottom: 1px solid #ddd;}
-    .fix_tabs li:last-child{border: none;}
+    /* .fix_tabs li:last-child{border: none;} */
     .company .subsidiary .move_list .main_tit{margin: 35px 0 45px;}
 
     /* active */
@@ -188,9 +188,8 @@ section.inform{height: auto;}
     .company .subsidiary .subsidiary_tabs.fix ul{padding: 0 10px;}
     .company .subsidiary .subsidiary_tabs li.on>a{color:#ed1c24; background-color: #fff;}
     /* business 전자산업 */
-    .business.electro .business_area .bs_info .bs_txt p{font-size: 2vw;}
-    .bs_tabs.fix_tabs li:last-child>a{border: 1px solid #ddd;}
-    .bs_tabs.fix_tabs li.on:last-child>a{border-top: 1px solid #000;}
+    .business .business_area .bs_info .bs_txt p{font-size: 2vw;}
+    /* .bs_tabs.fix_tabs li.on:last-child>a{border-top: 1px solid #000;} */
     /* 적용 제품 */
     .business_area .module>li .module_tit{position: static;}
     .business_area .module>li .module_tit span{display: inline-block; margin-left: 16px;}
@@ -342,7 +341,7 @@ section.inform{height: auto;}
      .company.history .print_btn{display: none;}
      .company.history .history_tit{padding: 30px 0; margin-bottom: 26px;}  
      .company.history .history_tit img{width: 60%;}
-     .company.history .history_list .history_tab{padding-top: 20px;}
+     .company.history .history_list .sublist_tab{padding-top: 20px;}
      .company.history .history_list .main_year{position: static; padding-bottom: 20px; font-size: 20px;}
      .company.history .history_list .main_year::after{ display: block; margin-left: 0; margin-top: 10px;}
      .company.history .history_list .history_area{padding-left: 0;}
@@ -392,15 +391,17 @@ section.inform{height: auto;}
     .company.inquiry .box_list>li>.qua_info>p{font-size: 14px;}
     .company.inquiry .box_list.contact>li>.qua_info{display: flex; height: 70px; padding: 0;}
 
+    /* ######################## SUB-BUSINESS-COMMON###################### */
+    .business .business_area .bs_tit{line-height: 22px; font-size: 22px; padding: 58px 0 45px;}
+    .business .business_area .bs_tit::before{font-size: 100px;}
+    .business .business_area .head p, .business .business_area .bs_des p{font-size: 15px; line-height: 26px;}
+    .business .business_area .bs_info>div{width: 100%;}
+    .business .business_area .bs_info .bs_txt{height: auto; padding:18px 20px;}
+    .business .business_area .bs_info .bs_txt p{font-size: 14px; line-height: 25px;}
+    .business.chemical .ty2 tbody td{padding: 20px 10px;}
     /* ######################## SUB-BUSINESS-전자사업###################### */
     /* 사업소개 */
-    .business.electro .business_area .bs_tit{line-height: 22px; font-size: 22px; padding: 62px 0 45px;}
-    .business.electro .business_area .bs_tit::before{font-size: 100px;}
-    .business.electro .business_area .head p, .business.electro .business_area .bs_des p{font-size: 15px; line-height: 26px;}
-    .business.electro .business_area .bs_info>div{width: 100%;}
     .business.electro .business_area .photo img{height: auto;}
-    .business.electro .business_area .bs_info .bs_txt{height: auto; padding:18px 20px;}
-    .business.electro .business_area .bs_info .bs_txt p{font-size: 14px; line-height: 25px;}
     .business.electro .business_area .bs_plan ul{margin-top: 50px; display: block;}
     .business.electro .business_area .bs_plan ul>li{width: 50%; height: auto; margin: 10px 0;}
     .business.electro .business_area .bs_plan ul>li>div{font-size: 15px; padding: 90px 0 17px; background-position: top 20px center;}
@@ -429,7 +430,45 @@ section.inform{height: auto;}
       .business_area .product .product_info .pic_box{position: static; width: 100%;}
       .business_area .product .product_info .pic_box .pic_inner{width: 100%;}
       .business_area .product .product_info .product_tb{padding: 20px 0 0;}
+    /* ######################## SUB-BUSINESS-화학사업###################### */
+    /* 사업소개 */
+    .business.chemical .business_area h2{margin-bottom:0}
+    .business.chemical .business_area h2 b{line-height: 26px; font-size: 14px;}
+    .business.chemical .business_area .bs_info{margin-bottom: 20px;}
+    .business.chemical .business_area .ch_info h2{margin-bottom: 25px;}
+    .business.chemical .business_area .ch_info li{padding: 44px 0;}
+    .business.chemical .business_area .ch_info li .ch_txt p{font-size: 14px; line-height: 33px;}
+    .business.chemical .business_area .ch_info li .ch_txt span{font-size: 14px;}
+    .business.chemical .business_area .analysis>div{margin: 0;}
+    .business.chemical .analysis>div>div{display: none;}
+    .business.chemical .analysis>div>div.mobile{display: block; margin: 0; width: 100%;}
+    .business.chemical .analysis>div>div.mobile .ty2{width: 100%;}
+    .business.chemical .analysis>div>div.mobile .ty2 thead th{height: 30px;}
+    .business.chemical .analysis>div>div.mobile .ty2 tbody td,
+    .business.chemical .analysis>div>div.mobile .ty2 tbody tr{height: 30px;}
+    .business.chemical .analysis>div .ty2 tbody td{padding: 0 8px;}
+    .business.chemical .analysis>div .ty2 tbody td{font-size: 12px;}
+    /* 제품 소개 */
+    .business.chemical .chermical_box{padding: 12px;}
+    .business.chemical .business_area h2{font-size: 24px;}
+    .business.chemical .chermical_box p{line-height: 20px; font-size: 16px; margin-top: 20px;}
+    .business.chemical .chermical_box p br{display: none;}
+    .business.chemical .chermical_box ul{margin-top: 35px;}
+    .business.chemical .chermical_box ul>li{padding: 25px 0;}
+    .business.chemical .chermical_box ul>li p{margin-top: 0; font-size: 15px;}
+    .business.chemical .chermical_box ul>li div{font-size: 15px;}
+    .business.chemical .chermical_box ul>li div>p{font-size: 14px;}
+    .business.chemical table.ty2{width: 850px;}
+    .business.chemical .ty2 tbody td{font-size: 14px; padding: 10px;}
+    /* 연구소 */
+    .business_area.research .rch_con{padding: 14px;}
+    .business_area.research .rch_con h3{font-size: 23px;margin-bottom: 47px;}
+    .business_area.research .rch_con .rch_info .rch_txt .txt_top{font-size: 14px;}
+    .business_area.research .rch_con .rch_info .rch_txt li{font-size: 13px; padding-bottom: 12px;}
+    .business_area.research .rch_con .rch_info .rch_pic img{width: 200px;}
+    
 
+    
 
      .content .notice .main_head,
      .content .notice .num{display: none;}

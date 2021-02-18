@@ -11,6 +11,14 @@ header .right_menu .fam{margin-right: 70px;}
 .company .vision_area .value>li p{text-align: left;}
 .content .gall_list li .txt h4{line-height: 22px;}
 .content .gallery .video_txt h3{font-size: 20px;}
+/* ######################## SUB-BUSINESS-화학사업###################### */
+/* 연구소 */
+.business_area.research .rch_con .rch_info .rch_txt .txt_top{margin: 12px 0;}
+.business_area.research .rch_con .rch_info>div{width: 100%; float: none;}
+.business_area.research .rch_con .rch_info .rch_pic{float: none; padding-bottom: 38px;}
+.business_area.research .rch_con .rch_info .rch_pic img{width: 100%;}
+.business_area.research .rch_con .rch_info .rch_txt{margin-bottom:0;}
+
 .stock .stock_head table.tb_main tr.last td{padding: 0 8%;}
 .conflict .conflict_img{height: auto;}
 .conflict .conflict_img>div{position: static;  transform: none;}

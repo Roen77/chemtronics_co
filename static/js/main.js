@@ -344,8 +344,8 @@ $(document).ready(function(){
                 var contentOffset=$('.content').offset().top-headerHeight;
                 $('body,html').animate({scrollTop:contentOffset})
             }
-            if($('.history_tabs.fix_tabs').length>0){
-                $('.history_tabs.fix_tabs').removeClass('fix');
+            if($('.sublist_tabs').length>0){
+                $('.sublist_tab').hide().eq(0).show();
             }
             if($('.bs_tabs.fix_tabs').length>0){
                 $('.bs_tabs.fix_tabs').removeClass('fix');
@@ -366,7 +366,7 @@ $(document).ready(function(){
                 //     var welOffset=$('.move_list').eq(idx).offset().top+$('.sub_menu_list').outerHeight()+$('.fix_tabs').outerHeight();
                 // }
                 if(!scrollState){
-                    var welOffset=$('.move_list').eq(idx).offset().top;-$('.sub_menu_list').outerHeight();
+                    var welOffset=$('.move_list').eq(idx).offset().top;-$('.sub_menu_list').outerHeight()+1;
                     scrollState=true;
                 }else{
                     var welOffset=$('.move_list').eq(idx).offset().top-$('.fix_tabs').outerHeight()-$('.sub_menu_list').outerHeight()+1;
@@ -383,15 +383,22 @@ $(document).ready(function(){
                 $(this).addClass('on');
             }
         })
-        // 히스토리탭메뉴
-        $('.history_list .history_tabs li').click(function(e){
+        // COMPNAY히스토리탭메뉴
+        $('.sublist_tabs li').eq(0).addClass("on")
+        $('.sublist_tabs li').click(function(e){
             e.preventDefault();
             var index=$(this).index();
-            var historyTab=$('.company.history .history_list .history_tab');
-            var historyfixMenu=$('.history_tabs.fix_tabs');
+            var subTab=$('.sublist_tab');
             // $('.history_list .history_tabs>li').removeClass("on");
             // $(this).addClass("on");
-            historyTab.hide().eq(index).show();
+            subTab.hide().eq(index).show();
+            if(!$(this).hasClass('on')){
+                $('.sublist_tabs li').removeClass("on")
+                $(this).addClass("on")
+            }
+            // var subOffset=$('.content').offset().top;
+            // console.log(subOffset)
+            // $('body,html').animate({scrollTop:subOffset})
     
 
         })
@@ -448,10 +455,10 @@ $(document).ready(function(){
                     var rel=winOffset;
    
                     if(! reascrll){
-                        var sec=$('.move_list').eq(i).offset().top;-50;
+                        var sec=$('.move_list').eq(i).offset().top;
                         reascrll=true;
                     }else{
-                        var sec=$('.move_list').eq(i).offset().top-$('.fix_tabs').outerHeight()-$('.sub_menu_list').outerHeight()+1;
+                        var sec=$('.move_list').eq(i).offset().top-$('.fix_tabs').outerHeight()-$('.sub_menu_list').outerHeight();
                     }
  
                     console.log("섹션의..",sec);
@@ -482,7 +489,7 @@ $(document).ready(function(){
 
         if($('.fix_tabs').length>0){
             sectionTop();
-            var welOffset= $('.fix_con').offset().top;
+            var welOffset= $('.fix_con').offset().top-$('.sub_menu_list').outerHeight();
             var realwinOffset=winOffset+$('.sub_menu_list').outerHeight();
             if( realwinOffset > welOffset){
                 if(!$('.fix_tabs').hasClass("fix")){
