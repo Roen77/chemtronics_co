@@ -102,6 +102,14 @@ section.inform{height: auto;}
 
 .company .ceo_txt .ceo_img{width: 390px; top:-100px;}
 .company .ceo_txt .ceo_img img{width: 100%;}
+/* ######################## SUB-BUSINESS-전자사업###################### */
+/* 전자제품 */
+.business_area .product .pic.pba_top{overflow: hidden;}
+.business_area .product .pic.pba_top .txt{width: 48.5%; float: left;}
+.business_area .product .pic.pba_top .txt.left{margin: 50px 1.5% 0 0;}
+.business_area .product .pic.pba_top .txt.right{margin: 50px 0 0 1.5%;}
+.business_area .product .pic .txt{position: static; width: 100%;}
+.business_area .product .pic.blm .txt,.business_area .product .pic.pba .txt{margin-top: 50px;}
 /* 테이블 */
 .content .financial tbody th,
 .content .financial tbody td{font-size: 14px;}
@@ -181,6 +189,12 @@ section.inform{height: auto;}
     .company .subsidiary .subsidiary_tabs li.on>a{color:#ed1c24; background-color: #fff;}
     /* business 전자산업 */
     .business.electro .business_area .bs_info .bs_txt p{font-size: 2vw;}
+    .bs_tabs.fix_tabs li:last-child>a{border: 1px solid #ddd;}
+    .bs_tabs.fix_tabs li.on:last-child>a{border-top: 1px solid #000;}
+    /* 적용 제품 */
+    .business_area .module>li .module_tit{position: static;}
+    .business_area .module>li .module_tit span{display: inline-block; margin-left: 16px;}
+    .business_area .module>li .module_des{padding-left: 0;}
 }
 /* 800px */
 @media all and (max-width:800px){
@@ -378,7 +392,7 @@ section.inform{height: auto;}
     .company.inquiry .box_list>li>.qua_info>p{font-size: 14px;}
     .company.inquiry .box_list.contact>li>.qua_info{display: flex; height: 70px; padding: 0;}
 
-    /* ######################## SUB-BUSINESS-전자산업###################### */
+    /* ######################## SUB-BUSINESS-전자사업###################### */
     /* 사업소개 */
     .business.electro .business_area .bs_tit{line-height: 22px; font-size: 22px; padding: 62px 0 45px;}
     .business.electro .business_area .bs_tit::before{font-size: 100px;}
@@ -396,6 +410,27 @@ section.inform{height: auto;}
     .business.electro .business_area .bs_group{font-size: 0;}
     .business.electro .business_area .bs_group>li{float: none; display: inline-block; text-align: center; width: 31.33%; margin: 1%;}
     .business.electro .business_area .bs_group>li .tit span{padding: 25px 0; font-size: 14px;}
+      /* 적용 제품 */
+      .business_area .product_head{padding-top: 40px;}
+      .business_area .main_tit{height: 150px;}
+      .business_area .main_tit>div{padding: 0 10px;}
+      .business_area .main_tit h2{font-size: 28px;}
+      .business_area .main_tit h2 b{padding-bottom: 17px; margin-bottom: 17px;}
+      .business_area .main_tit p{font-size: 13px;}
+      .business_area .module>li{padding: 22px 0;}
+      .business_area .module>li .module_tit{font-size: 16px;}
+      .business_area .module>li .module_tit span{font-size: 14px;}
+      .business_area .module>li .module_des{font-size: 14px; line-height: 20px;}
+      .business_area .product{padding-top: 40px;}
+      .business_area .product h3{padding-bottom: 32px; font-size: 20px;}
+      .business_area .product h3::after{width: 40px;}
+      .business_area .product .pic{padding: 33px 0;}
+      .business_area .product .pic .txt{font-size: 14px; line-height: 20px;}
+      .business_area .product .product_info .pic_box{position: static; width: 100%;}
+      .business_area .product .product_info .pic_box .pic_inner{width: 100%;}
+      .business_area .product .product_info .product_tb{padding: 20px 0 0;}
+
+
      .content .notice .main_head,
      .content .notice .num{display: none;}
      .content .notice li{ position: relative; height: auto; font-size: 12px; padding: 9px 16px; box-sizing: border-box;}

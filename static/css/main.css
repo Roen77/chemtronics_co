@@ -664,6 +664,37 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .business.electro .business_area .bs_group>li:hover .tit span::before{left:0; width: 100%;}
 .business.electro .business_area .bs_group>li:hover img{transform: scale(1.1);}
 /* 적용 제품 */
+.business_area .product_head{padding-top: 90px;}
+.business_area .main_tit{display: flex; justify-content: center; align-items: center; height: 268px; background: fixed url(../images/tv_detail_top_bg.jpg) no-repeat; background-position: top center; background-size: cover; color:#fff; } 
+.business_area .main_tit h2{font-size: 38px;}
+.business_area .main_tit h2 b{display: inline-block; font-weight: bold; border-bottom: 1px solid #fff; padding-bottom: 30px; margin-bottom: 30px;}
+.business_area .module>li{position: relative; padding: 40px 0; text-align: left; line-height: 30px;}
+.business_area .module>li .module_tit{position: absolute; width: 300px; font-size: 19px; color:#222; font-weight: 500;}
+.business_area .module>li .module_tit span{display: block; color:#828282;}
+.business_area .module>li .module_des{padding-left: 300px; color:#666;}
+.business_area .module>li~li{border-top: 1px solid #ddd;}
+.business_area .product{padding-top: 80px;}
+.business_area .product h3{position: relative; font-size: 28px; padding-bottom:64px; border-bottom: 1px solid #ddd;}
+.business_area .product h3::after{content: ''; position: absolute; left:50%; bottom:0; transform: translateX(-50%); width: 90px; background-color: #000; height: 1px;}
+.business_area .product .pic{position: relative; padding: 77px 0;}
+.business_area .product .pic img{width: 100%;}
+.business_area .product .pic .txt{position: absolute; width: 250px; padding:14px 20px; box-sizing: border-box; background-color: #222; color:#fff; line-height: 28px; text-align: left;}
+.business_area .product .pic .txt.left{left:0; top:84px;}
+.business_area .product .pic .txt.right{right: 0; top:86px;}
+.business_area .product .pic.pba .txt{top:160px;}
+.business_area .product .pic.blm .txt{top:141px;}
+.business_area .product .pic .txt b{font-weight: bold;}
+.business_area .product .product_info{position: relative;}
+.business_area .product .product_info~.product_info{margin-top: 30px;}
+.business_area .product .product_info.bom{margin-bottom: 150px;}
+.business_area .product .product_info .pic_box{position: absolute; width: 302px;}
+.business_area .product .product_info .pic_box .pic_inner{display: flex; justify-content: center; align-items: center; width: 269px; height: 218px; border: 1px solid #ddd;}
+.business_area .product .product_info .product_tb{padding-left: 302px;}
+.business_area .product .product_info table.ty1 tbody tr th{font-weight: bold;}
+.business_area .product .product_info table.ty1 tbody tr td{padding: 20px; height: auto; color:#222;}
+.business_area .product .product_info table.ty1 tbody tr b{font-weight: bold;}
+
+
 /* 리스트 영역 */
 .content .notice li .num{width: 7%;}
 .content .notice li .or{width: 11%;}
