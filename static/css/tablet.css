@@ -98,6 +98,7 @@ section.inform{height: auto;}
 
 /* active */
 .fix_tabs.fix ul{width: 100%;}
+.fix_tabs.fix li:last-child{border-right: none;}
 .company .subsidiary .subsidiary_tabs.fix{left:20px;}
 
 .company .ceo_txt .ceo_img{width: 390px; top:-100px;}
@@ -110,6 +111,7 @@ section.inform{height: auto;}
 .business_area .product .pic.pba_top .txt.right{margin: 50px 0 0 1.5%;}
 .business_area .product .pic .txt{position: static; width: 100%;}
 .business_area .product .pic.blm .txt,.business_area .product .pic.pba .txt{margin-top: 50px;}
+.business_area .product .pic img{width: 100%;}
 /* 테이블 */
 .content .financial tbody th,
 .content .financial tbody td{font-size: 14px;}
@@ -413,10 +415,10 @@ section.inform{height: auto;}
     .business.electro .business_area .bs_group>li .tit span{padding: 25px 0; font-size: 14px;}
       /* 적용 제품 */
       .business_area .product_head{padding-top: 40px;}
-      .business_area .main_tit{height: 150px;}
+      .business_area .main_tit{padding: 40px 0;}
       .business_area .main_tit>div{padding: 0 10px;}
-      .business_area .main_tit h2{font-size: 28px;}
-      .business_area .main_tit h2 b{padding-bottom: 17px; margin-bottom: 17px;}
+      .business.electro .business_area .main_tit h2{margin-bottom: 17px;}
+      .business.electro .business_area .main_tit h2 b{padding-bottom: 17px;  font-size: 28px;}
       .business_area .main_tit p{font-size: 13px;}
       .business_area .module>li{padding: 22px 0;}
       .business_area .module>li .module_tit{font-size: 16px;}
@@ -466,7 +468,26 @@ section.inform{height: auto;}
     .business_area.research .rch_con .rch_info .rch_txt .txt_top{font-size: 14px;}
     .business_area.research .rch_con .rch_info .rch_txt li{font-size: 13px; padding-bottom: 12px;}
     .business_area.research .rch_con .rch_info .rch_pic img{width: 200px;}
-    
+   /* ######################## SUB-BUSINESS-디스플레이 사업###################### */
+    /* 사업소개 */
+    .business .business_area h2 b{font-size: 15px; line-height: 20px;}
+    .business.display .business_area .main_bs>ul>li{padding-left: 4%;}
+    .business.display .business_area .main_bs>ul>li>p{font-size: 15px; padding-left: 35px;}
+    .business.display .business_area .main_bs>ul>li>p::before{font-size: 26px;}
+    .business.display .business_area .apply p{padding: 24px 0;}
+    /* 기술소개 */
+    .business.display .move_list{margin-bottom: 75px;}
+    .business.display .main_con .move_list .main_tit{padding: 36px 0;}
+    .business.display .display_head h2{margin-bottom: 35px; }
+    .business.display .display_head h2 b{font-size: 30px; line-height: 1;}
+    .business.display .display_head h2 b::after{height: 1px; bottom:-14px;}
+    .business.display .main_con .display_info{padding-top: 25px;}
+    .business.display .main_con .display_info>ul>li p{padding: 10px 0; font-size: 15px;}
+    .business.display .main_con .polishing img{width: 90%;}
+    .business.display .main_con .utg .display_info li:last-child,
+    .business.display .main_con .utg .display_info li{width: 100%; float: none;}
+    .business.display .main_con .utg .display_info li:last-child img{width: 40%;}
+    .business.display .main_con .develop .tit{font-size: 14px; padding-bottom: 14px;}
 
     
 

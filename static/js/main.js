@@ -489,7 +489,8 @@ $(document).ready(function(){
 
         if($('.fix_tabs').length>0){
             sectionTop();
-            var welOffset= $('.fix_con').offset().top-$('.sub_menu_list').outerHeight();
+            var welOffset= $('.fix_con').offset().top;
+            // var welOffset= $('.fix_con').offset().top-$('.sub_menu_list').outerHeight();
             var realwinOffset=winOffset+$('.sub_menu_list').outerHeight();
             if( realwinOffset > welOffset){
                 if(!$('.fix_tabs').hasClass("fix")){

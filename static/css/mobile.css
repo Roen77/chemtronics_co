@@ -18,6 +18,12 @@ header .right_menu .fam{margin-right: 70px;}
 .business_area.research .rch_con .rch_info .rch_pic{float: none; padding-bottom: 38px;}
 .business_area.research .rch_con .rch_info .rch_pic img{width: 100%;}
 .business_area.research .rch_con .rch_info .rch_txt{margin-bottom:0;}
+/* ######################## SUB-BUSINESS-디스플레이사업###################### */
+/* 기술소개 */
+.business.display .main_con .display_info>ul{margin: 0;}
+.business.display .main_con .display_info>ul>li{float: none; width: 100%; margin: 0;}
+.business.display .main_con .display_info>ul>li~li{margin-top: 10px;}
+.business.display .main_con .polishing img{width: 100%;}
 
 .stock .stock_head table.tb_main tr.last td{padding: 0 8%;}
 .conflict .conflict_img{height: auto;}
@@ -79,6 +85,19 @@ header .right_menu .fam{margin-right: 70px;}
     .business.electro .business_area .bs_plan ul>li:last-child{border-bottom:none;}
     /* 사업군 소개 */
     .business.electro .business_area .bs_group>li{width: 48%;}
+       /* ######################## SUB-BUSINESS-디스플레이 사업###################### */
+    /* 사업소개 */
+    .business.display .business_area .main_bs>ul,
+    .business.display .business_area .main_bs>ul>li{display: block; width: 100%; height: auto;}
+    .business.display .business_area .main_bs>ul>li{padding: 20px 40px;}
+    .business.display .business_area .main_bs>ul:nth-child(1)>li{border-bottom: 1px solid #ddd;}
+    .business.display .business_area .main_bs>ul>li:nth-child(1){margin: 0; border-bottom: none;}
+    .business.display .business_area .main_bs>ul>li::before{display: none;}
+    .business.display .business_area .main_bs .center_pic{position: static; transform: none; padding: 28px 0;}
+    .business.display .business_area .main_bs .center_pic img{width: 12%;}
+    .business.display .business_area .main_bs .center_pic p{font-size: 14px;}
+    .business.display .business_area .apply .tit{font-size: 16px; padding-top: 55px;}
+
     .hr .recruit .hr_list>li{height: 120px;}
     .hr .recruit li>p{padding-top: 60px; font-size: 13px;}
     .hr .hr_list>li::before{font-size: 45px;}
