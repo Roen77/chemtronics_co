@@ -11,6 +11,10 @@ header .right_menu .fam{margin-right: 70px;}
 .company .vision_area .value>li p{text-align: left;}
 .content .gall_list li .txt h4{line-height: 22px;}
 .content .gallery .video_txt h3{font-size: 20px;}
+/* ######################## SUB-BUSINESS-COMMON ############################### */
+.business .business_area .display_info>ul{margin: 0;}
+.business .business_area .display_info>ul>li{float: none; width: 100%; margin: 0;}
+.business .business_area .display_info>ul>li~li{margin-top: 10px;}
 /* ######################## SUB-BUSINESS-화학사업###################### */
 /* 연구소 */
 .business_area.research .rch_con .rch_info .rch_txt .txt_top{margin: 12px 0;}
@@ -20,9 +24,7 @@ header .right_menu .fam{margin-right: 70px;}
 .business_area.research .rch_con .rch_info .rch_txt{margin-bottom:0;}
 /* ######################## SUB-BUSINESS-디스플레이사업###################### */
 /* 기술소개 */
-.business.display .main_con .display_info>ul{margin: 0;}
-.business.display .main_con .display_info>ul>li{float: none; width: 100%; margin: 0;}
-.business.display .main_con .display_info>ul>li~li{margin-top: 10px;}
+.business.display .bs_tabs.fix_tabs li>a{font-size: 2.3vw;}
 .business.display .main_con .polishing img{width: 100%;}
 
 .stock .stock_head table.tb_main tr.last td{padding: 0 8%;}
@@ -75,7 +77,7 @@ header .right_menu .fam{margin-right: 70px;}
     .hr .person .txt p{padding-top: 0;}
     .content .box_list{margin: 0;}
     .content .box_list>li,.hr .hr_list.admin>li, .hr .hr_list.research>li{width: 100%; margin: 1% 0;}
-    .fix_tabs li>a{font-size: 1.5vw;}
+    .fix_tabs li>a{font-size: 2.8vw;}
 
     /* active */
     .fix_tabs.fix{top:34px;}
@@ -96,7 +98,9 @@ header .right_menu .fam{margin-right: 70px;}
     .business.display .business_area .main_bs .center_pic{position: static; transform: none; padding: 28px 0;}
     .business.display .business_area .main_bs .center_pic img{width: 12%;}
     .business.display .business_area .main_bs .center_pic p{font-size: 14px;}
-    .business.display .business_area .apply .tit{font-size: 16px; padding-top: 55px;}
+    .business.display .business_area .apply .tit {font-size: 16px;padding-top: 55px;}
+    /* 기술소개 */
+    .business.display .bs_tabs.fix_tabs li>a {display: flex; align-items: center; justify-content: center; height: 20px;}
 
     .hr .recruit .hr_list>li{height: 120px;}
     .hr .recruit li>p{padding-top: 60px; font-size: 13px;}

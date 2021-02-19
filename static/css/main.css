@@ -382,14 +382,14 @@ header .right_menu .lang.over h2>a{color:#222;}
 .sub_pg header .right_menu .lang.active .list>li:hover{background-color: #ddd;}
 .sub_pg .trigger>span{background-color: #222;}
 /* 배경 공통 요소 */
-.visual .sub_bg{position: relative; height: 745px; width: 100%; padding-top: 100px; box-sizing: border-box; background: url(../images/sub_visual_pr.jpg) no-repeat center; background-size: cover;}
+.visual .sub_bg{position: relative; height: 745px; width: 100%; padding-top: 140px;  box-sizing: border-box; background: url(../images/sub_visual_pr.jpg) no-repeat center bottom -50px; background-size: cover;}
 .IR.visual .sub_bg{background-image: url(../images/sub_visual_ir.jpg);}
 .ethical.visual .sub_bg{background-image: url(../images/sub_visual_ethical.jpg);}
 .HR.visual .sub_bg{background-image: url(../images/sub_visual_hr.jpg);}
 .company_vg.visual .sub_bg{background-image: url(../images/sub_visual_company.jpg);}
 .chemical_bg.visual .sub_bg{background-image: url(../images/sub_visual_business_02.jpg);}
 .display_bg.visual .sub_bg{background-image: url(../images/sub_visual_business_03.jpg);}
-/* 서브 메뉴 리스트 */
+.autoplay_bg.visual .sub_bg{background-image: url(../images/sub_visual_business_04.jpg);}
 /* 서브 메뉴 리스트 */
 .sub_menu_list{position: fixed; left:0; top:100px; width: 100%;  background-color: #f5f5f5; padding-left: 22px; box-sizing: border-box; border-bottom: 1px solid #e5e5e5; z-index: 100; transition: top 0.5s;border-top: 1px solid #e5e5e5; box-sizing: border-box;}
 .sub_menu_list>div{position: relative; float: left; background-color: #f5f5f5; width: 180px;}
@@ -437,7 +437,7 @@ header .right_menu .lang.over h2>a{color:#222;}
 .content .tabs>li:first-child{border-left: 1px solid #e5e5e5;}
 .content .tabs>li:last-child{border-right: 1px solid #e5e5e5;}
 .content .tabs>li::before{content: '';position: absolute; right: -1px; top:50%; transform: translateY(-50%); background-color: #e5e5e5; height: 50%; width: 1px;}
-.content .tabs>li>a{display: block; width: 198px; height: 60px; line-height: 60px; color:#222; font-size: 16px;}
+.content .tabs>li>a{display: block; width: 190px; height: 60px; line-height: 60px; color:#222; font-size: 16px;}
 .content .tabs>li.over>a{background-color: #222; color:#fff;}
 /* 테이블 공통 요소 */
 .content .tb_tit{position: relative;}
@@ -669,11 +669,17 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .business .business_area .bs_info .bs_txt{height: 400px; display: flex; align-items: center; background-color: #000; color:rgba(255, 255, 255, 0.603);  padding: 49px;box-sizing: border-box;}
 .business .business_area .bs_info .bs_txt p{line-height: 32px; box-sizing:border-box;font-size: 20px; text-align: left; font-weight: 300;}
 .business .business_area .bs_info .bs_txt p:first-child{padding-bottom: 24px;}
-.business .business_area .bs_info .bs_txt p b{font-weight: bold; color:#fff;}
+.business .business_area .bs_info .bs_txt p b{font-weight: 500; color:#fff;}
 .business.chemical .ty2 thead th{border: 1px solid #ddd; border-top: 1px solid #000;}
 .business.chemical .ty2 thead tr{ border-top: 1px solid #000;}
 .business.chemical .ty2 tbody tr{text-align: left;}
 .business.chemical .ty2 tbody td{padding: 20px 12px; line-height: 20px; color:#222; font-size: 15px; border-left: none}
+.business .business_area .display_info{padding-top: 50px;}
+.business .business_area .display_info img{display: block; margin: 0 auto; width: 100%;}
+.business .business_area .display_info>ul{margin: 0 -1%; overflow: hidden;}
+.business .business_area .display_info>ul>li{float: left; margin: 0 1%; width: 31.33%; border: 1px solid #ddd; box-sizing: border-box;}
+.business .business_area .display_info>ul>li p{padding: 27px 0; border-bottom: 1px solid #ddd;} 
+.business .business_area .display_info>ul>li img{width: 100%; display: block;} 
 /* ######################## SUB-BUSINESS-전자산업###################### */
 /* 사업소개 */
 .business.electro .business_area .bs_plan ul{ margin-top: 123px; overflow: hidden;}
@@ -818,6 +824,13 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .business.display .main_con .develop .tit{font-size: 22px; padding-bottom: 20px;}
 .business.display .main_con .develop .tit .fas{margin-right: 4px;}
 .business.display .main_con .develop img{margin: 0;}
+/* ######################## SUB-BUSINESS-자율주행사업###################### */
+/* 사업소개 */
+.business.autoplay .business_area .bs_tit{padding: 93px 0 60px;}
+.business.autoplay .business_area .bs_tit::before{content: 'C-V2X / WAVE'; width: 100%; font-size: 170px;}
+.business.autoplay .business_area .display_info>ul>li p{font-size: 20px; padding: 22px 0;}
+.business.autoplay .btn{height: 70px; padding: 0 70px; line-height: 70px; margin: 87px 0 37px;}
+.business.autoplay .business_area .bs_info{margin: 60px 0 0;}
 /* 리스트 영역 */
 .content .notice li .num{width: 7%;}
 .content .notice li .or{width: 11%;}
