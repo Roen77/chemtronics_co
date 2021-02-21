@@ -535,9 +535,9 @@ section.inform{height: auto;}
     .business.autoplay .auto_product .main_fnc .bom_box>div:last-child p{margin-bottom: 0;}
     /*V2X기술*/
     .business.autoplay .auto_product.v2x{padding: 19px 16px 0;}
-    .business.autoplay .v2x .con .heading{display: block; text-align: left; margin: 35px 0 0; padding: 20px 0;}
-    .business.autoplay .v2x .con .heading h4{font-size: 18px;}
-    .business.autoplay .v2x .con .heading p{font-size: 14px; text-align: left; padding-top: 23px;}
+    .business.autoplay .auto_product .con .heading{display: block; text-align: left; margin: 35px 0 0; padding: 20px 0;}
+    .business.autoplay .auto_product .con .heading h4{font-size: 18px;}
+    .business.autoplay .auto_product .con .heading p{font-size: 14px; text-align: left; padding-top: 23px;}
     .business.autoplay .v2x .con .info_box{padding: 23px 20px;}
     .business.autoplay .auto_product.v2x .tit{margin-bottom: 24px;}
     .business.autoplay .v2x .con .info_box>.tit b{line-height: 18px; font-size: 16px;}
@@ -551,11 +551,35 @@ section.inform{height: auto;}
     .business.autoplay .v2x .con .info_box .pro_list>ul>li{height: 38px;}
     .business.autoplay .v2x .con .info_box .pro_list>ul>li>p{font-size: 14px;}
     .business.autoplay .v2x .con>div>b{padding: 21px 0; font-size: 18px;}
-    .business.autoplay .v2x .config>li{width: 50%;}
+    .business.autoplay .v2x .config>li{width: 50%; background: none;}
     .business.autoplay .v2x .config>li .txt_box span{font-size: 16px;}
     .business.autoplay .v2x .config>li .txt_box p{font-size: 15px;}
     .business.autoplay .v2x .config>li .icon img{height: 42px;}
     .business.autoplay .v2x .V2X .bom_txt{padding: 19px 0 32px; font-size: 14px;}
+    /* ADAS 기술 */
+    .business.autoplay .auto_product.adas{padding: 38px 15px 33px;}
+    .business.autoplay .adas .sub_tit{font-size: 16px; padding: 18px 0;}
+    .business.autoplay .adas .con .info_box .txt_list li>p{font-size: 13px; line-height: 20px; text-align: left;}
+    .business.autoplay .adas .con .info_box .left_con,
+    .business.autoplay .adas .con .info_box .right_con{width: 100%;}
+    .business.autoplay .adas .con.svm .info_box .left_con img{height: 157px; margin-bottom: 46px; }
+    .business.autoplay .adas .con.svm .info_box{text-align: center;}
+    .business.autoplay .adas .rodmap_area .info_box{padding-top: 25px;}
+    .business.autoplay .adas .rodmap_area .roadmap>p{font-size: 14px;}
+    .business.autoplay .adas .con .info_box .txt_list{padding-bottom: 20px;}
+    .business.autoplay .adas .rodmap_area .info_box .right_con{padding: 0; text-align: center;}
+    .business.autoplay .adas .rodmap_area .info_box .right_con ul{text-align: left;}
+    .business.autoplay .adas .monitoring{padding: 0;}
+    .business.autoplay .adas .monitoring .pic{margin: 20px 0 14px;}
+    .business.autoplay .adas .txt_box>p{font-size: 15px;}
+    .business.autoplay .adas .con .info_box .left_con.sub_tit{padding-bottom: 18px;}
+    .business.autoplay .adas .dvr .info_box{padding: 23px 0 0;}
+    .business.autoplay .adas .dvr .info_box h4{font-size: 16px; padding-bottom: 16px;}
+    .business.autoplay .adas .dvr .img_con p{font-size: 14px; padding: 13px 0 28px;}
+    .business.autoplay .adas .dvr .img_con .right_con p{padding: 13px 0 0;}
+    
+
+
    
 
 

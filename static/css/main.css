@@ -870,9 +870,9 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 /* v2x 기술 */
 .business.autoplay .auto_product.v2x{padding: 74px 6% 0;}
 .business.autoplay .auto_product.v2x .tit{border-bottom:none; padding-bottom:0;}
-.business.autoplay .v2x .con .heading{display: flex; border-top: 1px solid #222; padding: 44px 0; border-bottom: 1px solid #ddd; margin-top: 60px;}
-.business.autoplay .v2x .con .heading h4{margin-right: auto; font-size: 21px;}
-.business.autoplay .v2x .con .heading p{font-size: 16px; letter-spacing: -0.5px; text-align: right; line-height: 25px;}
+.business.autoplay .auto_product .con .heading{display: flex; border-top: 1px solid #222; padding: 44px 0; border-bottom: 1px solid #ddd; margin-top: 60px;}
+.business.autoplay .auto_product .con .heading h4{margin-right: auto; font-size: 21px;}
+.business.autoplay .auto_product .con .heading p{font-size: 16px; letter-spacing: -0.5px; text-align: right; line-height: 25px;}
 .business.autoplay .v2x .con .info_box>.tit b{line-height: 30px; font-size: 22px; font-weight: 500; border-bottom: 2px solid #222;}
 .business.autoplay .v2x .con .info_box{background-color: #f1f1f1; padding: 47px; box-sizing: border-box;}
 .business.autoplay .v2x .con .info_box .pro_list{padding: 0 0 40px;}
@@ -892,7 +892,8 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .business.autoplay .v2x .con>div>b{display: block; padding: 43px 0 23px; color:#222; font-size: 20px;}
 .business.autoplay .v2x .solution img{width: 100%;}
 .business.autoplay .v2x .config{padding-top: 57px;}
-.business.autoplay .v2x .config>li{float: left; width: 25%; padding: 0 3.5%;  box-sizing: border-box;}
+.business.autoplay .v2x .config>li{float: left; width: 25%; padding: 0 3.5%;  box-sizing: border-box; background: url(../images/business04_v2x_plus_icon.png) no-repeat; background-position: left top 40%;}
+.business.autoplay .v2x .config>li:first-child{background: none;}
 .business.autoplay .v2x .config>li .icon{padding: 0 18px; box-sizing: border-box; text-align: center;}
 .business.autoplay .v2x .config>li .txt_box{height: 163px;}
 .business.autoplay .v2x .config>li .icon p{font-size: 11px; color:#a9aba9; padding: 12px 0 24px; border-bottom: 1px solid #ddd;}
@@ -900,8 +901,34 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .business.autoplay .v2x .config>li .txt_box p{line-height: 21px;  letter-spacing: -1px; color:#666;}
 .business.autoplay .v2x .V2X .bom_txt{padding: 32px 0; border-top: 1px solid #ddd;}
 .business.autoplay .v2x .V2X .bom_txt p{line-height: 21px;}
-
-
+/* ADAS 기술 */
+.business.autoplay .auto_product.adas{padding: 73px 6% 70px;}
+.business.autoplay .auto_product.adas img{max-width: 100%;}
+.business.autoplay .auto_product.adas .tit{padding-bottom: 0; border-bottom: none;}
+.business.autoplay .adas .sub_tit{color:#222; font-size: 22px; padding: 38px 0;}
+.business.autoplay .adas .con{text-align: left;}
+.business.autoplay .adas .info_box .left_con,
+.business.autoplay .adas .info_box .right_con{float: left; width: 50%;}
+.business.autoplay .adas .con .info_box .txt_list{padding-bottom: 33px;}
+.business.autoplay .adas .con .info_box .txt_list li>p{position: relative; line-height: 26px;color:#666; padding-left: 15px;}
+.business.autoplay .adas .con .info_box .txt_list li>p::before{content: '\f0da'; font-family: fontawesome; position: absolute; left:0;}
+.business.autoplay .adas .rodmap_area .info_box{padding: 50px 0 0;}
+.business.autoplay .adas .rodmap_area .info_box .left_con img{padding: 10px 0 8px;}
+.business.autoplay .adas .rodmap_area .info_box  .left_con{width: 56%;}
+.business.autoplay .adas .rodmap_area .info_box  .right_con{width: 44%; padding-left: 66px; box-sizing: border-box;}
+.business.autoplay .adas .rodmap_area .right_con ul{margin-top: 32px;}
+.business.autoplay .adas .rodmap_area .right_con ul>li>p{line-height: 21px; color:#9fa1a3; font-size: 10px;}
+.business.autoplay .adas .rodmap_area .right_con ul>li>p::before{content: '*'; display: inline-block; margin-right: 3px;}
+.business.autoplay .adas .monitoring{padding: 60px 0 25px;}
+.business.autoplay .adas .monitoring .pic{margin: 38px 0 20px;}
+.business.autoplay .adas .txt_box>p{font-size: 18px; margin-bottom: 10px;} 
+.business.autoplay .adas .monitoring .info_box .left_con{width: 154px; padding: 0;}
+.business.autoplay .adas .monitoring .info_box .txt_box.right_con{width: auto;}
+.business.autoplay .adas .monitoring .info_box .txt_box.right_con>p{margin-bottom: 9px;}
+.business.autoplay .adas .dvr .info_box{padding: 40px 0 0;}
+.business.autoplay .adas .dvr .info_box h4{font-weight: bold; font-size: 22px; padding-bottom: 19px;} 
+.business.autoplay .adas .dvr .img_con{text-align: center;}
+.business.autoplay .adas .dvr .img_con p{color:#999; padding-top: 19px;}
 
 /* 리스트 영역 */
 .content .notice li .num{width: 7%;}
