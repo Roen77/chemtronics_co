@@ -266,7 +266,7 @@ header .right_menu .lang.over h2>a{color:#222;}
 /* ######################## SECTION:inform ###################### */
 .inform{position: relative; text-align: center; color:#222;}
 .inform>.tit_info{position: absolute;  width: 100%; text-align: center; padding-top: 74px;}
-.des{padding: 0 100px;}
+.inform .des{padding: 0 100px;}
 .inform .info_con{position: relative; display: flex; height: 100vh;}
 .inform .info_con>li{flex:1; border-right: 1px solid #eee; padding-top: 280px;}
 .inform.info_con>li:first-child{border-left: 1px solid #eee;}
@@ -831,6 +831,78 @@ table.ty1 td{padding: 20px 0; height: auto; text-align: left;}
 .business.autoplay .business_area .display_info>ul>li p{font-size: 20px; padding: 22px 0;}
 .business.autoplay .btn{height: 70px; padding: 0 70px; line-height: 70px; margin: 87px 0 37px;}
 .business.autoplay .business_area .bs_info{margin: 60px 0 0;}
+/* 제품소개 */
+.business.autoplay .auto_product{padding:6.25% 147px 115px; box-sizing: border-box;}
+.business.autoplay .auto_product~.auto_product{margin-top: 98px;}
+.business.autoplay .auto_product .tit{font-size: 37px; color:#222; font-weight: bold; padding-bottom: 60px; border-bottom: 1px solid #ddd;}
+.business.autoplay .auto_product.top .pic{margin-top: 47px; padding: 65px 0 15px;}
+.business.autoplay .auto_product.top .pic img{width: 100%;}
+.business.autoplay .auto_product .display_info>ul{margin:-2%; overflow: hidden;}
+.business.autoplay .auto_product .display_info>ul>li{margin: 2%; width: 29.33%;}
+.business.autoplay .auto_product .display_info>ul>li>p{color:#fff; background-color: #222; font-size: 16px;}
+.business.autoplay .auto_product .display_info>ul>li>div{padding: 40px 0;}
+.business.autoplay .auto_product .display_info>ul>li>div>img{width: auto;}
+.business.autoplay .auto_product .display_info .des_list{padding: 0 30px; box-sizing: border-box; height: 320px;}
+.business.autoplay .auto_product .display_info .des_list>li p{position: relative; padding: 0; border:none; line-height: 24px; letter-spacing: -1px; font-size: 15px; color:#444; text-align: left;}
+.business.autoplay .auto_product .display_info .des_list>li p::before{content: '-';position: absolute; left:-14px;}
+.business.autoplay .auto_product .pic{position: relative; margin: 60px 0;}
+.business.autoplay .auto_product .pic img{width: 100%;}
+.business.autoplay .auto_product .pic .comment{position: absolute; left:0; top:0; width: 100%; background-color: #222; color:#fff; font-weight: bold; padding: 24px 0; font-size: 27px;}
+.business.autoplay .auto_product .des{padding: 60px 0; border-top: 1px solid #ddd;}
+.business.autoplay .auto_product .des:last-child{padding: 60px 0 0;}
+.business.autoplay .auto_product .des .title{display: block; text-align: left; font-size: 18px; font-weight: bold; padding-bottom: 30px;}
+.business.autoplay .auto_product .des>div{overflow: hidden;}
+.business.autoplay .auto_product .des>div>div{float: left; width: 50%; text-align: left; padding-right: 40px; box-sizing: border-box;}
+.business.autoplay .auto_product .des .heading{display: inline-block; font-weight: bold; padding-bottom: 14px; font-size: 17px;}
+.business.autoplay .auto_product .des>div>div p{color:#888; line-height: 20px;}
+.business.autoplay .auto_product .des.top_des .svm .proc_img{margin: 0 0 18px;} 
+.business.autoplay .auto_product .des.top_des .svm .txt{display: inline-block; margin-right: 80px;}
+.business.autoplay .auto_product .des.top_des .svm .txt b{font-size: 15px; font-weight: bold;}
+.business.autoplay .auto_product .des.top_des .svm .txt p{line-height: 18px; color:#888; padding-top: 6px;}
+.business.autoplay .auto_product .des.top_des .func>div{display: flex;} 
+.business.autoplay .auto_product .des.top_des .func>div~div{margin-top: 38px;}
+.business.autoplay .auto_product .des.top_des .func .heading{padding-bottom: 2px;}
+.business.autoplay .auto_product .des.top_des .func .txt{padding: 0 0 0 38px; line-height: 20px;}
+.business.autoplay .auto_product .des.top_des .func ul>li>p{position: relative; line-height: 20px; padding-top: 0; padding-left: 12px; letter-spacing: -0.8px;}
+.business.autoplay .auto_product .des.top_des .func ul>li>p::before{content: '-'; position: absolute; margin-right: 6px; left:0;}
+.business.autoplay .auto_product .main_fnc .top_box{margin-bottom: 30px;}  
+.business.autoplay .auto_product .pic.last{margin: 0;}
+/* v2x 기술 */
+.business.autoplay .auto_product.v2x{padding: 74px 6% 0;}
+.business.autoplay .auto_product.v2x .tit{border-bottom:none; padding-bottom:0;}
+.business.autoplay .v2x .con .heading{display: flex; border-top: 1px solid #222; padding: 44px 0; border-bottom: 1px solid #ddd; margin-top: 60px;}
+.business.autoplay .v2x .con .heading h4{margin-right: auto; font-size: 21px;}
+.business.autoplay .v2x .con .heading p{font-size: 16px; letter-spacing: -0.5px; text-align: right; line-height: 25px;}
+.business.autoplay .v2x .con .info_box>.tit b{line-height: 30px; font-size: 22px; font-weight: 500; border-bottom: 2px solid #222;}
+.business.autoplay .v2x .con .info_box{background-color: #f1f1f1; padding: 47px; box-sizing: border-box;}
+.business.autoplay .v2x .con .info_box .pro_list{padding: 0 0 40px;}
+.business.autoplay .v2x .con .info_box .pro_list>p{text-align: left; font-size: 17px;}
+.business.autoplay .v2x .con .info_box .pro_list>ul{margin: 0 -0.5%; overflow: hidden;}
+.business.autoplay .v2x .con .info_box .pro_list>ul>li{float: left;width: 19%; display: flex; justify-content: center; align-items: center; height: 54px; background-color: #fff; border-top: 1px solid #222; margin:0.5%;}
+.business.autoplay .v2x .con .info_box .pro_list>ul.app>li{width: 14.6%;}
+.business.autoplay .v2x .con .info_box .pro_list>ul.app>li.smart{width: 21%;}
+.business.autoplay .v2x .con .info_box .pro_list>ul.application>li{width: 19%;}
+.business.autoplay .v2x .con .info_box .pro_list>ul.framework>li p,
+.business.autoplay .v2x .con .info_box .pro_list .list_tit{position: relative; padding-left: 16px; text-align: left;}
+.business.autoplay .v2x .con .info_box .pro_list>ul.framework>li{justify-content: start; font-size: 17px;}
+.business.autoplay .v2x .con .info_box .pro_list>ul.framework>li p::before,
+.business.autoplay .v2x .con .info_box .pro_list .list_tit::before{content: '\f0da';position: absolute; left:0; font-family: fontawesome; color:#e52a2a; margin-right: 5px; padding-bottom: 6px;}
+.business.autoplay .v2x .con .info_box .pro_list>ul.framework>li{border-top: none; background-color: transparent;}
+.business.autoplay .v2x .con .info_box .pro_list>ul.framework>li p span{display: block;}
+.business.autoplay .v2x .con>div>b{display: block; padding: 43px 0 23px; color:#222; font-size: 20px;}
+.business.autoplay .v2x .solution img{width: 100%;}
+.business.autoplay .v2x .config{padding-top: 57px;}
+.business.autoplay .v2x .config>li{float: left; width: 25%; padding: 0 3.5%;  box-sizing: border-box;}
+.business.autoplay .v2x .config>li .icon{padding: 0 18px; box-sizing: border-box; text-align: center;}
+.business.autoplay .v2x .config>li .txt_box{height: 163px;}
+.business.autoplay .v2x .config>li .icon p{font-size: 11px; color:#a9aba9; padding: 12px 0 24px; border-bottom: 1px solid #ddd;}
+.business.autoplay .v2x .config>li .txt_box span{display: block; padding: 19px 0 14px; font-size: 18px; font-weight: bold; color:#222;}
+.business.autoplay .v2x .config>li .txt_box p{line-height: 21px;  letter-spacing: -1px; color:#666;}
+.business.autoplay .v2x .V2X .bom_txt{padding: 32px 0; border-top: 1px solid #ddd;}
+.business.autoplay .v2x .V2X .bom_txt p{line-height: 21px;}
+
+
+
 /* 리스트 영역 */
 .content .notice li .num{width: 7%;}
 .content .notice li .or{width: 11%;}

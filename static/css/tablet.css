@@ -118,6 +118,14 @@ section.inform{height: auto;}
 /* ######################## SUB-BUSINESS-자율주행 사업###################### */
 /* 사업소개 */
 .business.autoplay .business_area .bs_tit::before{font-size: 12vw;}
+/* 제품소개 */
+.business.autoplay .auto_product{padding: 74px 6% 79px;}
+.business.autoplay .auto_product .display_info>ul>li{width: 46%;}
+.business.autoplay .auto_product .des.top_des .svm .txt{margin-right: 50px;}
+.business.autoplay .auto_product .des.top_des .func{padding: 0;}
+.business.autoplay .auto_product .des.top_des .svm .proc_img,
+.business.autoplay .auto_product .des.top_des .func img{width: 100%;}
+.business.autoplay .auto_product .des.top_des .func .txt{padding: 0 0 0 25px;}
 /* 테이블 */
 .content .financial tbody th,
 .content .financial tbody td{font-size: 14px;}
@@ -411,8 +419,8 @@ section.inform{height: auto;}
     .business.autoplay .business_area .bs_info .bs_txt p,
     .business .business_area .bs_info .bs_txt p{font-size: 14px; line-height: 25px;}
     .business.chemical .ty2 tbody td{padding: 20px 10px;}
-    .business .business_area .display_info{padding-top: 25px;}
-    .business .business_area .display_info>ul>li p{padding: 10px 0; font-size: 15px;}
+    .business .business_area .move_list .display_info{padding-top: 25px;}
+    .business .business_area .move_list .display_info>ul>li p{padding: 10px 0; font-size: 15px;}
     /* ######################## SUB-BUSINESS-전자사업###################### */
     /* 사업소개 */
     .business.electro .business_area .photo img{height: auto;}
@@ -503,9 +511,55 @@ section.inform{height: auto;}
     .business.autoplay .business_area .bs_tit{padding: 60px 0;}
     .business.autoplay .btn{margin: 45px 0 20px; height: 49px; line-height: 49px; font-size: 13px;}
     .business.autoplay .business_area .display_info>ul>li p{padding: 10px 0; font-size: 14px;}
+    /* 제품소개 */
+    .business.autoplay .auto_product{padding: 36px 15px 43px;}
+    .business.autoplay .auto_product~.auto_product{margin-top: 50px;}
+    .business.autoplay .auto_product .tit{font-size: 26px; padding-bottom: 25px;}
+    .business.autoplay .auto_product.top .pic{padding: 37px 0 10px; margin: 0;}
+    .business.autoplay .auto_product .pic{margin: 28px 0;}
+    .business.autoplay .auto_product .pic .comment{font-size: 17px; padding: 17px 0;}
+    .business.autoplay .auto_product .display_info .des_list>li p{font-size: 14px;}
+    .business.autoplay .auto_product .des{padding: 30px 0;}
+    .business.autoplay .auto_product .des>div>div{float: none; width: 100%; padding: 0;}
+    .business.autoplay .auto_product .des .title{font-size: 15px; padding-bottom: 21px;}
+    .business.autoplay .auto_product .des.top_des .svm{margin-bottom: 20px;}
+    .business.autoplay .auto_product .des.top_des .svm .proc_img{width: 100%;}
+    .business.autoplay .auto_product .des.top_des .svm .txt{margin-right: 30%;}
+    .business.autoplay .auto_product .des.top_des .svm .txt b{font-size: 13px;}
+    .business.autoplay .auto_product .des.top_des .svm .txt p{font-size: 14px; line-height: 18px;}
+    .business.autoplay .auto_product .des.top_des .func ul>li>p{line-height: 17px; margin-bottom: 0;}
+    .business.autoplay .auto_product .main_fnc .top_box{margin-bottom: 0;}
+    .business.autoplay .auto_product .des .heading{font-size: 14px;}
+    .business.autoplay .auto_product .des>div>div p{font-size: 14px;}
+    .business.autoplay .auto_product .des>div>div p{margin-bottom: 20px;}
+    .business.autoplay .auto_product .main_fnc .bom_box>div:last-child p{margin-bottom: 0;}
+    /*V2X기술*/
+    .business.autoplay .auto_product.v2x{padding: 19px 16px 0;}
+    .business.autoplay .v2x .con .heading{display: block; text-align: left; margin: 35px 0 0; padding: 20px 0;}
+    .business.autoplay .v2x .con .heading h4{font-size: 18px;}
+    .business.autoplay .v2x .con .heading p{font-size: 14px; text-align: left; padding-top: 23px;}
+    .business.autoplay .v2x .con .info_box{padding: 23px 20px;}
+    .business.autoplay .auto_product.v2x .tit{margin-bottom: 24px;}
+    .business.autoplay .v2x .con .info_box>.tit b{line-height: 18px; font-size: 16px;}
+    .business.autoplay .v2x .con .info_box .pro_list{padding-bottom: 27px;}
+    .business.autoplay .v2x .con .info_box .pro_list .list_tit{margin-bottom: 5px;}
+    .business.autoplay .v2x .con .info_box .pro_list>ul.framework>li p, .business.autoplay .v2x .con .info_box .pro_list .list_tit{font-size: 14px;}
+    .business.autoplay .v2x .con .info_box .pro_list>ul.application>li,
+    .business.autoplay .v2x .con .info_box .pro_list>ul.app>li.smart,
+    .business.autoplay .v2x .con .info_box .pro_list>ul.app>li,
+    .business.autoplay .v2x .con .info_box .pro_list>ul>li{width: 32.333%;}
+    .business.autoplay .v2x .con .info_box .pro_list>ul>li{height: 38px;}
+    .business.autoplay .v2x .con .info_box .pro_list>ul>li>p{font-size: 14px;}
+    .business.autoplay .v2x .con>div>b{padding: 21px 0; font-size: 18px;}
+    .business.autoplay .v2x .config>li{width: 50%;}
+    .business.autoplay .v2x .config>li .txt_box span{font-size: 16px;}
+    .business.autoplay .v2x .config>li .txt_box p{font-size: 15px;}
+    .business.autoplay .v2x .config>li .icon img{height: 42px;}
+    .business.autoplay .v2x .V2X .bom_txt{padding: 19px 0 32px; font-size: 14px;}
+   
 
 
-    
+
 
      .content .notice .main_head,
      .content .notice .num{display: none;}

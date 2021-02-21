@@ -13,8 +13,6 @@ header .right_menu .fam{margin-right: 70px;}
 .content .gallery .video_txt h3{font-size: 20px;}
 /* ######################## SUB-BUSINESS-COMMON ############################### */
 .business .business_area .display_info>ul{margin: 0;}
-.business .business_area .display_info>ul>li{float: none; width: 100%; margin: 0;}
-.business .business_area .display_info>ul>li~li{margin-top: 10px;}
 /* ######################## SUB-BUSINESS-화학사업###################### */
 /* 연구소 */
 .business_area.research .rch_con .rch_info .rch_txt .txt_top{margin: 12px 0;}
@@ -26,6 +24,12 @@ header .right_menu .fam{margin-right: 70px;}
 /* 기술소개 */
 .business.display .bs_tabs.fix_tabs li>a{font-size: 2.3vw;}
 .business.display .main_con .polishing img{width: 100%;}
+.business.display .move_list .display_info>ul>li{float: none; width: 100%; margin: 0;}
+.business.display .move_list .display_info>ul>li~li{margin-top: 10px;}
+/* 제품소개 */
+.business.autoplay .auto_product .display_info>ul>li{float: none; width: 100%; margin: 0;}
+.business.autoplay .auto_product .display_info>ul>li~li{margin-top: 10px;}
+
 
 .stock .stock_head table.tb_main tr.last td{padding: 0 8%;}
 .conflict .conflict_img{height: auto;}
@@ -101,6 +105,14 @@ header .right_menu .fam{margin-right: 70px;}
     .business.display .business_area .apply .tit {font-size: 16px;padding-top: 55px;}
     /* 기술소개 */
     .business.display .bs_tabs.fix_tabs li>a {display: flex; align-items: center; justify-content: center; height: 20px;}
+    /* v2x 기숭 */
+    .business.autoplay .v2x .config>li{width: 100%; padding: 0; display: flex; align-items: center; border-bottom: 1px solid #ddd; height: 100px;}
+    .business.autoplay .v2x .config>li .icon{width: 94px;}
+    .business.autoplay .v2x .config>li .icon p{padding: 12px 0 0; border-bottom:none;}
+    .business.autoplay .v2x .config>li .txt_box{height: auto; text-align: left;}
+    .business.autoplay .v2x .config>li .txt_box p,
+    .business.autoplay .v2x .config>li .txt_box span{padding: 0 0 6px; font-size: 14px;}
+    .business.autoplay .v2x .V2X .bom_txt{border-top:none;}
 
     .hr .recruit .hr_list>li{height: 120px;}
     .hr .recruit li>p{padding-top: 60px; font-size: 13px;}
